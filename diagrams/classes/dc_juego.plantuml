@@ -1,16 +1,28 @@
 @startuml
 class AlgoThieft
 {
-    -pistas : Pista
-    -jugador : Jugador
-    -tiempo : Tiempo
-    -lugares : Lugar
-    -ciudad : Ciudad
-    -ladrones : Ladron
-    -objetosRobados: Objetos
-    -estrategiasDeEscape: EstrategiasDeEscape
+    -pistas : List<Pista>
+    -policia : List<Policia>
+    -edificio : List<Edificio>
+    -ciudades : List<Ciudad>
+    -ladrones : List<Ladron>
+    -dossierLadrones: DossierLadrones
+    -objetosRobados: List<ObjetoRobado>
+    -estrategiasDeEscape: List<EstrategiasDeEscape>
+}
 
+class Partida
+{
+    - ciudadActual: Ciudad
+    - reloj : Reloj
+    - ladron : Ladron
+    - objetoRobado : ObjetoRobado
+    - estrategiasDeEscape: EstrategiaDeEscape
+
+    +pedirOrdenDeCaptura(): void
     +viajarA() : void
     +entrarA(): void
 }
+AlgoThieft --> Partida
+
 @enduml

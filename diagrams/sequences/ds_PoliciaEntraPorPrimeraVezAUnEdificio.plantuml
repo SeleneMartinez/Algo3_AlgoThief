@@ -1,10 +1,14 @@
 @startuml
-Juego -->Policia ++: visitarEdificio(edificio : Edificio)
+Juego --> Partida: visitarEdificio(policia: Policia, edificio Edificio): void
+Partida --> Policia ++: visitarEdificio(edificio : Edificio) : Pista
 Policia --> Edificio : agregarVisita(): void
-Edificio --> Edificio:
+Edificio --> Edificio: obtenerDemora(): int
+Edificio  --> Visita: obtenerDemora(): int
+Visita --> Edificio : demora int
+Edificio --> Policia : agregarDemora(demora : int) : void
 Policia --> Edificio: buscarLadron(): Ladron
 alt "no esta el ladron"
     Policia --> Edificio : obtenerPista() : Pista
-    Edificio --> Policia : demorar() : void
+    Edificio --> Policia: Pista obtenerPista
 end
 @enduml
