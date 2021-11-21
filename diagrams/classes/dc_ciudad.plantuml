@@ -2,7 +2,7 @@
 class Ciudad
 {
     - nombre
-    - ciudadConecatdas : List<Ciudad>
+    - ciudadConectadas : List<Ciudad>
 }
 interface Edificio
 {
