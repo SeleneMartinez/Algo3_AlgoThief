@@ -7,7 +7,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 ## Grupo {N}
 
 * **Martinez, Selene** - [integrante1](https://github.com/SeleneMartinez)
-* **Integrante 2** - [integrante2](https://github.com/integrante2)
+* **Oshiro, Lucas** - [integrante2](https://github.com/LucasOshiro1)
 * **Rubachin, Federico** - [integrante3](https://github.com/federubachin)
 * **Duca, Francisco** - [integrante4](https://github.com/franciscoduc4)
 * **Vargas, Rodrigo** - [integrante5](https://github.com/Scuero)
