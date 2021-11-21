@@ -1,6 +1,5 @@
 lenguage: java
 jdk: 
-  -openjdk8
+  -openjdk11
 script: 
-  mvn clean install
   mvn clean test
