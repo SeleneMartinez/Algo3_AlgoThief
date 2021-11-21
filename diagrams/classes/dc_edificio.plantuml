@@ -1,0 +1,38 @@
+@startuml
+interface Edificio
+{
+    -cantVecesVisitado : int
+    + obtenerPista(): Pista
+}
+
+class Biblioteca
+{
+    -pista :Pista
+}
+
+class Banco
+{
+    -pista :Pista
+}
+
+class Aeropuerto
+{
+    -pista :Pista
+}
+class Puerto
+{
+    -pista :Pista
+}
+class Bolsa
+{
+    -pista :Pista
+}
+
+Edificio<|.. Bolsa
+Edificio<|.. Banco
+Edificio<|.. Aeropuerto
+Edificio<|.. Puerto
+Edificio<|.. Biblioteca
+
+
+@enduml

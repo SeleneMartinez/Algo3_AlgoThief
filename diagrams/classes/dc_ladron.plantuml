@@ -1,0 +1,20 @@
+@startuml
+class Ladron
+{
+}
+
+interface Arma
+{
+}
+
+class Cuchillo
+{
+}
+class Pistola
+{
+}
+
+Ladron --> Arma
+Arma <|.. Cuchillo
+Arma <|.. Pistola
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+class Policia
+{
+
+}
+interface Rango
+{
+    +dificultad(): Dificultad
+}
+
+class Detective
+{
+    -tiempoDeViaje
+}
+class Novato
+{
+    -tiempoDeViaje
+}
+class Sargento
+{
+    -tiempoDeViaje
+}
+class Investigador
+{
+    -tiempoDeViaje
+}
+
+Policia -->Rango
+Rango <|..Investigador
+Rango <|..Sargento
+Rango <|.. Detective
+Rango <|..Novato
+
+@enduml

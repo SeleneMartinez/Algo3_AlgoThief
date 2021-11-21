@@ -1,0 +1,16 @@
+@startuml
+class AlgoThieft
+{
+    -pistas : Pista
+    -jugador : Jugador
+    -tiempo : Tiempo
+    -lugares : Lugar
+    -ciudad : Ciudad
+    -ladrones : Ladron
+    -objetosRobados: Objetos
+    -estrategiasDeEscape: EstrategiasDeEscape
+
+    +viajarA() : void
+    +entrarA(): void
+}
+@enduml

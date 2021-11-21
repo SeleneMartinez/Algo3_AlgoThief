@@ -1,0 +1,26 @@
+@startuml
+class Pistas
+{
+    -edificio : Edificio
+    -ciudad : Ciudad
+    -pista : string
+}
+
+class Dificultad
+{
+}
+class Facil
+{
+}
+class Medio
+{
+}
+class Dificil
+{
+}
+
+Pistas --->Dificultad
+Dificultad <|-- Facil
+Dificultad <|-- Medio
+Dificultad <|-- Dificil
+@enduml

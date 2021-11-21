@@ -1,0 +1,27 @@
+@startuml
+    interface Visita
+    {
+        +agregarVisita() : Visita
+        +obtenerDemora(): int
+    }
+    class PrimeraVisita
+    {
+        +agregarVisita : SegundaVisita
+    }
+    class SegundaVisita
+    {
+        +agregarVisita : VisitaTercera
+    }
+    class TerceraVisita
+    {
+        +agregarVisita : NoSePuedeVisitar
+    }
+    class NoVisitado
+    {
+        +agregarVisita : PrimeraVisita
+    }
+    Visita <|..SegundaVisita
+    Visita <|..TerceraVisita
+    Visita <|..NoVisitado
+    Visita <|...PrimeraVisita
+@enduml
