@@ -9,7 +9,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Martinez, Selene ** - [integrante1](https://github.com/SeleneMartinez/Algo3_AlgoThieft)
 * **Integrante 2** - [integrante2](https://github.com/integrante2)
 * **Rubachin, Federico** - [integrante3](https://github.com/federubachin)
-* **Integrante 4** - [integrante4](https://github.com/integrante4)
+* **Duca, Francisco** - [integrante4](https://github.com/franciscoduc4)
 * ** Vargas, Rodrigo ** - [integrante5](https://github.com/Scuero)
 
 Corrector: **{Corrector}**
