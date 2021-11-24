@@ -1,6 +1,6 @@
 ![tp2](https://github.com/SeleneMartinez/Algo3_AlgoThieft/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThieft/branch/master/graph/badge.svg)](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThieft)
 
-# TP2 Algoritmos 3: {AlgoThieft} 
+# TP2 Algoritmos 3: AlgoThieft 
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
