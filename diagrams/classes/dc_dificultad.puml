@@ -1,0 +1,46 @@
+@startuml
+interface Dificultad
+{
++obtenerDificultadDePistas():Pistas
++obtenerDificultadDeRutaDeEscape(): RutaDeEscape
+}
+
+class Facil
+{
+}
+class Media
+{
+}
+class Dificil
+{
+}
+class MuyDificil
+{
+}
+
+class RutaFacil
+{
+}
+class RutaMedioDificil
+{
+}
+class RutaDificil
+{
+}
+
+
+
+Facil ..>RutaFacil
+Media ..>RutaMedioDificil
+Dificil..>RutaMedioDificil
+MuyDificil...>RutaDificil
+
+Facil ...>PistaFacil
+Media...>PistaMedia
+Dificil...>PistaDificil
+MuyDificil..>PistaDificil
+Dificultad<|...Facil
+Dificultad<|...Media
+Dificultad<|... Dificil
+Dificultad<|...MuyDificil
+@enduml
