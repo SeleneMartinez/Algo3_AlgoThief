@@ -1,0 +1,22 @@
+@startuml
+interface Pista
+{
+   +obtenerPistas(ciudades): void
+}
+
+class PistaFacil
+{
+    +obtenerPistas(ciudades): void
+}
+class PistaMedia
+{
+    +obtenerPistas(ciudades): void
+}
+class PistaDificil
+{
+    +obtenerPistas(ciudades): void
+}
+Pista<|...PistaFacil
+Pista<|...PistaMedia
+Pista<|...PistaDificil
+@enduml
