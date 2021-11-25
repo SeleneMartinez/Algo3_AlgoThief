@@ -1,6 +1,7 @@
 @startuml
 class Ladron
 {
+    
 }
 
 interface Arma
@@ -12,6 +13,19 @@ class Cuchillo
 }
 class Pistola
 {
+}
+
+interface Orden
+{
+    + tengoOrdenDeCaptura(Ladron ladron) : void
+}
+class OrdenDeCaptura
+{
+    + tengoOrdenDeCaptura(Ladron ladron) : void
+}
+class OrdenDeCapturaInvalida
+{
+    + tengoOrdenDeCaptura(Ladron ladron) : void
 }
 
 Ladron --> Arma

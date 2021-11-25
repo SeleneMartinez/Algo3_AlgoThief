@@ -2,7 +2,7 @@
 Juego --> Partida: visitarEdificio(Policia policia, edificio EdificioConPista): void
 Partida --> EdificioSinPista: visitarEdificio(policia): void
 alt "esta con orden de arresto"
-    EdificioSinPista --> EdificioSinPista : capturar(): void
+    EdificioSinPista --> EdificioSinPista : buscarLadron(): void
     Ladron --> Ladron: entregarme(): void
     Ladron --> OrdenDeCaptura : tengoOrdenDeCaptura(Ladron ladron)
     OrdenDeCaptura --> Ladron : capturado(): void

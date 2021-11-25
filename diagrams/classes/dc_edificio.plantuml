@@ -2,21 +2,18 @@
 
 interface Edificio
 {
-    
+    +visitarEdificio: void
 }
+
 interface EdificioConPista
 {
-    visitarEdificio(): void
-}
-interface EdificioConPista
-{
-    -cantVecesVisitado : int
+    - visita : Visita 
     +visitarEdificio : void
-    + obtenerPista(): Pista
 }
-interface EdificioSinPista
+class EdificioSinPista
 {
-    obtenerPista():Pista
+    +visittarEdificio():void
+    -buscarLadron(): void
 }
 
 class Biblioteca
