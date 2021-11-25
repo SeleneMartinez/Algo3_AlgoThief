@@ -1,22 +1,22 @@
-![tp2](https://github.com/SeleneMartinez/Algo3_AlgoThieft/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThieft/branch/master/graph/badge.svg)](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThieft)
+![tp2](https://github.com/SeleneMartinez/Algo3_AlgoThief/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThief/branch/master/graph/badge.svg)](https://codecov.io/gh/SeleneMartinez/Algo3_AlgoThief)
 
-# TP2 Algoritmos 3: {nombre} 
+# TP2 Algoritmos 3: AlgoThief 
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
 ## Grupo {N}
 
 * **Martinez, Selene** - [integrante1](https://github.com/SeleneMartinez)
-* **Integrante 2** - [integrante2](https://github.com/integrante2)
+* **Oshiro, Lucas** - [integrante2](https://github.com/LucasOshiro1)
 * **Rubachin, Federico** - [integrante3](https://github.com/federubachin)
 * **Duca, Francisco** - [integrante4](https://github.com/franciscoduc4)
-* ** Vargas, Rodrigo ** - [integrante5](https://github.com/Scuero)
+* **Vargas, Rodrigo** - [integrante5](https://github.com/Scuero)
 
 Corrector: **{Corrector}**
 
 ## Aplicación
 
-La versión más reciente de la aplicación puede encontrarse en la pestaña [releases](https://github.com/SeleneMartinez/Algo3_AlgoThieft/releases/latest) y ejecutarse en Linux, Windows o Mac de esta forma:
+La versión más reciente de la aplicación puede encontrarse en la pestaña [releases](https://github.com/SeleneMartinez/Algo3_AlgoThief/releases/latest) y ejecutarse en Linux, Windows o Mac de esta forma:
 
 ```bash
 $ java -jar <archivo.jar>
