@@ -1,28 +1,33 @@
 @startuml
 class Policia
 {
-
+    - int casosResueltos
 }
 interface Rango
 {
+    + rangoSiguiente(int casosResueltos): Rango
     +dificultad(): Dificultad
 }
 
 class Detective
 {
-    -tiempoDeViaje
+    -int tiempoDeViaje
 }
 class Novato
 {
-    -tiempoDeViaje
+    -int tiempoDeViaje
 }
 class Sargento
 {
-    -tiempoDeViaje
+    -int tiempoDeViaje
 }
 class Investigador
 {
-    -tiempoDeViaje
+    -int tiempoDeViaje
+}
+
+interface Dificultad
+{
 }
 
 Policia -->Rango
@@ -30,5 +35,5 @@ Rango <|..Investigador
 Rango <|..Sargento
 Rango <|.. Detective
 Rango <|..Novato
-
+Rango ...> Dificultad
 @enduml

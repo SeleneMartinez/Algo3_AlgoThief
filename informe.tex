@@ -1,0 +1,281 @@
+\documentclass[titlepage,a4paper]{article}
+
+\usepackage{a4wide}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,bookmarksopen=true]{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\pagestyle{fancy} % Encabezado y pie de página
+\fancyhf{}
+\fancyhead[L]{TP1 AlgoThieft}
+\fancyhead[R]{Algoritmos y Programación III - FIUBA}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{titlepage} % Carátula
+	\hfill\includegraphics[width=6cm]{logofiuba.jpg}
+    \centering
+    \vfill
+    \Huge \textbf{Trabajo Práctico 2 — Java}
+    \vskip2cm
+    \Large [7507/9502] Algoritmos y Programación III\\
+    Curso 02 \\ % Curso 1 para el de la tarde y 2 para el de la noche
+    Segundo cuatrimestre de 2021 
+    \vfill
+    \begin{tabular}{ | l | l | l | } % Datos del alumno
+      \hline
+      Padron & Apellido y Nombre & Mail \\ \hline
+      100439 & Martinez, Selene & semartinez@fi.uba.ar \\ \hline
+      padron & apellido  nombre & mail \\ \hline
+      padron & apellido  nombre & mail \\ \hline
+      padron & apellido  nombre & mail \\ \hline
+      padron & apellido  nombre & mail \\ \hline
+  	\end{tabular}
+    \vfill
+    \vfill
+\end{titlepage}
+
+\tableofcontents % Índice general
+\newpage
+
+\section{Introducción}\label{sec:intro}
+El presente informe reune la documentación de la solución del primer trabajo práctico de la materia Algoritmos y Programación III que consiste en desarrollar una aplicación de un sistema detección de covid en Pharo utilizando los conceptos del paradigma de la orientación a objetos vistos hasta ahora en el curso.
+
+\section{Supuestos}\label{sec:supuestos}
+% Deberá contener explicaciones de cada uno de los supuestos que el alumno haya tenido que adoptar a partir de situaciones que no estén contempladas en la especificación.
+
+Para la resolución del trabajo práctico tuve en cuenta los siguientes supuestos:
+\begin{enumerate}
+  \item Defecto puede ser un diagnóstico del sistema cuando se ingresa por primera vez a una persona.
+  \item Si una persona que es personal esencial se vacuna su estado pasa a ser Vacunado.
+  \item Ninguna persona con sintomas puede tener un diagnostico que no sea Sospechoso o Positivo.
+  \item Un colegio puede tener clases presenciales aunque no tenga burbujas.
+  \item Si una persona tiene un contacto Estrecho con un Sospechoso el diagnostico 'Contacto Estrecho Sospechoso' se superpone a todos los diagnosticos menos a:
+  \begin{itemize}
+      \item Contacto Estrecho Positivo
+      \item Positivo
+      \item Sospechoso
+  \end{itemize}
+  \item Si una persona tiene un contacto estrecho con un positivo el diagnostico 'Contacto Estrecho Positivo' se superpone a todos los diagnosticos menos a:
+    \begin{itemize}
+      \item Positivo
+      \item Sospechoso
+  \end{itemize}
+  \item Sospechoso solo puede cambiar de diagnostico a Positivo.
+  \item Una persona con covid positivo no cambia de diagnostico, solo se le agregan síntomas.
+  
+  Items 7 y 8 van a modificarse en futuras implementaciones a medida que pierdan sintomas y/o pasen los días de aislamiento correspondientes.
+  
+   
+\end{enumerate}
+
+
+
+
+
+
+\section{Diagramas de clase}\label{sec:diagramasdeclase}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{AlgovidCompuestoPorPersonas.png}
+\caption{\label{fig:class01}Diagrama Programa AlgoVid y su relación con la clase Persona.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{dc_AlgoVidCompuestoPorColegios.png}
+\caption{\label{fig:class02}Diagrama del programa AlgoVid y su relación con la clase Colegio. A su vez muestra la relación entre Colegio y Burbuja.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{dc_AlgovidCompuestoPorBurbujas.png}
+\caption{\label{fig:class03}Diagrama Programa AlgoVid y su relación con la clase Burbuja. Además muestra la relación entre Burbuja <-> su estado y Burbuja <-> Personas}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\textwidth]{dc_Estado_Herencia.png}
+\caption{\label{fig:class04}Diagrama de la clase Estado y su relación con sus hijos.
+}
+\end{figure}
+Estado le delega a las clases abstractas Habilitado/NoHabilitado la implementación de setHabilitacion.\hfill
+
+Vacunadx, Defecto, PersonalEsencial,NoVacunado y CovidNegativo implementan el método setEstado. Por el contrario, la clase abstracta Aislado se lo delega a sus hijos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\textwidth]{dc_Aislado.png}
+\caption{\label{fig:class05}Diagrama de Aislado, incluye clase madre y clases hijas. Las clases hijas implementan el metodo setEstado. Las clases Sospechoso, Positivo y Estrecho Positivo hacen un override del método actualizarEstadoPorburbujaPinchada()}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\textwidth]{dc_Protocolo_Depende_De_Estado.png}
+\caption{\label{fig:class06}Diagrama de estado sobre cómo se relaciona el Estado y el protocolo. Por defecto obtenerProtocolo devuelve ProtoloNoPositivo, si la subclase de estado es Positivo entonces devuelve una instancia de ProtocoloPositivo}
+\end{figure}
+
+\section{Detalles de implementación}\label{sec:implementacion}
+
+% Explicaciones sobre la implementación interna de algunas clases que consideren que puedan llegar a resultar interesantes.
+
+
+
+
+\subsection{Colecciones en AlgoVid}
+Dado que algoVid almacena varias personas, burbujas y colegios, me decanté por usar una Ordered Collection para los tres atributos
+
+\subsection{Protocolo sin Herencia}
+ProtocoloNoPositivo y Protocolo positivo entienden el mismo mensaje: 'activarProtocoloa: Burbuja'.
+
+
+Persona le pide el protocolo a diagnóstico -> Diagnostico a Estado -> estado al obtenerProtocolo devuelve ProtocoloNoPositivo si es distinto a Positivo. Positivo devuelve un ProtocoloPositivo debido al override.
+
+No necesito usar herencia debido a que ambas clases entienden el mismo mensaje, tampoco necesito que ambas clases compartan la interfaz ya que si bien comparten la firma de un método, solo tienen uno y sus ejecuciones son distintas.
+\subsection{Habilitado/NoHabilitado}
+Estas son dos clases abstractas pero que definen la implementacion del método: 
+\verb   setHabilitación() \newline
+este mensaje establece el estado true o false del atributo habilitadoCirculación de Estado.
+
+Clases que heredan de NoHabilitado:
+\begin{itemize}
+\item Aislado
+\item NoVacunado
+\item Defecto
+\end{itemize}
+ninguna de ellas tiene permiso para circular
+\newline
+
+Clases que heredan de Habilitado
+\begin{itemize}
+\item Vacunadx
+\item PersonalEsencial
+\item CovidNegativo
+\end{itemize}
+todas tienen permiso para circular
+\newline
+
+\subsection{Aislado}
+Es una clase que no puede ser PersonalEsencial, por más que se vacune no puede salir -> su estado no cambia porque con Vacuna aún contagian/Pueden Contagiarse,  hereda de NoHabilitado. Si se le envía el mensaje deRiesgo se devuelve a sí misma debido a que por más que puedan ser de riesgo, están en aislamiento por sintomas/contacto estrecho.
+Las personas de riesgo se mantienen siendo de riesgo.
+
+Acontinuación se enumerarán clases que heredan de Aislado y sus particularidades
+
+\subsubsection{PersonaDeRiesgo}
+No puede ser Esencial porque corre peligro. Es de riesgo aunque se vacune. Por eso hereda de aislado. 
+
+\subsubsection{EstrechoPositivo}
+Esta clase además de Heredar de Aislado utiliza un override en actualizarPor: para evitar que pase de contacto estrecho positivo a contacto estrecho sospechoso.
+
+\subsubsection{EstrechoSospechoso}
+Esta clase si puede cambiar por contacto estrecho
+
+\subsubsection{PuedeTenerSintomas}
+A diferencia de las dos clases anteriores que ante el primer sintoma cambian automáticamente a Sospechoso, estas pueden agregar varios sintomas al mismo tiempo. No se debe a no ser que sea parte de una actualización de estado ya que se podría tener un positivo con menos de 4 sintomas y ninguno habitual. Como sospechoso nunca va a utilizar conSintomas: sintomas, se lo deja sin implementar.
+Las dos clases siguientes heredan de PuedeTenerSintomas.
+
+
+\subsubsection{Sospechoso}
+actualizarPorBurbujaPinchada no actualiza a EstrechoPositivo porque es más riesgoso ser Sospechoso que un contacto estrecho. Lo mismo sucede con actualizaPor: contactoEstrechoPositivo/Sospechoso.
+
+Cuando agregamos un sintoma a Sospechoso primero lo va a agregar a los sintomas que son una OrderedCollection.
+Luego se pregunta haySintomasHabituales y sintomas size = 3 o sintomas size >4.
+Esto es porque si tiene tres sintomas y por lo menos uno es habitual de covid, o tiene mas de tres sintomas, tiene actualizar el diagnostico a Positivo. Si no se deveulve a si mismo.
+
+\subsubsection{Positivo}
+actualizarPorBurbujaPinchada también se sobreescribe así como actualizar:Por ya que Positivo es el rango más alto de contagio,
+Cuando agregamos sintoma simplemente lo agrega con add: sintoma a la OrderedCollection de los sintomas.
+
+ContactoEstrecho devuelve estrechoPositivo.
+
+
+
+
+
+
+\subsection{Burbuja}
+
+La clase Burbuja tiene un atributo llamado estado. Este atributo por defecto es BurbujaSana, si se pincha la burbuja cambia a BurbujaPinchada.
+
+Cuando la Burbuja recibe el mensaje pincharBurbuja delega al estado el cambio del mismo y la notificación a integrantes ya que BurbujaSana y BurbujaPinchada entienden los mismos mensajes, solo cambia su implementacion,
+
+
+
+\subsection{Conflictos que se me presetaron}
+A la hora de desarrollar el tp me generaba conflicto que persona se transformara en contactoEstrechoPositivo y la burbuja automaticamente tenia que pincharse. No me gustaba la idea de pasarle la burbuja a mi diagnostico para que se encargue. \newline
+Lo que buscaba era una forma de poder decirle a la persona 'pincha tu burbuja' se lo delegue a la burbuja.
+Pensé en crear una clase PersonaPositiva y que sepa pinchar la burbuja si fuese positiva, si no, que no haga nada. Pero surgía un   nuevo problema: Cómo actualizar el diagnostico. No quiero que la persona se encargue de saber cómo actualizar su estado. Quiero delegarlo.\newline
+Luego de mucho pensar llegué a esta aproximación:\newline
+
+Una persona tiene un diagnostico que es instancia de Diagnóstico, una burbuja que es instancia de Burbuja, un protocolo que es ProtocoloNoPositivo/ProtocoloPositivo dependiendo del diagnostico.
+La persona le dice al diagnostico agregar sintomas, el diagnostico se lo pasa al estado. Todos los estados menos el Sospechoso y Positivo cambian automaticamente a Sospechoso al agregar un sintoma.
+Por defecto se crea un Diagnostico con un estado Defecto que tiene un protocolo no positivo.
+Positivo es la única clase con un ProtocoloPositivo.
+Al agregar un sintoma se actualiza el protocolo (por si es positivo). El protocolo le envia a la burbuja  
+activarProtocoloPorSintoma: sintoma para que se pinche si es un ProtocoloPositivo. Si no lo es no hace nada. \newline
+
+
+
+Por ahora tengo una OrderedCollection de sintomasHabituales, tal vez estaria bueno que sea una OrderedCollection de Sintomas y que una clase Sintoma sepa si es Habitual o NoHabitual como Protocolo/ Burbuja.
+
+\subsection{Aclaraciones}
+Aislado, Habilitado/NoHabilitado/ PuedeTenerSintoma/Estado no deben instanciarse.
+
+
+\section{Excepciones}\label{sec:excepciones}
+% Explicación de cada una de las excepciones creadas y con qué fin fueron creadas.
+
+\begin{description}
+\item[Exception]NoPudoEncontrarPersona, se lanza cuándo se le pide a algovid que busque una persona que no esta instanciada o sin nombre.
+\item[Excepcion] NoPudoEncontrarBurbuja se lanza cuándo se le pide a algovid que busqe una burbuja no instanciada o sin nombre
+\item[Excepcion] NoPudoEncontrarColegio se lanza cuando se le pide a algovid que busque un colegio no instanciado o sin nombre. 
+
+
+\end{description}
+\subsection{Manejo de Excepciones}
+
+Decidí hacer tres excepciones separadas para que la persona sepa bien dónde está fallando ya que, al hacer algovid agregar: nombreBurbuja a: nombreColegio, si no encuentra alguno de los dos lanzaría notFound  pero no sabría cuál de los dos no pudo encontrar.
+Cuando a colegio se le envía el mensaje clasesPresenciales, este devuelve true o false dependiendo del porcentaje de burbujas pinchadas. Para calcular el porcentaje de burbujas pinchadas la clase divide BurbujasPinchadas sobre BurbujasTotales. Si el colegio no tiene burbujas va a lanzar ZeroDivisionError. Tomé la decisiónn de manejar esta excepción haciendo que si no hay burbujas en colegio el porcentajeDeBurbujasPinchadas tiene que devolver burbujasTotales, es decir 0.
+
+
+\section{Diagramas de secuencia}\label{sec:diagramasdesecuencia}
+% Mostrar las secuencias interesantes que hayan implementado. Pueden agregar texto para explicar si algo no queda claro.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\textwidth]{ds_AgregarSintomaASospechosoCon3SitomasLoVuelvePositivo.png}
+\caption{\label{fig:seq07}Si agregaSintoma a Sospechoso con tres sintomas se vuelve Positivo.}
+\end{figure}
+
+Luego de que diagnostico actualice su estado de Sospechoso a Positivo, Persona va a actualizar su protocolo, pidiendoselo al diagnostico, y por último activa el protocolo correspondiente al diagnostico.
+En este caso al ser Positivo el protocolo debería cambiar el estado de todos en la burbuja a estrecho Positivo y pinchar la misma.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9 \textwidth]{ds_AgregarSintomaHabitualASospechosoConUnSintomaLoMantieneSospechoso.png}
+\caption{\label{fig:seq08}Si sospechoso tiene dos o menos sintomas, aunque se le adicione un sintoma habitual, su diagnostico va a ser Sospechoso}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{ds_personaActivaProtocoloPositivo.png}
+\caption{\label{fig:seq09}Persona Positiva activa protocolo y pincha su burbuja}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{ds_actualizar_por_burbuja_pinchada.png}
+\caption{\label{fig:seq10}Diagrama de secuencia dependiendo de que estado es es el diagnostico que se obtiene luego de pinchar la burbuja}
+\end{figure}
+
+
+
+\end{document}
