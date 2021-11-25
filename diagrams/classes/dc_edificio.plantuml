@@ -1,8 +1,22 @@
 @startuml
+
 interface Edificio
 {
+    
+}
+interface EdificioConPista
+{
+    visitarEdificio(): void
+}
+interface EdificioConPista
+{
     -cantVecesVisitado : int
+    +visitarEdificio : void
     + obtenerPista(): Pista
+}
+interface EdificioSinPista
+{
+    obtenerPista():Pista
 }
 
 class Biblioteca
@@ -28,11 +42,14 @@ class Bolsa
     -pista :Pista
 }
 
-Edificio<|.. Bolsa
-Edificio<|.. Banco
-Edificio<|.. Aeropuerto
-Edificio<|.. Puerto
-Edificio<|.. Biblioteca
+EdificioConPista<|.. Bolsa
+EdificioConPista<|.. Banco
+EdificioConPista<|.. Aeropuerto
+EdificioConPista<|.. Puerto
+EdificioConPista<|.. Biblioteca
+
+Edificio <|... EdificioConPista
+Edificio <|..EdificioSinPista
 
 
 @enduml
