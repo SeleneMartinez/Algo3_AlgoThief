@@ -4,7 +4,7 @@
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo {N}
+## Grupo 13
 
 * **Martinez, Selene** - [integrante1](https://github.com/SeleneMartinez)
 * **Oshiro, Lucas** - [integrante2](https://github.com/LucasOshiro1)
@@ -12,7 +12,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Duca, Francisco** - [integrante4](https://github.com/franciscoduc4)
 * **Vargas, Rodrigo** - [integrante5](https://github.com/Scuero)
 
-Corrector: **{Corrector}**
+Corrector: **Fontela, Joaquín**
 
 ## Aplicación
 
