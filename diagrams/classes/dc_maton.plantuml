@@ -15,6 +15,9 @@ class Pistola
 {
 }
 
+class Ladron
+{
+}
 interface Orden
 {
     + tengoOrdenDeCaptura(Ladron ladron) : void
@@ -32,4 +35,5 @@ Orden <|.. OrdenDeCapturaInvalida
 Maton --> Arma
 Arma <|.. Cuchillo
 Arma <|.. Pistola
+Ladron --> Orden
 @enduml
