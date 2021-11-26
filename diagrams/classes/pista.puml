@@ -1,5 +1,5 @@
 @startuml
-class Pista
+interface Pista
 {
     - pista: string
     + obtenerRespuesta(): string

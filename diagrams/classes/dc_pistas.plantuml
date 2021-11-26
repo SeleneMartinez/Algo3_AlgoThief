@@ -1,5 +1,5 @@
 @startuml
-class Pistas
+/'class Pistas
 {
     -edificio : Edificio
     -ciudad : Ciudad
@@ -17,10 +17,31 @@ class Medio
 }
 class Dificil
 {
+}'/
+
+interface Pista
+{
+    -pista: string
+    +obtenerRespuesta: string
+}
+class PistaFacil
+{
+    +obtenerRespuesta: string
 }
 
-Pistas --->Dificultad
-Dificultad <|-- Facil
-Dificultad <|-- Medio
-Dificultad <|-- Dificil
+class PistaMedia
+{
+    +obtenerRespuesta: string
+}
+
+class PistaDificil
+{
+    +obtenerRespuesta: string
+}
+
+
+Pista <|.. PistaFacil
+Pista <|.. PistaMedia
+Pista <|..PistaDificil
+
 @enduml
