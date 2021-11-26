@@ -1,7 +1,7 @@
 @startuml
-class Ladron
+class Maton
 {
-    
+ + obtenerDemoraPorArma():int
 }
 
 interface Arma
@@ -27,8 +27,9 @@ class OrdenDeCapturaInvalida
 {
     + tengoOrdenDeCaptura(Ladron ladron) : void
 }
-
-Ladron --> Arma
+Orden <|.. OrdenDeCaptura
+Orden <|.. OrdenDeCapturaInvalida
+Maton --> Arma
 Arma <|.. Cuchillo
 Arma <|.. Pistola
 @enduml

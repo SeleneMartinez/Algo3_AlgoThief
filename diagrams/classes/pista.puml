@@ -1,0 +1,34 @@
+@startuml
+class Pista
+{
+    - pista: string
+    + obtenerRespuesta(): string
+}
+
+interface RespuestaDelEvento
+{
+   + obtenerRespuesta(): string
+}
+class Amenaza
+{
+    +obtenerRespuesta(): string
+}
+class LadronAtrapado
+{
+    +obtenerRespuesta(): string
+}
+class LadronEscapo
+{
+    +obtenerRespuesta(): string
+}
+class SinInformacion
+{
+    +obtenerRespuesta(): string
+}
+RespuestaDelEvento <|.. Pista
+RespuestaDelEvento <|.. Amenaza
+RespuestaDelEvento <|.. LadronAtrapado
+RespuestaDelEvento <|.. LadronEscapo
+RespuestaDelEvento <|.. SinInformacion
+
+@enduml

@@ -4,16 +4,13 @@ interface Edificio
 {
     +visitarEdificio: void
 }
-
-interface EdificioConPista
+class EdificioConMaton
 {
-    - visita : Visita 
-    +visitarEdificio : void
+    +visitar(Policia policia): Amenaza
 }
-class EdificioSinPista
+class EdificioConLadron
 {
-    +visittarEdificio():void
-    -buscarLadron(): void
+    +visitar((Policia policia): RespuestaDelEventos
 }
 
 class Biblioteca
@@ -39,14 +36,19 @@ class Bolsa
     -pista :Pista
 }
 
-EdificioConPista<|.. Bolsa
-EdificioConPista<|.. Banco
-EdificioConPista<|.. Aeropuerto
-EdificioConPista<|.. Puerto
-EdificioConPista<|.. Biblioteca
+class EdificioConPista
+{
+    +visitar(Policia policia): Pista
+}
+EdificioConPista<|-- Bolsa
+EdificioConPista<|-- Banco
+EdificioConPista<|-- Aeropuerto
+EdificioConPista<|-- Puerto
+EdificioConPista<|-- Biblioteca
 
+Edificio <|... EdificioConLadron
+Edificio <|... EdificioConMaton
 Edificio <|... EdificioConPista
-Edificio <|..EdificioSinPista
 
 
 @enduml

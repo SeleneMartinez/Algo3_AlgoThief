@@ -1,0 +1,11 @@
+@startuml
+Juego -> Partida++: visitarEdificio(Edificio edificio, Policia): RespuestaDelEvento
+Partida -> Ciudad++ : visitarEdificio(Edificio edificio, Policia policia): RespuestaDelEvento
+Ciudad -> EdificioConMaton : visitarEdificio(Policia, policia): RespuestaDelEvento
+EdificioConMaton -> Policia: amenazar (Maton maton): RespuestaDelEvento
+Policia -> EdificioConMaton : Amenaza
+EdificioConMaton -> Ciudad : Amenaza
+Ciudad -> Partida : Amenaza
+Partida -> Juego : Amenaza
+
+@enduml

@@ -2,6 +2,8 @@
 class Policia
 {
     - int casosResueltos
+    + amenaza(Maton maton): Amenaza
+    + demorar(int demora): void
 }
 interface Rango
 {

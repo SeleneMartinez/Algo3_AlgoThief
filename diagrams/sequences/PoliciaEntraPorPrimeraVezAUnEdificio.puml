@@ -1,0 +1,12 @@
+@startuml
+Juego -> Partida++: visitarEdificio(Edificio edificio, Policia policia): RespuestaDelEvento
+Partida ->CiudadSinLadron++ : visitarEdificio(Edificio edificio, Policia policia): RespuestaDelEvento
+CiudadSinLadron ->Edificio : visitarEdificio(Policia policia): RespuestaDelEvento
+Edificio -> Edificio: obtenerDemora() : int
+Edificio -> Edificio: agregarVisita(): void
+Edificio -> Policia: demorar(int demora): void
+Edificio --> CiudadSinLadron --: pista :RespuestaDelEvento
+CiudadSinLadron --> Partida : pista :RespuestaDelEvento
+Partida --> Juego--: pista : RespuestaDelEvento
+
+@enduml

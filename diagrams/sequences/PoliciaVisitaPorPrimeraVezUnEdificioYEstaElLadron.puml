@@ -1,0 +1,13 @@
+@startuml
+Juego -> Partida++: visitarEdificio(Edificio edificio, Policia): RespuestaDelEvento
+Partida -> Ciudad++ : visitarEdificio(Edificio edificio, Policia policia): RespuestaDelEvento
+Ciudad -> Edificio : visitarEdificio(Policia, policia): RespuestaDelEvento
+Edificio -> Policia: capturar (Ladron ladron): RespuestaDelEvento
+Policia -> OrdenDeCaptura: tieneOrdenDeCaptura(Ladron ladron)): RespuestaDelEvento
+OrdenDeCaptura -> Policia: ladronAtrapado
+Policia -> Edificio : ladronAtrapado
+Edificio -> Ciudad : ladronAtrapado
+Ciudad -> Partida : ladronAtrapado
+Partida -> Juego : ladronAtrapado
+
+@enduml
