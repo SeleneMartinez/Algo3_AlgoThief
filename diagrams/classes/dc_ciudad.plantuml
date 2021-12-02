@@ -4,7 +4,7 @@ class Ciudad
     - nombre
     - ciudadConectadas : List<Ciudad>
 }
-interface Edificio
+abstract Edificio
 {
     -cantVecesVisitado : int
     + visitarEdificio(): void

@@ -19,7 +19,7 @@ class Dificil
 {
 }'/
 
-interface Pista
+abstract Pista
 {
     -pista: string
     +obtenerRespuesta: string
