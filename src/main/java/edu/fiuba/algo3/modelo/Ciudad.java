@@ -12,6 +12,10 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
+    public String darNombre(){
+        return nombre;
+    }
+
     public void agregarConexion(Ciudad ciudad) {
         ciudadesConectadas.add(ciudad);
     }

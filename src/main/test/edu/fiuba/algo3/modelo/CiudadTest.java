@@ -24,13 +24,12 @@ public class CiudadTest {
         ciudades.get(0).agregarConexion( ciudades.get(1) );
         ciudades.get(0).agregarConexion( ciudades.get(2) );
         ciudades.get(1).agregarConexion( ciudades.get(4) );
-        ciudades.get(4).agregarConexion( ciudades.get(3) );
-        ciudades.get(4).agregarConexion( ciudades.get(2) );
         assertEquals(ciudades.get(0).devolverCiudadesConectadas().size(), 2);
         assertEquals(ciudades.get(1).devolverCiudadesConectadas().size(), 1);
-        assertEquals(ciudades.get(4).devolverCiudadesConectadas().size(), 2);
+        assertEquals(ciudades.get(0).devolverCiudadesConectadas().get(0).darNombre(), "Montreal" );
+        assertEquals(ciudades.get(0).devolverCiudadesConectadas().get(1).darNombre(), "Berlin" );
+        assertEquals(ciudades.get(1).devolverCiudadesConectadas().get(0).darNombre(), "Moscu" );
     }
-
 
     public List<Ciudad> crearCiudades() {
         List<Ciudad> ciudades = new ArrayList<Ciudad>();
