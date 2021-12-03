@@ -6,10 +6,12 @@ public class Policia {
     private Rango rango;
     private int cantEdificiosVisitados;
     private OrdenDeCaptura orden;
+    private Reloj reloj;
 
     public Policia(String nombre, int casosResueltos) {
         this.nombre = nombre;
         this.casosResueltos = casosResueltos;
+        this.reloj = new Reloj(0 , "Lunes");
         this.rangoSiguiente();
     }
 
@@ -17,6 +19,7 @@ public class Policia {
         this.nombre = nombre;
         this.casosResueltos = 0;
         this.rango = new RangoNovato();
+        this.reloj = new Reloj(0 , "Lunes");
         this.orden = null;
     }
 
@@ -45,9 +48,20 @@ public class Policia {
     }
 
     public void demorar(int demora){
-        Reloj.aumentarHora(demora);
+        reloj.aumentarHora(demora);
     }
 
+    public void herir(int herida) { reloj.aumentarHora(herida); }
+
+    public void dormir(){
+        reloj.aumentarHora(8);
+    }
+
+    /*public void visitarEdificio(){
+        return;
+    }
+
+    public boolean detener(Ladron ladron) { return true; }*/
 }
 
 
