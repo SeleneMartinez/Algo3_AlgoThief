@@ -35,7 +35,7 @@ public class Ciudad {
     }
 
     public Ciudad devolverCiudadAnterior() { 
-        return ciudadAnterior;}
+        return ciudadAnterior;
     }
 
     public List<Edificio> devolverEdificios(){
