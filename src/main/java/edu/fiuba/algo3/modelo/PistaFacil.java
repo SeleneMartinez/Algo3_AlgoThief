@@ -6,12 +6,12 @@ import java.io.BufferedReader;
 
 
 public class PistaFacil extends Pista {
-    String laPista;
+    public String laPista;
 
     public PistaFacil(String tipoEdificio, String ciudad) {
         try {
-            BufferedReader csvReader = new BufferedReader(new FileReader("pistas.csv"));
-            String linea = null;
+            BufferedReader csvReader = new BufferedReader(new FileReader("src/main/java/edu/fiuba/algo3/modelo/pistas.csv"));
+            String linea;
             while ((linea = csvReader.readLine()) != null) {
                 String[] datosPista = linea.split(";");
                 if (datosPista[0].equals(ciudad) && datosPista[1].equals("facil") && datosPista[2].equals(tipoEdificio)) {
