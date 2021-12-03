@@ -5,10 +5,10 @@ package edu.fiuba.algo3.modelo;
  */
 
 public class EdificioConMaton implements Edificio {
-    Maton maton = new Maton();
+    Maton maton = new Maton(new Cuchillo());
 
     public Amenaza visitarEdificio(Policia policia) {
-        policia.herir(maton.atacar());
+        policia.herir(maton.atacar(policia));
         return new Amenaza();
     };
 
