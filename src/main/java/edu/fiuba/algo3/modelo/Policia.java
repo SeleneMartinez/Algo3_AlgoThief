@@ -13,11 +13,11 @@ public class Policia {
         this.rangoSiguiente();
     }
 
-    public Policia(String nombre) {
-        nombre = nombre;
-        casosResueltos = 0;
-        rango = new RangoNovato();
-        orden = null;
+    public Policia(String nombre){
+        this.nombre = nombre;
+        this.casosResueltos = 0;
+        this.rango = new RangoNovato();
+        this.orden = null;
     }
 
     public String obtenerNombre() {
