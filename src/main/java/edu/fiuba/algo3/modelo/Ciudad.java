@@ -14,24 +14,19 @@ public class Ciudad {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
     }
-
     public String darNombre(){
         return nombre;
     }
-
     public void agregarConexion(Ciudad ciudad) {
         ciudadesConectadas.add(ciudad);
     }
-
-    public int obtenerDistanciaA(Ciudad destino){
-        return this.ubicacion.calcularDistancia(destino.ubicacion);
+    public void agregarCiudadAnterior(Ciudad ciudadAnterior) {
+        ciudadesConectadas.add(ciudadAnterior);
+        this.ciudadAnterior = ciudadAnterior;
     }
-    
-
-    /*public void agregarEdificio(Edificio edificio) {
+    public void agregarEdificio(IEdificio edificio) {
         edificiosEnCiudad.add(edificio);
     }
-
     public List<Ciudad> devolverCiudadesConectadas(){
         return ciudadesConectadas;
     }
@@ -40,8 +35,11 @@ public class Ciudad {
         return ciudadAnterior;
     }
 
-    public List<Edificio> devolverEdificios(){
+    public List<IEdificio> devolverEdificios(){
         return edificiosEnCiudad;
+    }
+    public int obtenerDistanciaA(Ciudad destino){
+        return this.ubicacion.calcularDistancia(destino.ubicacion);
     }
 
 }
