@@ -29,7 +29,13 @@ public class Reloj {
         this.dia=dia;
     }
     public void aumentarHora( int hora){
-        this.horario= this.horario+hora;
+        int nuevoHorario = this.horario + hora;
+        if (nuevoHorario >= 24) {
+            this.horario = nuevoHorario - 24;
+            this.cambioDia();
+        } else {
+            this.horario = nuevoHorario;
+        }
     }
     public void cambioDia(){
         this.dia=iteradorDias.next();
