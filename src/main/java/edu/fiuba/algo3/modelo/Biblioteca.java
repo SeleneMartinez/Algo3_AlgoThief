@@ -6,8 +6,7 @@ public class Biblioteca extends EdificioConPista {
         this.pista = new PistaFacil("Biblioteca", ciudad);
     }
 
-    public RespuestasDelEvento visitarEdificio(Policia policia) {
-        policia.entrarEdificio();
-        return pista;
+    public IRespuestaDelEvento visitarEdificio(Policia policia) {
+        return super.visitarEdificio(policia);
     }
 }

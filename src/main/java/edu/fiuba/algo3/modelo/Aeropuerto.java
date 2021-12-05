@@ -5,8 +5,7 @@ public class Aeropuerto extends EdificioConPista {
         this.pista = new PistaFacil("Aeropuerto", ciudad);
     }
 
-    public RespuestasDelEvento visitarEdificio(Policia policia) {
-        policia.entrarEdificio();
-        return pista;
+    public IRespuestaDelEvento visitarEdificio(Policia policia) {
+        return super.visitarEdificio(policia);
     }
 }

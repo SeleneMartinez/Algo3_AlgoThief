@@ -1,10 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
-public class EdificioConPista implements Edificio {
+public class EdificioConPista implements IEdificio {
     Pista pista;
+    IVisita visita = new PrimeraVisita();
 
-    public RespuestasDelEvento visitarEdificio(Policia policia) {
-        policia.entrarEdificio();
+    public IRespuestaDelEvento visitarEdificio(Policia policia) {
+        visita = visita.recibirVisita(policia);
         return pista;
     }
 }

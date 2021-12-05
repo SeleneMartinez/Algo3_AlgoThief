@@ -1,4 +1,4 @@
-/*package algothief;
+/* package algothief;
 import edu.fiuba.algo3.modelo.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,5 +22,4 @@ public class PoliciaTest {
         Policia policia = new Policia("Roberto");
         assertEquals(rangoTest, policia.obtenerRangoPolicia());
     }
-}
-*/
+}*/
