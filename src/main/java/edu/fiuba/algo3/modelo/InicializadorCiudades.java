@@ -1,14 +1,10 @@
 package edu.fiuba.algo3.modelo;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
-
 public class InicializadorCiudades {
 
     public InicializadorCiudades() {}
