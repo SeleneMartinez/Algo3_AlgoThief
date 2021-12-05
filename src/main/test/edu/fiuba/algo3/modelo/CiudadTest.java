@@ -33,11 +33,17 @@ public class CiudadTest {
 
     public List<Ciudad> crearCiudades() {
         List<Ciudad> ciudades = new ArrayList<Ciudad>();
-        Ciudad buenosAires = new Ciudad("Argentina");
-        Ciudad montreal = new Ciudad("Montreal");
-        Ciudad berlin = new Ciudad("Berlin");
-        Ciudad sidney = new Ciudad("Sidney");
-        Ciudad moscu = new Ciudad("Moscu");
+        Ubicacion ubicacionArgentina = new Ubicacion(50,50);
+        Ubicacion ubicacionMontreal = new Ubicacion(200,250);
+        Ubicacion ubicacionBerlin = new Ubicacion(250,250);
+        Ubicacion ubicacionSidney = new Ubicacion(300,350);
+        Ubicacion ubicacionMoscu = new Ubicacion(350,350);
+
+        Ciudad buenosAires = new Ciudad("Argentina", ubicacionArgentina);
+        Ciudad montreal = new Ciudad("Montreal", ubicacionMontreal);
+        Ciudad berlin = new Ciudad("Berlin", ubicacionBerlin);
+        Ciudad sidney = new Ciudad("Sidney",ubicacionSidney);
+        Ciudad moscu = new Ciudad("Moscu", ubicacionMoscu);
         ciudades.add(buenosAires);
         ciudades.add(montreal);
         ciudades.add(berlin);
