@@ -1,8 +1,10 @@
 package algothief;
+
 import edu.fiuba.algo3.modelo.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,6 +53,8 @@ public class CiudadTest {
         ciudades.add(moscu);
         return ciudades;
     }
+    @Test
+    public void inicializarCiudades() throws IOException {
 
-
+    }
 }

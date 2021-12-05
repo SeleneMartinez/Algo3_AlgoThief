@@ -1,0 +1,95 @@
+
+  [
+    {
+      "Ciudad": "New York City",
+      "Pais": "USA",
+      "Latitud": 600,
+      "Altitud": 1100
+    },
+    {
+    "Ciudad": "Montreal",
+    "Pais": "Canada",
+    "Latitud": 600,
+    "Altitud": 1200
+    },
+    {
+    "Ciudad": "Mexico", "Pais": "Mexico", "Latitud": 400, "Altitud": 900
+    },
+    {
+    "Ciudad": "Lima", "Pais": "Peru", "Latitud": 650, "Altitud": 600
+    },
+    {
+    "Ciudad": "Rio de Janeiro", "Pais": "Brazil", "Latitud": 900, "Altitud": 550
+    },
+    {
+    "Ciudad": "Buenos Aires", "Pais": "Argentina", "Latitud": 800, "Altitud": 350},
+    {
+    "Ciudad": "Reykjavik", "Pais": "Iceland", "Latitud": 1350, "Altitud": 1250
+    },
+    {
+    "Ciudad": "London", "Pais": "UK", "Latitud": 1400, "Altitud": 1250
+    },
+    {
+    "Ciudad": "Paris", "Pais": "France", "Latitud": 1400, "Altitud": 1200
+    },
+    {
+    "Ciudad": "San Marino", "Pais": "San Marino", "Latitud": 1300, "Altitud": 1200
+    },
+    {
+    "Ciudad": "Rome", "Pais": "Italy", "Latitud": 1300, "Altitud": 1150},
+    {
+    "Ciudad": "Oslo", "Pais": "Norway", "Latitud": 1300, "Altitud": 1350
+    },
+    {
+    "Ciudad": "Budapest", "Pais": "Hungary", "Latitud": 1600, "Altitud": 1200
+    },
+    {
+    "Ciudad": "Athens", "Pais": "Greece", "Latitud": 1600, "Altitud": 1100
+    },
+    {
+    "Ciudad": "Istanbul", "Pais": "Turkey", "Latitud": 1700, "Altitud": 1100
+    },
+    {
+    "Ciudad": "Moscow", "Pais": "Soviet Union", "Latitud": 1800, "Altitud": 1300},
+    {
+    "Ciudad": "Baghdad", "Pais": "Iraq", "Latitud": 1850, "Altitud": 1500
+    },
+    {
+    "Ciudad": "Cairo", "Pais": "Egypt", "Latitud": 1700, "Altitud": 1000
+    },
+    {
+    "Ciudad": "Bamako", "Pais": "Mali", "Latitud": 1300, "Altitud": 850
+    },
+    {
+    "Ciudad": "Kigali", "Pais": "Rwanda", "Latitud": 1700, "Altitud": 700
+    },
+    {
+    "Ciudad": "Moroni", "Pais": "Comoros", "Latitud": 1800, "Altitud": 600},
+    {
+    "Ciudad": "Kathmandu", "Pais": "Nepal", "Latitud": 2300, "Altitud": 100
+    },
+    {
+    "Ciudad": "New Delhi", "Pais": "India", "Latitud": 2200, "Altitud": 1000
+    },
+    {
+    "Ciudad": "Colombo", "Pais": "Sri Lanka", "Latitud": 2200, "Altitud": 75
+    },
+    {
+    "Ciudad": "Peking", "Pais": "China", "Latitud": 2550, "Altitud": 1100
+    },
+    {
+    "Ciudad": "Tokyo", "Pais": "Japan", "Latitud": 2800, "Altitud": 1050},
+    {
+    "Ciudad": "Bangkok", "Pais": "Thailand", "Latitud": 2350, "Altitud": 850
+    },
+    {
+    "Ciudad": "Singapore", "Pais": "Singapore", "Latitud": 2300, "Altitud": 700
+    },
+    {
+    "Ciudad": "Port Moresby", "Pais": "Papua New Guinea", "Latitud": 1150, "Altitud": 600
+    },
+    {
+    "Ciudad": "Sydney", "Pais": "Australia", "Latitud": 2900, "Altitud": 3500
+    }
+]
+
