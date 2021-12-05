@@ -11,7 +11,7 @@ public class RangoNovato implements IRango{
     public boolean esSargento(){ return false;}
 
     public int tiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino) {
-        return (int)((ciudadOrigen.distanciaA(ciudadDestino) / velocidad));
+        return (int)((ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
     public IRango obtenerRango(int casosResueltos)
