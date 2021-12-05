@@ -4,15 +4,8 @@ public class Policia {
     public String nombre;
     private int casosResueltos;
     private IRango rango;
-    private int cantEdificiosVisitados;
     private IOrdenDeCaptura orden;
     private Reloj reloj;
-
-    public Policia(String nombre, int casosResueltos) {
-        this.nombre = nombre;
-        this.casosResueltos = casosResueltos;
-        this.reloj = new Reloj(0 , "Lunes");
-    }
 
     public Policia(String nombre){
         this.nombre = nombre;
