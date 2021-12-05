@@ -1,17 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
 public class Maton {
-    Arma arma;
+    IArma arma;
 
-    public Maton(Cuchillo cuchillo) {
-        this.arma = cuchillo;
-    }
+    public Maton(IArma arma){this.arma = arma;}
 
-    public Maton(Pistola pistola) {
-        this.arma = pistola;
-    }
-
-    public int atacar(Policia policia) {
-        return arma.ataque(policia);
+    public IRespuestaDelEvento atacar(Policia policia) {
+        return arma.herir(policia);
     }
 }

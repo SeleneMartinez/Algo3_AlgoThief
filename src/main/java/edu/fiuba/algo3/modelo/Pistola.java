@@ -1,10 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
 
-public class Pistola implements Arma {
-    int damage = 4;
+public class Pistola implements IArma {
+    int demoraPorAtaque = 4;
 
-    public int ataque(Policia policia) {
-        return damage;
+    public IRespuestaDelEvento herir(Policia policia) {
+        policia.demorar(demoraPorAtaque);
+        return new Amenaza();
     }
 }

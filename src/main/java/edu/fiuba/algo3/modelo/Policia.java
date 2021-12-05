@@ -3,16 +3,15 @@ package edu.fiuba.algo3.modelo;
 public class Policia {
     public String nombre;
     private int casosResueltos;
-    private Rango rango;
+    private IRango rango;
     private int cantEdificiosVisitados;
-    private OrdenDeCaptura orden;
+    private IOrdenDeCaptura orden;
     private Reloj reloj;
 
     public Policia(String nombre, int casosResueltos) {
         this.nombre = nombre;
         this.casosResueltos = casosResueltos;
         this.reloj = new Reloj(0 , "Lunes");
-        this.rangoSiguiente();
     }
 
     public Policia(String nombre){
@@ -31,19 +30,7 @@ public class Policia {
         return this.casosResueltos;
     }
 
-    public void rangoSiguiente() {
-        if (this.casosResueltos < 5) {
-            this.rango = new RangoNovato();
-        } else if (5 <= this.casosResueltos && this.casosResueltos < 10){
-            this.rango = new RangoDetective();
-        } else if (10 <= this.casosResueltos && this.casosResueltos < 20){
-            this.rango = new RangoInvestigador();
-        } else if (20 <= this.casosResueltos){
-            this.rango = new RangoSargento();
-        }
-    }
-
-    public Rango obtenerRangoPolicia() {
+    public IRango obtenerRangoPolicia() {
         return this.rango;
     }
 
@@ -57,11 +44,19 @@ public class Policia {
         reloj.aumentarHora(8);
     }
 
+    public void nuevoCasoResuelto()
+    {
+        this.casosResueltos++;
+        this.rango = this.rango.obtenerRango(casosResueltos);
+    }
+
     /*public void visitarEdificio(){
         return;
     }
-
-    public boolean detener(Ladron ladron) { return true; }*/
+    */
+    public IRespuestaDelEvento detener(Ladron ladron) {
+        return this.orden.capturar(ladron);
+    }
 }
 
 
