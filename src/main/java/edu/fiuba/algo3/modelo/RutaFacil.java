@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class RutaFacil implements RutaDeEscape{
+public class RutaFacil implements IRutaDeEscape{
     List<Ciudad> ciudadesDeLaRuta = new ArrayList<Ciudad>();
     List<Ciudad> ciudadesConectadas = new ArrayList<Ciudad>();
     public void agregarCiudadEnLaRuta(Ciudad ciudad) {
         {
             ciudadesDeLaRuta.add(ciudad);
-            ciudadesConectadas.add(ciudad.devolverCiudadesConectadas());
-            ciudadesDeLaRuta.add(ciudadesConectadas[0]);
-            ciudadesDeLaRuta.add(ciudadesConectadas[1]);
-            ciudadesDeLaRuta.add(ciudadesConectadas[2]);
+            ciudadesConectadas.addAll(ciudad.devolverCiudadesConectadas());
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(0));
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(1));
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(2));
 
 
 

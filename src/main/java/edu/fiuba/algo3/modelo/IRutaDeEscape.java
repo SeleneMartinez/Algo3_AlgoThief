@@ -1,5 +1,5 @@
 package edu.fiuba.algo3.modelo;
 
-public interface RutaDeEscape {
+public interface IRutaDeEscape {
     Ciudad devolverProximaCiudad();
 }
