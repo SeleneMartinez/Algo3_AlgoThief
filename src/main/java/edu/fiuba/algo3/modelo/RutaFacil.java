@@ -10,10 +10,10 @@ public class RutaFacil implements IRutaDeEscape{
     public void agregarCiudadEnLaRuta(Ciudad ciudad) {
         {
             ciudadesDeLaRuta.add(ciudad);
-            ciudadesConectadas.add(ciudad.devolverCiudadesConectadas());
-            ciudadesDeLaRuta.add(ciudadesConectadas[0]);
-            ciudadesDeLaRuta.add(ciudadesConectadas[1]);
-            ciudadesDeLaRuta.add(ciudadesConectadas[2]);
+            ciudadesConectadas.addAll(ciudad.devolverCiudadesConectadas());
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(0));
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(1));
+            ciudadesDeLaRuta.add(ciudadesConectadas.get(2));
 
 
 
