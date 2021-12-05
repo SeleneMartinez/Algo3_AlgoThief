@@ -5,9 +5,10 @@ import java.util.List;
 
 public class Ciudad {
     String nombre;
+    Ciudad ciudadAnterior;
     List<Ciudad> ciudadesConectadas = new ArrayList<Ciudad>();
     Ubicacion ubicacion;
-    //List<Edificio> edificiosEnCiudad = new ArrayList<Edificio>(); // lista que contiene los 3 edificios en la cuidad
+    List<IEdificio> edificiosEnCiudad = new ArrayList<IEdificio>(); // lista que contiene los 3 edificios en la cuidad
 
     public Ciudad(String nombre, Ubicacion ubicacion){
         this.nombre = nombre;
@@ -29,14 +30,18 @@ public class Ciudad {
 
     /*public void agregarEdificio(Edificio edificio) {
         edificiosEnCiudad.add(edificio);
-    }*/
+    }
 
     public List<Ciudad> devolverCiudadesConectadas(){
         return ciudadesConectadas;
     }
 
-    /*public List<Edificio> devolverEdificios(){
+    public Ciudad devolverCiudadAnterior() { 
+        return ciudadAnterior;
+    }
+
+    public List<Edificio> devolverEdificios(){
         return edificiosEnCiudad;
-    }*/
+    }
 
 }
