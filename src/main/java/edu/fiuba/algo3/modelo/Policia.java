@@ -31,8 +31,6 @@ public class Policia {
         reloj.aumentarHora(demora);
     }
 
-    public void herir(int herida) { reloj.aumentarHora(herida); }
-
     public void dormir(){
         reloj.aumentarHora(8);
     }
@@ -42,13 +40,25 @@ public class Policia {
         this.casosResueltos++;
         this.rango = this.rango.obtenerRango(casosResueltos);
     }
-
-    /*public void visitarEdificio(){
-        return;
-    }
-    */
     public IRespuestaDelEvento detener(Ladron ladron) {
         return this.orden.capturar(ladron);
+    }
+
+    public void recibirOrdenDeCaptura(OrdenDeCaptura ordenDeCaptura){
+        this.orden = ordenDeCaptura;
+        this.demorarPorOrdenDeCaptura();
+    }
+
+    private void demorarPorOrdenDeCaptura() {
+        this.demorar(3);
+    }
+
+    public void viajarDesdeHasta(Ciudad origen, Ciudad destino){
+        this.demorar(this.rango.tiempoDeViaje(origen, destino));
+    }
+
+    public int obtenerHora(){
+        return reloj.obtenerHora();
     }
 }
 
