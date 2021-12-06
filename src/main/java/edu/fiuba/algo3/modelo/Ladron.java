@@ -1,10 +1,21 @@
 package edu.fiuba.algo3.modelo;
 
 public class Ladron{
+    public String nombre;
+    public String sexo;
+    public String hobby;
+    public String pelo;
+    public String auto;
+    public String caracteristica;
 
-    String descripcion;
-
-    public Ladron(String descripcion){this.descripcion = descripcion;}
+    public Ladron(String nombre, String pelo, String sexo, String hobby, String caracteristica, String auto){
+        this.nombre = nombre;
+        this.pelo = pelo;
+        this.caracteristica = caracteristica;
+        this.hobby = hobby;
+        this.auto = auto;
+        this.sexo = sexo;
+    }
 
     public IRespuestaDelEvento entregarse(){
         return new LadronAtrapado();
