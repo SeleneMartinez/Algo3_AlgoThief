@@ -16,7 +16,7 @@ public class RangoInvestigador implements IRango{
     public IRango obtenerRango(int casosResueltos)
     {
         IRango output = this;
-        if(casosResueltos >= 15)
+        if(casosResueltos >= 20)
         {
             output = new RangoSargento();
         }
