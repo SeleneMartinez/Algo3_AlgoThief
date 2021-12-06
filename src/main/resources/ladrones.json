@@ -1,0 +1,74 @@
+[
+    {
+        "Nombre": "Nick Brunch",
+        "Sexo": "Maculino",
+        "Hobby": "Escalada",
+        "Pelo": "Negro",
+        "Caracteristica": "Anillo",
+        "Auto": "Moto"
+    },
+    {
+        "Nombre": "Len Bulk",
+        "Sexo": "Maculino",
+        "Hobby": "Escalada",
+        "Pelo": "Rojo",
+        "Caracteristica": "Tatuaje", 
+        "Auto": "Convertible"},
+    
+    {
+        "Nombre": "Ihor Ihorovitch",
+        "Sexo": "Maculino",
+        "Hobby": "Croquet",
+        "Pelo": "Rubio",
+        "Caracteristica": "Tatuaje",
+        "Auto": "Limosina"},
+    {
+        "Nombre": "Fast Eddie B.",
+        "Sexo": "Maculino",
+        "Hobby": "Croquet",
+        "Pelo": "Negro",
+        "Caracteristica": "Joyas",
+        "Auto": "Convertible"},
+    {
+        "Nombre": "Scar Graynolt",
+        "Sexo": "Maculino",
+        "Hobby": "Croquet",
+        "Pelo": "Rojo",
+        "Caracteristica": "Anillo",
+        "Auto": "Limosina"},
+    {
+        "Nombre": "Merey Laroc",
+        "Sexo": "Femenino",
+        "Hobby": "Escalada",
+        "Pelo": "Marron",
+        "Caracteristica": "Joyas",
+        "Auto": "Limosina"},
+    {
+        "Nombre": "Lady Agatha",
+        "Sexo": "Femenino",
+        "Hobby": "Tennis",
+        "Pelo": "Rojo",
+        "Caracteristica": "Anillo",
+        "Auto": "Convertible"},
+    {
+        "Nombre": "Katherine Drib",
+        "Sexo": "Femenino",
+        "Hobby": "Escalada",
+        "Pelo": "Marron",
+        "Caracteristica": "Tatuaje",
+        "Auto": "Moto"},
+    {
+        "Nombre": "Dazzle Annie",
+        "Sexo": "Femenino",
+        "Hobby": "Tennis",
+        "Pelo": "Rubio",
+        "Caracteristica": "Tatuaje",
+        "Auto": "Limosina"},
+    {
+        "Nombre": "Carmen Sandiego",
+        "Sexo": "Femenino",
+        "Hobby": "Tennis",
+        "Pelo": "Marron",
+        "Caracteristica": "Joyas",
+        "Auto": "Convertible"}
+]
