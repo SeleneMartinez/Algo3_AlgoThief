@@ -2,8 +2,8 @@ package edu.fiuba.algo3.modelo;
 
 public class Banco extends EdificioConPista {
 
-    public Banco(String ciudad) {
-        this.pista = new PistaFacil("Banco", ciudad);
+    public Banco(Pista pista) {
+        this.pista = pista;
     }
 
     public IRespuestaDelEvento visitarEdificio(Policia policia) {
