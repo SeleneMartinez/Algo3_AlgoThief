@@ -1,0 +1,183 @@
+[
+  {
+    "Ciudad":"New York City",
+    "PistaEconomica":"Pregunto acerca de Wall Street",
+    "PistaViajera": "Estuvo hablando sobre conocer Disney",
+    "PistaCultural": "Leyo un libro de Edgar Allan Poe"
+  },
+  {
+    "Ciudad":"Montreal",
+    "PistaEconomica":"Queria cambiar dolares no estadounidenses",
+    "PistaViajera": "La bandera del avion era blanca y roja.",
+    "PistaCultural":"Queria cambiar dolares no estadounidenses"
+  },
+  {
+    "Ciudad":"Mexico",
+    "PistaEconomica": "Hizo una transferencia al banco de Tijuana",
+    "PistaViajera": "Queria conocer Chichen Itza",
+    "PistaCultural": "Estuvo escuchando musica de mariachis"
+  },
+  {
+    "Ciudad":"Lima",
+    "PistaEconomica":"Queria invertir en mineria",
+    "PistaViajera":"Dijo que queria conocer el Cuzc",
+    "PistaCultural": "Pidio libros sobre la Guerra del Pacifico"
+  },
+  {
+    "Ciudad":"Rio de Janeiro",
+    "PistaEconomica":"Pregunto por la cotizacion del real",
+    "PistaViajera":"Queria visitar el Maracana",
+    "PistaCultural":"Pidio libros sobre la flora del Amazonas"
+  },
+  {
+    "Ciudad":"Buenos Aires",
+    "PistaEconomica": "Pregunto por la inversion en soja",
+    "PistaViajera": "Dijo que queria conocer las Cataratas del Iguazu",
+    "PistaCultural": "Pidio el libro 'Martin Fierro'"
+  },
+
+  {
+    "Ciudad":"Reykjavik",
+    "PistaEconomica":"Estaba interesado en la pesca",
+    "PistaViajera":"Tenia mucha ropa de abrigo",
+    "PistaCultural":"Pidio libros sobre la historia de la colonizacion escandinava"
+  },
+  {
+    "Ciudad":"London",
+    "PistaEconomica":"Pregunto sobre las acciones de Rolls-Royce",
+    "PistaViajera":"Dijo que queria conocer el rio Tamesis",
+    "PistaCultural":"Estuvo leyendo obras de Shakespeare"
+  },
+  {
+    "Ciudad":"Paris",
+    "PistaEconomica":"Pregunto por la inversion en vinos",
+    "PistaViajera": "Dijo que queria visitar el Louvre",
+    "PistaCultural": "Pidio un libro sobre la Universidad de la Sorbona"
+  },
+  {
+    "Ciudad":"San Marino",
+    "PistaEconomica": "Pregunto sobre la inversion en sellos postales",
+    "PistaViajera":"Queria conocer el monte Titano",
+    "PistaCultural":"Pidio libros sobre la republica mas antigua"
+  },
+  {
+    "Ciudad":"Roma",
+    "PistaEconomica":"Pregunto sobre la fabrica Fiat",
+    "PistaViajera":"Estuvo hablando sobre conocer el Coliseo",
+    "PistaCultural":"Pidio un libro sobre la historia de Julio Cesar"
+  },
+  {
+    "Ciudad":"Oslo",
+    "PistaEconomica":"Pregunto sobre la inversion en petroleo",
+    "PistaViajera":"Queria conocer el norte de Europa",
+    "PistaCultural":"Leyo la historia de Nordland"
+  },
+  {
+    "Ciudad":"Budapest",
+    "PistaEconomica":"Pregunto sobre la crisis economica europea",
+    "PistaViajera":"Hablo sobre navegar el rio Danubio",
+    "PistaCultural":"Leyo un libro sobre el asentamiento celta"
+  },
+  {
+    "Ciudad":"Athens",
+    "PistaEconomica":"Pregunto sobre la crisis economica europea",
+    "PistaViajera":"La bandera tenia una cruz blanca",
+    "PistaCultural":"Estuvo leyendo el libro 'La Iliada'"
+  },
+  {
+    "Ciudad":"Istanbul",
+    "PistaEconomica":"Queria invertir en el mercado de especias",
+    "PistaViajera":"Queria conocer el mar de Marmara",
+    "PistaCultural":"Leyo sobre el imperio Hitita"
+  },
+  {
+    "Ciudad":"Moscow",
+    "PistaEconomica":"Queria hacer inversiones en Siberia",
+    "PistaViajera":"Queria conocer San Petersburgo",
+    "PistaCultural":"Estuvo leyendo sobre grandes desiertos"
+  },
+  {
+    "Ciudad":"Baghdad",
+    "PistaEconomica":"Queria conocer el golfo persico",
+    "PistaViajera":"Queria conocer el golfo persico",
+    "PistaCultural":"Leyo sobre la 'cuna de la civilizacion'"
+  },
+  {
+    "Ciudad":"Cairo",
+    "PistaEconomica":"Dijo que queria navegar el Nilo",
+    "PistaViajera":"Dijo que queria navegar el Nilo",
+    "PistaCultural":"Leyo sobre la adoracion al gato"
+  },
+  {
+    "Ciudad":"Bamako",
+    "PistaEconomica":"Abrio una cuenta en francos cfa",
+    "PistaViajera":"Queria conocer el Africa occidental",
+    "PistaCultural":"Leyo sobre la pobreza en Africa"
+  },
+  {
+    "Ciudad":"Kigali",
+    "PistaEconomica":"Cambio dinero a francos ruandeses",
+    "PistaViajera":"Se fue en un avion de bandera celeste amarilla y verde",
+    "PistaCultural":"Pidio el libro 'Las nieblas de africa'"
+  },
+  {
+    "Ciudad":"Moroni",
+    "PistaEconomica":"Abrio una cuenta en francos camoranoss",
+    "PistaViajera":"Dijo que queria conocer el volcan Karthala",
+    "PistaCultural":"Leyo una historia de los Bantues"
+  },
+  {
+    "Ciudad":"Kathmandu",
+    "PistaEconomica":"Hizo una transferencia al banco de Gandaki",
+    "PistaViajera":"La bandera del avion era roja con figuras blancas",
+    "PistaCultural":"Estuvo leyendo sobre hinduismo"
+  },
+  {
+    "Ciudad":"New Delhi",
+    "PistaEconomica":"Queria hacer una transferencia al banco de Canpur",
+    "PistaViajera":"Queria conocer el oceano indico",
+    "PistaCultural":"Pidio un libro sobre budismo"
+  },
+  {
+    "Ciudad":"Colombo",
+    "PistaEconomica":"Queria invertir en te y cafe",
+    "PistaViajera":"Queria conocer el golfo de Bengala",
+    "PistaCultural":"Leyo sobre hinduismo"
+  },
+  {
+    "Ciudad":"Peking",
+    "PistaEconomica":"Queria invertir en acciones de Alibaba",
+    "PistaViajera":"Es la capital de una Republica Popular",
+    "PistaCultural":"Se encuentra la enorme plaza peatonal de Tiananmen"
+  },
+  {
+    "Ciudad":"Tokyo",
+    "PistaEconomica":"Pregunto sobre las acciones de Sony",
+    "PistaViajera":"Estuvo hablando sobre conocer el Monte Fuji",
+    "PistaCultural":"Leyo sobre el ataque a Pearl Harbor"
+  },
+  {
+    "Ciudad":"Singapore",
+    "PistaEconomica":"Queria invertir en la industria electronica",
+    "PistaViajera":"Queria conocer el sudeste asiatico",
+    "PistaCultural":"Estuvo leyendo sobra la estructura de las ciudades estado"
+  },
+  {
+    "Ciudad":"Sydney",
+    "PistaEconomica":"Pregunto por la industria turistica",
+    "PistaViajera":"Queria conocer el mar de Timor",
+    "PistaCultural":"Pidio un diccionario de ingles"
+  },
+  {
+    "Ciudad":"Bangkok",
+    "PistaEconomica":"Su moneda oficial es el baht",
+    "PistaViajera":"Queria conocer el sudeste asiatico",
+    "PistaCultural":"Pregunto sobre el terremoto del oceano Indico del 2004"
+  },
+  {
+    "Ciudad":"Por Moresby",
+    "PistaEconomica":"Queria invertir en empresas de petroleo, cobre y oro",
+    "PistaViajera":"Se fue en un avion de bandera con cuatro estrellas blancas",
+    "PistaCultural":"Saco un libro sobre la cultura de los motuanos"
+  }
+]
