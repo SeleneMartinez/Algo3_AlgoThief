@@ -7,6 +7,7 @@ public class Ladron{
     public String pelo;
     public String auto;
     public String caracteristica;
+    public IRutaDeEscape rutaDeEscape;
 
     public Ladron(String nombre, String pelo, String sexo, String hobby, String caracteristica, String auto){
         this.nombre = nombre;
