@@ -24,13 +24,14 @@ public class RutaFacil implements IRutaDeEscape{
 
             int x = 1;
             ciudadesDeLaRuta.add(ciudadActual);
-            while (x <= 4)
+            while (x <= 3)
             {
             ciudadesConectadas.addAll(ciudadActual.devolverCiudadesConectadas());
             int int_random = rand.nextInt(ciudadesConectadas.size());
             ciudadesDeLaRuta.add(ciudadesConectadas.get(int_random));
-            x++;
             ciudadActual = ciudadesDeLaRuta.get(x);
+            x++;
+
 
         }
     }
