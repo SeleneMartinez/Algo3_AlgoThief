@@ -1,0 +1,183 @@
+[
+    {
+        "Ciudad":"New York City",
+        "PistaEconomica":"La moneda es el dolar",
+        "PistaViajera": "Bandera blanca, azul y roja con 50 estrellas",
+        "PistaCultural": "Tom Cruise y Denzel Washington son de alli"
+    },
+    {
+        "Ciudad":"Montreal",
+        "PistaEconomica":"",
+        "PistaViajera": "Bandera roja y blanca con una hoja",
+        "PistaCultural":"El idioma oficial es el frances"
+    },
+    {
+        "Ciudad":"Mexico",
+        "PistaEconomica": "Su moneda es el peso",
+        "PistaViajera": "Bandera roja, verde y blanca",
+        "PistaCultural": "Se festeja el dia de los muertos"
+    },
+    {
+        "Ciudad":"Lima",
+        "PistaEconomica":"Su moneda es el sol",
+        "PistaViajera":"Bandera roja y blanca",
+        "PistaCultural": "Su comida tipica es el ceviche"
+    },
+    {
+        "Ciudad":"Rio de Janeiro",
+        "PistaEconomica":"Su moneda es el real",
+        "PistaViajera":"Su bandera es verde, azul y amarilla",
+        "PistaCultural":"El idioma oficial es el portugues"
+    },
+    {
+        "Ciudad":"Buenos Aires",
+        "PistaEconomica": "La moneda es el peso Argentino",
+        "PistaViajera": "La bandera es celeste y blanca con un sol",
+        "PistaCultural": "Se baila el tango"
+    },
+
+    {
+        "Ciudad":"Reykjavik",
+        "PistaEconomica":"Su moneda es la corona",
+        "PistaViajera":"Su bandera es azul, roja y blanca",
+        "PistaCultural":"Su idioma es el islandes"
+    },
+    {
+        "Ciudad":"London",
+        "PistaEconomica":"Su moneda es la libra esterlina",
+        "PistaViajera":"Su bandera es azul, roja y blanca",
+        "PistaCultural":"Alli se encuentra el Big ben"
+    },
+    {
+        "Ciudad":"Paris",
+        "PistaEconomica":"Su moneda es el euro",
+        "PistaViajera": "Su bandera son tres franjaz azul, blanca y roja",
+        "PistaCultural": "Alli se encuentra la torre eiffel"
+    },
+    {
+        "Ciudad":"San Marino",
+        "PistaEconomica":"Su moneda es el euro",
+        "PistaViajera":"Su bandera es celeste y blanca con tres trores",
+        "PistaCultural":"Su idioma oficial es el italiano"
+    },
+    {
+        "Ciudad":"Roma",
+        "PistaEconomica":"Su moneda es el euro",
+        "PistaViajera":"Su bandera es verde, blanca y roja",
+        "PistaCultural":"Alli se encuentra el famoso coliseo"
+    },
+    {
+        "Ciudad":"Oslo",
+        "PistaEconomica":"Su moneda es la corona",
+        "PistaViajera":"Su bandera es roja, blanca y azul",
+        "PistaCultural":"Posee un museo de barcos vikingos"
+    },
+    {
+        "Ciudad":"Budapest",
+        "PistaEconomica":"Su moneda es el florin",
+        "PistaViajera":"Su bandera es roja, blanca y verde",
+        "PistaCultural":"Alli se encuentra el castillo de Buda"
+    },
+    {
+        "Ciudad":"Athens",
+        "PistaEconomica":"Su moneda es el euro",
+        "PistaViajera":"Su bandera es blanca y azul",
+        "PistaCultural":"Alli se encuentra el templo a Zeus"
+    },
+    {
+        "Ciudad":"Istanbul",
+        "PistaEconomica":"La moneda es la nueva lira turca",
+        "PistaViajera":"Su bandera es roja con una luna y estrella blanca",
+        "PistaCultural":"Alli se encuentra la Santa Sofia y el caballo de Troya"
+    },
+    {
+        "Ciudad":"Moscow",
+        "PistaEconomica":"Rublo sovietico",
+        "PistaViajera":"Su bandera es roja con un martillo y una hoz",
+        "PistaCultural":"Su idioma es el ruso"
+    },
+    {
+        "Ciudad":"Baghdad",
+        "PistaEconomica":"Su moneda es el dinar",
+        "PistaViajera":"Su bandera es roja, blanca y negra con una inscripcion verde",
+        "PistaCultural":"Su idioma es el arabe"
+    },
+    {
+        "Ciudad":"Cairo",
+        "PistaEconomica":"Su moneda es la libra del pais",
+        "PistaViajera":"Su bandera es roja, blanca y negra",
+        "PistaCultural":"Alli se encuentran las piramides"
+    },
+    {
+        "Ciudad":"Bamako",
+        "PistaEconomica":"Su moneda es el franco de africa",
+        "PistaViajera":"Su bandera es verde, amarilla y roja",
+        "PistaCultural":"Alli se encuentra la Mezquita de Djenne"
+    },
+    {
+        "Ciudad":"Kigali",
+        "PistaEconomica":"La moneda es el franco ruandes",
+        "PistaViajera":"Su bandera es celeste, amarilla y verde con un sol",
+        "PistaCultural":"Los idiomas que se hablan son ruanda, frances e ingles"
+    },
+    {
+        "Ciudad":"Moroni",
+        "PistaEconomica":"Su moneda son los francos comoranos",
+        "PistaViajera":"Su bandera es verde, amarilla, blanca, roja y celeste",
+        "PistaCultural":"Los idiomas que se hablan son el comoro, frances y arabe"
+    },
+    {
+        "Ciudad":"Kathmandu",
+        "PistaEconomica":"Su moneda son las rupias",
+        "PistaViajera":"Su bandera es azul, roja y blanca",
+        "PistaCultural":"Alli se encuentra la estupa de buda"
+    },
+    {
+        "Ciudad":"New Delhi",
+        "PistaEconomica":"Su mnoneda son las rupias",
+        "PistaViajera":"Su bandeara es naranja, blanca y verde con un chakra azul",
+        "PistaCultural":"Alli se encuentra el Taj Mahal"
+    },
+    {
+        "Ciudad":"Colombo",
+        "PistaEconomica":"Su moneda es la rupia",
+        "PistaViajera":"Su bandera es roja y amarilla con un leon sosteniendo un sable.",
+        "PistaCultural":"Alli se encuentra la roca del leon"
+    },
+    {
+        "Ciudad":"Peking",
+        "PistaEconomica":"Su moneda es el Renminbi",
+        "PistaViajera":"Su bandera es roja con estrellas amarillas",
+        "PistaCultural":"Alli se encuentra la famosa muralla"
+    },
+    {
+        "Ciudad":"Tokyo",
+        "PistaEconomica":"Su moneda es el yen",
+        "PistaViajera":"Su bandear es blanca con un circulo rojo",
+        "PistaCultural":"Alli se encuentra el cruce de shibuya"
+    },
+    {
+        "Ciudad":"Singapore",
+        "PistaEconomica":"Su moneda es el dolar",
+        "PistaViajera":"Su bandera es roja y blanca con una luna y estrellas blancas",
+        "PistaCultural":"Alli se encuentra el famoso hotel Marina Bay"
+    },
+    {
+        "Ciudad":"Sydney",
+        "PistaEconomica":"Su moneda es el dolar",
+        "PistaViajera":"Su bandera es azul, roja y blanca con estrellas blancas",
+        "PistaCultural":"Alli se encuentra la famosa Casa de Opera."
+    },
+    {
+        "Ciudad":"Bangkok",
+        "PistaEconomica":"Su moneda oficial es el baht",
+        "PistaViajera":"Su bandera es roja, blanca y azul",
+        "PistaCultural":"Alli se encuentra el palacio real o Gran Palacio"
+    },
+    {
+        "Ciudad":"Por Moresby",
+        "PistaEconomica":"Su moneda es el kina",
+        "PistaViajera":"Su bandera es roja negra y amarilla",
+        "PistaCultural":"Su ave nacional es el ave del paraiso"
+    }
+]
