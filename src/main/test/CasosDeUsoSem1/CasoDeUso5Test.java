@@ -8,7 +8,7 @@ public class CasoDeUso5Test {
     @Test
     public void detectiveRecibeHeridaDeCuchilloYDuerme() {
         String respuestaEsperada = "Matón atacó al policia";
-        Integer horaEsperada = 17;
+        Integer horaEsperada = 10;
         String nombrePolicia = "PoliNovato";
         Policia novato = new Policia(nombrePolicia);
         Cuchillo cuchillo = new Cuchillo();
