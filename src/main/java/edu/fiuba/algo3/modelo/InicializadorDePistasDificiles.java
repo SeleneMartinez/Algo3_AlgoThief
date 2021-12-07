@@ -6,18 +6,17 @@ import com.google.gson.JsonStreamParser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class InicializadorDePistasFaciles {
+public class InicializadorDePistasDificiles {
 
     public HashMap<String, List<Pista>> inicializarPistas() {
 
         HashMap<String, List<Pista>> pistasFaciles = new HashMap<String, List<Pista>>();
         try{
-            JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasFaciles.json"));
+            JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasDificiles.json"));
             JsonElement json = parser.next();
             JsonArray jsonArray = json.getAsJsonArray();
             for (int i = 0; i < jsonArray.size(); i++) {
@@ -40,3 +39,5 @@ public class InicializadorDePistasFaciles {
         return pistasFaciles;
     }
 }
+
+
