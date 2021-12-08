@@ -12,7 +12,7 @@ public class CasoDeUso3Test {
         Integer latitud1 = 600;
         Integer altitud2 = 900;
         Integer latitud2 = 400;
-        Integer horaEsperada = 7; //hay que ver lo de las horas en 0
+        Integer horaEsperada = 0; //hay que ver lo de las horas en 0
         String nombreCiudad1 = "Montreal";
         String nombreCiudad2 = "Mexico";
         String nombrePolicia = "PoliNovato";
