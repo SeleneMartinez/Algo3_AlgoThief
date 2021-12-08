@@ -26,6 +26,7 @@ public class RutaNormal implements IRutaDeEscape{
         ciudadesDeLaRuta.add(ciudadActual);
         while (x <= 4)
         {
+            ciudadesConectadas.clear();
             ciudadesConectadas.addAll(ciudadActual.devolverCiudadesConectadas());
             int int_random = rand.nextInt(ciudadesConectadas.size());
             ciudadesDeLaRuta.add(ciudadesConectadas.get(int_random));
