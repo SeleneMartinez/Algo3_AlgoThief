@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class ConectorCiudades {
 
-    static final int MIN_NUMERO_PAISES = 1;
-    static final int MAX_NUMERO_PAISES = 30;
+    int cantidadDePaises;
     List<Ciudad> ciudadesSinConectar;
     
     public ConectorCiudades(List<Ciudad> ciudadesSinConectar){
+        cantidadDePaises = ciudadesSinConectar.size();
         this.ciudadesSinConectar = ciudadesSinConectar;
         desordenarLista();
     }
@@ -21,7 +21,7 @@ public class ConectorCiudades {
     }
 
     private void desordenarLista() {
-        for(int posicion = MIN_NUMERO_PAISES; posicion < MAX_NUMERO_PAISES; posicion++)
+        for(int posicion = 0; posicion < cantidadDePaises; posicion++)
             intercambiar( ciudadesSinConectar, posicion, darNumeroAleatorio() );
     }
 
@@ -33,10 +33,10 @@ public class ConectorCiudades {
 
     private int darNumeroAleatorio(){
         Random numero = new Random();
-        return ( MIN_NUMERO_PAISES + numero.nextInt( MAX_NUMERO_PAISES ) );
+        return ( 0 + numero.nextInt( cantidadDePaises ) );
     }
 
-    public void agrarConexiones(Ciudad ciudad){
+    public void agregarConexiones(Ciudad ciudad){
         for (int i = 1; i <= 2; i++){
             Ciudad ciudadAlAzar = darCiudadAlAzar();
             establecerConexiones(ciudad, ciudadAlAzar);
