@@ -1,8 +1,21 @@
 package edu.fiuba.algo3.modelo;
 
-public class RangoNovato implements IRango{
-    private double velocidad = 900;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.List;
 
+public class RangoNovato implements IRango{
+    private int velocidad;
+    HashMap<String, List<Pista>> pistas;
+    public RangoNovato() {
+        this.velocidad = 900;
+        this.pistas = (new InicializadorDePistasFaciles()).inicializarPistas();
+
+    }
+
+    public HashMap<String, List<Pista>> obtenerPistaPorRango(){
+        return this.pistas;
+    }
     public boolean esNovato() {
         return true;
     }

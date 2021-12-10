@@ -6,16 +6,15 @@ import com.google.gson.JsonStreamParser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class InicializadorDePistasFaciles {
+public class InicializadorDePistasMedias {
 
     public HashMap<String, List<Pista>> inicializarPistas() {
 
-        HashMap<String, List<Pista>> pistasFaciles = new HashMap<String, List<Pista>>();
+        HashMap<String, List<Pista>> pistasMedias = new HashMap<String, List<Pista>>();
         try{
             JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasFaciles.json"));
             JsonElement json = parser.next();
@@ -26,17 +25,19 @@ public class InicializadorDePistasFaciles {
                 String pistaViajera = (jsonArray.get(i).getAsJsonObject().get("PistaViajera")).getAsString();
                 String pistaCultural = (jsonArray.get(i).getAsJsonObject().get("PistaCultural")).getAsString();
 
-                Pista pistaFacilEconomica = new Pista(pistaEconomica);
-                Pista pistaFacilViajera = new Pista(pistaViajera);
-                Pista pistaFacilCultural = new Pista(pistaCultural);
-                List<Pista> pistas = Arrays.asList(pistaFacilEconomica,
-                        pistaFacilViajera,
-                        pistaFacilCultural);
-                pistasFaciles.put(nombreCiudad, pistas);
+                Pista pistaMediaEconomica = new Pista(pistaEconomica);
+                Pista pistaMediaViajera = new Pista(pistaViajera);
+                Pista pistaMediaCultural = new Pista(pistaCultural);
+                List<Pista> pistas = Arrays.asList(pistaMediaEconomica,
+                        pistaMediaViajera,
+                        pistaMediaCultural);
+                pistasMedias.put(nombreCiudad, pistas);
             }
-        }catch(FileNotFoundException e){
+        }catch (FileNotFoundException e){
             System.out.println(e.getMessage());
         }
-        return pistasFaciles;
+        return pistasMedias;
     }
 }
+
+

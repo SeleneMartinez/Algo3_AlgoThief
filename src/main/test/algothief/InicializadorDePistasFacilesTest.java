@@ -1,9 +1,6 @@
 package algothief;
 
-import edu.fiuba.algo3.modelo.InicializadorDePistasFaciles;
-import edu.fiuba.algo3.modelo.InicializadorLadrones;
-import edu.fiuba.algo3.modelo.Ladron;
-import edu.fiuba.algo3.modelo.PistaFacil;
+import edu.fiuba.algo3.modelo.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -15,7 +12,7 @@ public class InicializadorDePistasFacilesTest {
     @Test
     public void seInicializanLasPistas() throws FileNotFoundException {
         InicializadorDePistasFaciles inicializadorDePistasFaciles = new InicializadorDePistasFaciles();
-        HashMap<String, List<PistaFacil>> ciudadesConPistas = inicializadorDePistasFaciles.inicializarPistas();
+        HashMap<String, List<Pista>> ciudadesConPistas = inicializadorDePistasFaciles.inicializarPistas();
         assertEquals(30, ciudadesConPistas.size());
     }
 }

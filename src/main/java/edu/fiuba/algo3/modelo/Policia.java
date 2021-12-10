@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
+import java.io.FileNotFoundException;
+
 public class Policia {
     public String nombre;
     private int casosResueltos;
@@ -7,7 +9,7 @@ public class Policia {
     private IOrdenDeCaptura orden;
     private Reloj reloj;
 
-    public Policia(String nombre){
+    public Policia(String nombre) {
         this.nombre = nombre;
         this.casosResueltos = 0;
         this.rango = new RangoNovato();
