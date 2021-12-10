@@ -26,4 +26,29 @@ public class Ladron{
     {
         return new LadronEscapo();
     }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public String getPelo() {
+        return pelo;
+    }
+
+    public String getCaracteristica() {
+        return caracteristica;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public String getVehiculo() {
+        return auto;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
 }

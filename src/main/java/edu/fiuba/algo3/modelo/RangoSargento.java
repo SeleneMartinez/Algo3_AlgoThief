@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 public class RangoSargento implements IRango{
-    private int velocidad = 1500;
+    private double velocidad = 1500;
 
     public boolean esNovato() {
         return false;
@@ -11,7 +11,7 @@ public class RangoSargento implements IRango{
     public boolean esSargento(){ return true; }
 
     public int tiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino) {
-        return (ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad);
+        return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
     public IRango obtenerRango(int casosResueltos)
