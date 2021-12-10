@@ -6,7 +6,7 @@ public class OrdenDeCaptura implements IOrdenDeCaptura{
         this.ladron = ladron;
     }
     public IRespuestaDelEvento capturar(Ladron ladronEnEdificio){
-        IRespuestaDelEvento  output = ladron.escapar();
+        IRespuestaDelEvento output = ladron.escapar();
         if(this.ladron == ladronEnEdificio){
             output = ladronEnEdificio.entregarse();
         }

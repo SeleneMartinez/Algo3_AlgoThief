@@ -1,7 +1,7 @@
 [
     {
         "Nombre": "Nick Brunch",
-        "Sexo": "Maculino",
+        "Sexo": "Masculino",
         "Hobby": "Escalada",
         "Pelo": "Negro",
         "Caracteristica": "Anillo",
@@ -9,7 +9,7 @@
     },
     {
         "Nombre": "Len Bulk",
-        "Sexo": "Maculino",
+        "Sexo": "Masculino",
         "Hobby": "Escalada",
         "Pelo": "Rojo",
         "Caracteristica": "Tatuaje", 
@@ -17,21 +17,21 @@
     
     {
         "Nombre": "Ihor Ihorovitch",
-        "Sexo": "Maculino",
+        "Sexo": "Masculino",
         "Hobby": "Croquet",
         "Pelo": "Rubio",
         "Caracteristica": "Tatuaje",
         "Auto": "Limosina"},
     {
         "Nombre": "Fast Eddie B.",
-        "Sexo": "Maculino",
+        "Sexo": "Masculino",
         "Hobby": "Croquet",
         "Pelo": "Negro",
         "Caracteristica": "Joyas",
         "Auto": "Convertible"},
     {
         "Nombre": "Scar Graynolt",
-        "Sexo": "Maculino",
+        "Sexo": "Masculino",
         "Hobby": "Croquet",
         "Pelo": "Rojo",
         "Caracteristica": "Anillo",

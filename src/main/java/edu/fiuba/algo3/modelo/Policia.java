@@ -14,7 +14,7 @@ public class Policia {
         this.casosResueltos = 0;
         this.rango = new RangoNovato();
         this.reloj = new Reloj(0 , "Lunes");
-        this.orden = null;
+        this.orden = new OrdenDeCapturaSinEmitir();
     }
 
     public String obtenerNombre() {
@@ -42,6 +42,7 @@ public class Policia {
         this.casosResueltos++;
         this.rango = this.rango.obtenerRango(casosResueltos);
     }
+
     public IRespuestaDelEvento detener(Ladron ladron) {
         return this.orden.capturar(ladron);
     }

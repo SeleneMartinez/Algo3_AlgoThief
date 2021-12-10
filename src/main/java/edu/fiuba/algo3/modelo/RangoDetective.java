@@ -25,7 +25,7 @@ public class RangoDetective implements IRango{
     public boolean esSargento(){ return false;}
 
     public int tiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino) {
-        return (ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad);
+        return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
     public IRango obtenerRango(int casosResueltos)
