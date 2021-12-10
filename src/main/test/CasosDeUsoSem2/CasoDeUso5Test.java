@@ -14,7 +14,7 @@ public class CasoDeUso5Test {
         OrdenDeCaptura orden = new OrdenDeCaptura(ladronSospechoso);
         Ciudad ciudadOrigen = new Ciudad("Buenos Aires", new Ubicacion(800, 350));
         Ciudad ciudadFinal = new Ciudad("Lima", new Ubicacion(650, 600));
-        Pista pistaBanco = new PistaFacil("Su moneda es el sol");
+        Pista pistaBanco = new Pista("Su moneda es el sol");
         Banco banco = new Banco(pistaBanco);
         EdificioConLadron edificioConLadron = new EdificioConLadron();
 
@@ -41,7 +41,7 @@ public class CasoDeUso5Test {
         assertTrue(detective.obtenerRangoPolicia() instanceof RangoDetective);
         assertEquals("Rock", detective.obtenerNombre());
         assertNotNull(banco.visitarEdificio(detective));
-        assertTrue(banco.visitarEdificio(detective) instanceof PistaFacil);
+        assertTrue(banco.visitarEdificio(detective) instanceof Pista);
         assertEquals(7, detective.cantidadDeCasosResueltos());
         assertEquals(1, rangoDetective.tiempoDeViaje(ciudadOrigen, ciudadFinal));
         assertEquals("Policia atrapó al ladron", eventoDetenerLadron.obtenerRespuesta());
