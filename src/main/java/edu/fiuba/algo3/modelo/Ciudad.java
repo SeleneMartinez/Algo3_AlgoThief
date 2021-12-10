@@ -34,4 +34,8 @@ public class Ciudad {
         return edificiosEnCiudad;
     }
 
+    public int obtenerDistanciaA(Ciudad destino){
+        return this.ubicacion.calcularDistancia(destino.ubicacion);
+    }
+
 }
