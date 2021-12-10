@@ -13,8 +13,8 @@ public class CasoDeUso4Test {
         String nombrePolicia = "PoliNovato";
 
         Policia novato = new Policia(nombrePolicia);
-        PistaFacil pista1 = new PistaFacil(pistaAeropuerto);
-        PistaFacil pista2 = new PistaFacil(pistaPuerto);
+        Pista pista1 = new Pista(pistaAeropuerto);
+        Pista pista2 = new Pista(pistaPuerto);
         Aeropuerto aeropuerto = new Aeropuerto(pista1);
         Puerto puerto = new Puerto(pista2);
 

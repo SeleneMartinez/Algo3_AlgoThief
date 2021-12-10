@@ -28,13 +28,13 @@ public class CasoDeUso2Test {
                 "Limosina");
         Policia novato = new Policia(nombrePolicia);
         Ciudad ciudad = new Ciudad(nombreCiudad, new Ubicacion(altitud, latitud));
-        PistaFacil pista1 = new PistaFacil(pistaBanco);
-        PistaFacil pista2 = new PistaFacil(pistaBiblioteca);
+        Pista pista1 = new Pista(pistaBanco);
+        Pista pista2 = new Pista(pistaBiblioteca);
         Banco banco = new Banco(pista1);
         Biblioteca biblioteca = new Biblioteca(pista2);
 
-        PistaFacil pistaObtenida1 = (PistaFacil) banco.visitarEdificio(novato);
-        PistaFacil pistaObtenida2 = (PistaFacil) biblioteca.visitarEdificio(novato);
+        Pista pistaObtenida1 = (Pista) banco.visitarEdificio(novato);
+        Pista pistaObtenida2 = (Pista) biblioteca.visitarEdificio(novato);
 
         assertEquals(nombreCiudad, ciudad.darNombre());
         assertEquals(pistaBanco, pistaObtenida1.obtenerRespuesta());

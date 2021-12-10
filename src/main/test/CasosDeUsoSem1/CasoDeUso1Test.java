@@ -32,14 +32,14 @@ public class CasoDeUso1Test {
                 "Joyas",
                 "Limosina");
         Policia novato = new Policia(nombrePolicia);
-        //HashMap<String, List<PistaFacil>> pistas = initPistas.inicializarPistas();
+        //HashMap<String, List<Pista>> pistas = initPistas.inicializarPistas();
         //List<Ciudad> ciudades = initCiudades.iniciarCiudades();
         //List<Ladron> ladrones = initLadrones.iniciarLadrones();
         Ciudad ciudad = new Ciudad(nombreCiudad, new Ubicacion(altitud, latitud));
-        PistaFacil pista = new PistaFacil(laPista);
+        Pista pista = new Pista(laPista);
         Banco banco = new Banco(pista);
 
-        PistaFacil pistaObtenida = (PistaFacil) banco.visitarEdificio(novato);
+        Pista pistaObtenida = (Pista) banco.visitarEdificio(novato);
 
 
         assertEquals(nombreCiudad, ciudad.darNombre());

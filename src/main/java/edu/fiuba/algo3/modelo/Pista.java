@@ -1,7 +1,12 @@
 package edu.fiuba.algo3.modelo;
 
-public abstract class Pista implements IRespuestaDelEvento {
+public class Pista implements IRespuestaDelEvento {
     String pista;
 
-    public abstract String obtenerRespuesta();
+    public Pista(String pistaNueva){
+        this.pista = pistaNueva;
+    }
+    public String obtenerRespuesta(){
+        return this.pista;
+    };
 }
