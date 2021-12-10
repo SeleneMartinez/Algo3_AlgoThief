@@ -38,16 +38,20 @@ public class ConectorCiudades {
     }
 
     public List<Ciudad> agregarConexiones(Ciudad ciudad){
+        ciudadesSinConectar.remove(ciudad);
         for (int i = 1; i <= 2; i++){
             Ciudad ciudadAlAzar = darCiudadAlAzar();
             ciudadesSinConectar.add(ciudadAlAzar);
+            ciudadesSinConectar.remove(ciudadAlAzar);
         }
         return ciudadesSinConectar;
     }
     public List<Ciudad> agregarConexionesPrimeraVez(Ciudad ciudad){
+        ciudadesSinConectar.remove(ciudad);
         for (int i = 1; i <= 3; i++){
             Ciudad ciudadAlAzar = darCiudadAlAzar();
             ciudadesSinConectar.add(ciudadAlAzar);
+            ciudadesSinConectar.remove(ciudadAlAzar);
         }
         return ciudadesSinConectar;
     }
