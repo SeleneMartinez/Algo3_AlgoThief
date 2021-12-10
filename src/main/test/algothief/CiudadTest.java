@@ -38,12 +38,12 @@ public class CiudadTest {
         Ubicacion ubicacionBerlin = new Ubicacion(250,250);
         Ubicacion ubicacionSidney = new Ubicacion(300,350);
         Ubicacion ubicacionMoscu = new Ubicacion(350,350);
-
-        Ciudad buenosAires = new Ciudad("Argentina", ubicacionArgentina);
-        Ciudad montreal = new Ciudad("Montreal", ubicacionMontreal);
-        Ciudad berlin = new Ciudad("Berlin", ubicacionBerlin);
-        Ciudad sidney = new Ciudad("Sidney",ubicacionSidney);
-        Ciudad moscu = new Ciudad("Moscu", ubicacionMoscu);
+        ConectorCiudades conector = new ConectorCiudades();
+        Ciudad buenosAires = new Ciudad("Argentina", ubicacionArgentina, conector);
+        Ciudad montreal = new Ciudad("Montreal", ubicacionMontreal, conector);
+        Ciudad berlin = new Ciudad("Berlin", ubicacionBerlin, conector);
+        Ciudad sidney = new Ciudad("Sidney",ubicacionSidney, conector);
+        Ciudad moscu = new Ciudad("Moscu", ubicacionMoscu, conector);
         ciudades.add(buenosAires);
         ciudades.add(montreal);
         ciudades.add(berlin);

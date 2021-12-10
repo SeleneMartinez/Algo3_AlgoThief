@@ -22,7 +22,7 @@ public class InicializadorCiudades {
             int altitud = (jsonArray.get(i).getAsJsonObject().get("Altitud")).getAsInt();
 
             Ubicacion ubicacion = new Ubicacion(altitud, latitud);
-            Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion,conector);
+            Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion);
             ciudades.add(ciudad);
         }
         conector.RecibeSinConectar(ciudades);

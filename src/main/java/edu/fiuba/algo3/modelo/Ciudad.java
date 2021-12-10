@@ -10,7 +10,7 @@ public class Ciudad {
     List<Ciudad> ciudadesConectadas = new ArrayList<Ciudad>();
     List<IEdificio> edificiosEnCiudad = new ArrayList<IEdificio>(); // lista que contiene los 3 edificios en la cuidad
 
-    public Ciudad(String nombre, Ubicacion ubicacion, ConectorCiudades conector){
+    public Ciudad(String nombre, Ubicacion ubicacion){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.conector = conector;
