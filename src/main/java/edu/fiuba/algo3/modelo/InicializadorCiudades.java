@@ -10,6 +10,7 @@ public class InicializadorCiudades {
     public InicializadorCiudades() {}
 
     public List<Ciudad> iniciarCiudades() throws FileNotFoundException {
+        ConectorCiudades conector= new ConectorCiudades();
         List<Ciudad> ciudades = new ArrayList<Ciudad>();
         JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/ciudades.json"));
         JsonElement json = parser.next();
@@ -21,9 +22,10 @@ public class InicializadorCiudades {
             int altitud = (jsonArray.get(i).getAsJsonObject().get("Altitud")).getAsInt();
 
             Ubicacion ubicacion = new Ubicacion(altitud, latitud);
-            Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion);
+            Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion,conector);
             ciudades.add(ciudad);
         }
+        conector.RecibeSinConectar(ciudades);
         return ciudades;
     }
 }

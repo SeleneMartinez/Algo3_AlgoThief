@@ -6,12 +6,14 @@ import java.util.List;
 public class Ciudad {
     String nombre;
     Ubicacion ubicacion;
+    ConectorCiudades conector;
     List<Ciudad> ciudadesConectadas = new ArrayList<Ciudad>();
     List<IEdificio> edificiosEnCiudad = new ArrayList<IEdificio>(); // lista que contiene los 3 edificios en la cuidad
 
-    public Ciudad(String nombre, Ubicacion ubicacion){
+    public Ciudad(String nombre, Ubicacion ubicacion, ConectorCiudades conector){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+        this.conector = conector;
     }
 
     public String darNombre(){
@@ -26,8 +28,21 @@ public class Ciudad {
         edificiosEnCiudad.add(edificio);
     }
 
+
+
+    public List<Ciudad> devolverCiudadesConectadasPrimeraVez() {
+        {
+            this.ciudadesConectadas = conector.agregarConexionesPrimeraVez(this);
+            return ciudadesConectadas;
+        }
+    }
+
     public List<Ciudad> devolverCiudadesConectadas(){
-        return ciudadesConectadas;
+        {
+            this.ciudadesConectadas = conector.agregarConexiones(this);
+            return ciudadesConectadas;
+        }
+
     }
 
     public List<IEdificio> devolverEdificios(){

@@ -7,8 +7,9 @@ public class ConectorCiudades {
 
     int cantidadDePaises;
     List<Ciudad> ciudadesSinConectar;
+
     
-    public ConectorCiudades(List<Ciudad> ciudadesSinConectar){
+    public void RecibeSinConectar(List<Ciudad> ciudadesSinConectar){
         cantidadDePaises = ciudadesSinConectar.size();
         this.ciudadesSinConectar = ciudadesSinConectar;
         desordenarLista();
@@ -36,15 +37,21 @@ public class ConectorCiudades {
         return ( 0 + numero.nextInt( cantidadDePaises ) );
     }
 
-    public void agregarConexiones(Ciudad ciudad){
+    public List<Ciudad> agregarConexiones(Ciudad ciudad){
         for (int i = 1; i <= 2; i++){
             Ciudad ciudadAlAzar = darCiudadAlAzar();
-            establecerConexiones(ciudad, ciudadAlAzar);
+            ciudadesSinConectar.add(ciudadAlAzar);
         }
+        return ciudadesSinConectar;
+    }
+    public List<Ciudad> agregarConexionesPrimeraVez(Ciudad ciudad){
+        for (int i = 1; i <= 3; i++){
+            Ciudad ciudadAlAzar = darCiudadAlAzar();
+            ciudadesSinConectar.add(ciudadAlAzar);
+        }
+        return ciudadesSinConectar;
     }
 
-    private void establecerConexiones( Ciudad ciudad, Ciudad otraCiudad){ // ciudad agrega a su lista de ciudades conectadas a otra ciudad
-        ciudad.agregarConexion(otraCiudad);
-        otraCiudad.agregarConexion(ciudad);
-    }
+
+
 }
