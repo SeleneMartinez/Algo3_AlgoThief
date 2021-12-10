@@ -1,183 +1,183 @@
 [
   {
     "Ciudad":"New York City",
-    "PistaEconomica":"La moneda es el dolar",
-    "PistaViajera": "Bandera blanca, azul y roja con 50 estrellas",
-    "PistaCultural": "Tom Cruise y Denzel Washington son de alli"
+    "PistaEconomica":"izo una transferencia al banco de Washington",
+    "PistaViajera": "Queria conocer la estatua de la Libertad",
+    "PistaCultural": "Estuvo leyendo sobre la guerra de Secesion"
   },
   {
     "Ciudad":"Montreal",
-    "PistaEconomica":"",
-    "PistaViajera": "Bandera roja y blanca con una hoja",
-    "PistaCultural":"El idioma oficial es el frances"
+    "PistaEconomica":"Hizo una transferencia al banco de Quebec",
+    "PistaViajera": "Queria conocer las Cataratas del Niagara",
+    "PistaCultural":"Leyo un libro sobre deportes de invierno"
   },
   {
     "Ciudad":"Mexico",
-    "PistaEconomica": "Su moneda es el peso",
-    "PistaViajera": "Bandera roja, verde y blanca",
-    "PistaCultural": "Se festeja el dia de los muertos"
+    "PistaEconomica": "Queria invertir en hoteles en cancun",
+    "PistaViajera": "Queria conocer Acapulco",
+    "PistaCultural": "Leyo sobre la historia de la conquista de Hernan Cortes"
   },
   {
     "Ciudad":"Lima",
-    "PistaEconomica":"Su moneda es el sol",
-    "PistaViajera":"Bandera roja y blanca",
-    "PistaCultural": "Su comida tipica es el ceviche"
+    "PistaEconomica":"Cambio su dinero a soles",
+    "PistaViajera":"Se fue en un avion hacia America del Sur",
+    "PistaCultural": "Leyo sobre la conquista de Pizarro"
   },
   {
     "Ciudad":"Rio de Janeiro",
-    "PistaEconomica":"Su moneda es el real",
-    "PistaViajera":"Su bandera es verde, azul y amarilla",
-    "PistaCultural":"El idioma oficial es el portugues"
+    "PistaEconomica":"Queria invertir en un hotel en Copacabana",
+    "PistaViajera":"Hablo sobre visitar el Pan de Azucar",
+    "PistaCultural":"Estuvo leyendo sobre la colonizacion portuguesa"
   },
   {
     "Ciudad":"Buenos Aires",
-    "PistaEconomica": "La moneda es el peso Argentino",
-    "PistaViajera": "La bandera es celeste y blanca con un sol",
-    "PistaCultural": "Se baila el tango"
+    "PistaEconomica": "Dijo estar preocupado por la posibilidad de default",
+    "PistaViajera": "Dijo que queria escalar el Aconcagua",
+    "PistaCultural": "Pregunto por las obras de Borges"
   },
 
   {
     "Ciudad":"Reykjavik",
-    "PistaEconomica":"Su moneda es la corona",
-    "PistaViajera":"Su bandera es azul, roja y blanca",
-    "PistaCultural":"Su idioma es el islandes"
+    "PistaEconomica":"Pregunto sobre inversion en pesca",
+    "PistaViajera":"Queria conocer los geiseres",
+    "PistaCultural":"Estuvo escuchando musica de Bjork"
   },
   {
     "Ciudad":"London",
-    "PistaEconomica":"Su moneda es la libra esterlina",
-    "PistaViajera":"Su bandera es azul, roja y blanca",
-    "PistaCultural":"Alli se encuentra el Big ben"
+    "PistaEconomica":"Hizo una transferencia al banco de Manchester",
+    "PistaViajera":"Estuvo hablando sobre conocer el Big Ben",
+    "PistaCultural":"Estuvo leyendo sobre la revolucion industrial"
   },
   {
     "Ciudad":"Paris",
-    "PistaEconomica":"Su moneda es el euro",
-    "PistaViajera": "Su bandera son tres franjaz azul, blanca y roja",
-    "PistaCultural": "Alli se encuentra la torre eiffel"
+    "PistaEconomica":"Queria invertir en champagne",
+    "PistaViajera": "Dijo que queria conocer la torre Eiffel",
+    "PistaCultural": "Pidio un libro de Sartre"
   },
   {
     "Ciudad":"San Marino",
-    "PistaEconomica":"Su moneda es el euro",
-    "PistaViajera":"Su bandera es celeste y blanca con tres trores",
-    "PistaCultural":"Su idioma oficial es el italiano"
+    "PistaEconomica":"Queria invertir en turismo",
+    "PistaViajera":"Se fue en un avion con una bandera con los colores del cielo",
+    "PistaCultural":"Queria la historia 'serenisima republica'"
   },
   {
     "Ciudad":"Roma",
-    "PistaEconomica":"Su moneda es el euro",
-    "PistaViajera":"Su bandera es verde, blanca y roja",
-    "PistaCultural":"Alli se encuentra el famoso coliseo"
+    "PistaEconomica":"Hizo una transferencia al banco de Venecia",
+    "PistaViajera":"Dijo que queria conocer la torre de Pisa",
+    "PistaCultural":"Estuvo leyendo sobre el imperio romano"
   },
   {
     "Ciudad":"Oslo",
-    "PistaEconomica":"Su moneda es la corona",
-    "PistaViajera":"Su bandera es roja, blanca y azul",
-    "PistaCultural":"Posee un museo de barcos vikingos"
+    "PistaEconomica":"Pregunto por la inversion en pesca",
+    "PistaViajera":"Queria conocer la peninsula escandinava",
+    "PistaCultural":"Leyo sobre la historia de escandinavia"
   },
   {
     "Ciudad":"Budapest",
-    "PistaEconomica":"Su moneda es el florin",
-    "PistaViajera":"Su bandera es roja, blanca y verde",
-    "PistaCultural":"Alli se encuentra el castillo de Buda"
+    "PistaEconomica":"Pidio la cotizacion de florines hungaros",
+    "PistaViajera":"Queria viajar a Europa central",
+    "PistaCultural":"Leyo sobre el Rio Danubio"
   },
   {
     "Ciudad":"Athens",
-    "PistaEconomica":"Su moneda es el euro",
-    "PistaViajera":"Su bandera es blanca y azul",
-    "PistaCultural":"Alli se encuentra el templo a Zeus"
+    "PistaEconomica":"Dijo que queria dedicarse al turismo",
+    "PistaViajera":"Estuvo hablando sobre visitar el Partenon",
+    "PistaCultural":"Leyo sobre el origen de los juegos olimpicos"
   },
   {
     "Ciudad":"Istanbul",
-    "PistaEconomica":"La moneda es la nueva lira turca",
-    "PistaViajera":"Su bandera es roja con una luna y estrella blanca",
-    "PistaCultural":"Alli se encuentra la Santa Sofia y el caballo de Troya"
+    "PistaEconomica":"Queria invertir en una empresa de cruceros por el Mediterraneo",
+    "PistaViajera":"La bandera del avion era roja con figuras blancas",
+    "PistaCultural":"Pidio un libro de Orhan Pamuk"
   },
   {
     "Ciudad":"Moscow",
-    "PistaEconomica":"Rublo sovietico",
-    "PistaViajera":"Su bandera es roja con un martillo y una hoz",
-    "PistaCultural":"Su idioma es el ruso"
+    "PistaEconomica":"Queria invertir en gas natural y petroleo",
+    "PistaViajera":"La bandera del avion tenia dos franjas verticales",
+    "PistaCultural":"Pidio un libro de Tolstoi"
   },
   {
     "Ciudad":"Baghdad",
-    "PistaEconomica":"Su moneda es el dinar",
-    "PistaViajera":"Su bandera es roja, blanca y negra con una inscripcion verde",
-    "PistaCultural":"Su idioma es el arabe"
+    "PistaEconomica":"Queria invertir en petroleo",
+    "PistaViajera":"Queria conocer el Tigris y el Eufrates",
+    "PistaCultural":"Leyo sobre Sadam Husein"
   },
   {
     "Ciudad":"Cairo",
-    "PistaEconomica":"Su moneda es la libra del pais",
-    "PistaViajera":"Su bandera es roja, blanca y negra",
-    "PistaCultural":"Alli se encuentran las piramides"
+    "PistaEconomica":"Queria invertir en un hotel frente a las Piramides",
+    "PistaViajera":"Queria volar al noreste de Africa",
+    "PistaCultural":"Pidio libros sobre las invasiones arabes"
   },
   {
     "Ciudad":"Bamako",
-    "PistaEconomica":"Su moneda es el franco de africa",
-    "PistaViajera":"Su bandera es verde, amarilla y roja",
-    "PistaCultural":"Alli se encuentra la Mezquita de Djenne"
+    "PistaEconomica":"Queria invertir en la produccion de algodon",
+    "PistaViajera":"La bandera del avion tenia tres franjas verticales",
+    "PistaCultural":"Pidio un diccionario de frances"
   },
   {
     "Ciudad":"Kigali",
     "PistaEconomica":"La moneda es el franco ruandes",
-    "PistaViajera":"Su bandera es celeste, amarilla y verde con un sol",
+    "PistaViajera":"Se fue en un avion hacia Africa central",
     "PistaCultural":"Los idiomas que se hablan son ruanda, frances e ingles"
   },
   {
     "Ciudad":"Moroni",
-    "PistaEconomica":"Su moneda son los francos comoranos",
+    "PistaEconomica":"Abrio una cuenta en francos ruandeses",
     "PistaViajera":"Su bandera es verde, amarilla, blanca, roja y celeste",
-    "PistaCultural":"Los idiomas que se hablan son el comoro, frances y arabe"
+    "PistaCultural":"Pidio libros sobre las luchas entre Hutus y Tutsis"
   },
   {
     "Ciudad":"Kathmandu",
-    "PistaEconomica":"Su moneda son las rupias",
-    "PistaViajera":"Su bandera es azul, roja y blanca",
-    "PistaCultural":"Alli se encuentra la estupa de buda"
+    "PistaEconomica":"Queria invertir en la region de Terai",
+    "PistaViajera":"Queria conocer el Asia meridional",
+    "PistaCultural":"Pidio un libro sobre el leopardo de las nieves"
   },
   {
     "Ciudad":"New Delhi",
-    "PistaEconomica":"Su mnoneda son las rupias",
-    "PistaViajera":"Su bandeara es naranja, blanca y verde con un chakra azul",
-    "PistaCultural":"Alli se encuentra el Taj Mahal"
+    "PistaEconomica":"Hizo una transferencia al banco de Bombay",
+    "PistaViajera":"Queria conocer el Taj Mahal",
+    "PistaCultural":"Estuvo leyendo sobre hinduismo"
   },
   {
     "Ciudad":"Colombo",
-    "PistaEconomica":"Su moneda es la rupia",
-    "PistaViajera":"Su bandera es roja y amarilla con un leon sosteniendo un sable.",
-    "PistaCultural":"Alli se encuentra la roca del leon"
+    "PistaEconomica":"Pregunto sobre inversion en te y cafe",
+    "PistaViajera":"Queria conocer una isla de Asia",
+    "PistaCultural":"Leyo sobre budismo"
   },
   {
     "Ciudad":"Peking",
-    "PistaEconomica":"Su moneda es el Renminbi",
+    "PistaEconomica":"Dijo que queria invertir en empresas de Beijing",
     "PistaViajera":"Su bandera es roja con estrellas amarillas",
-    "PistaCultural":"Alli se encuentra la famosa muralla"
+    "PistaCultural":"Queria escuchar una Opera sobre actuacion teatral y artes marciales"
   },
   {
     "Ciudad":"Tokyo",
-    "PistaEconomica":"Su moneda es el yen",
-    "PistaViajera":"Su bandear es blanca con un circulo rojo",
-    "PistaCultural":"Alli se encuentra el cruce de shibuya"
+    "PistaEconomica":"Hizo una transferencia al banco de Kyoto",
+    "PistaViajera":"Queria conocer la ciudad de Hiroshima",
+    "PistaCultural":"Estuvo leyendo sobre la Restauracion Meiji"
   },
   {
     "Ciudad":"Singapore",
-    "PistaEconomica":"Su moneda es el dolar",
-    "PistaViajera":"Su bandera es roja y blanca con una luna y estrellas blancas",
-    "PistaCultural":"Alli se encuentra el famoso hotel Marina Bay"
+    "PistaEconomica":"Pregunto sobre la economia de los tigres asiaticos",
+    "PistaViajera":"Queria conocer la peninsula de Malasia",
+    "PistaCultural":"Pidio articulos sobre los tsunami"
   },
   {
     "Ciudad":"Sydney",
-    "PistaEconomica":"Su moneda es el dolar",
-    "PistaViajera":"Su bandera es azul, roja y blanca con estrellas blancas",
-    "PistaCultural":"Alli se encuentra la famosa Casa de Opera."
+    "PistaEconomica":"Abrio una cuenta en dolares australianos",
+    "PistaViajera":"Queria conocer oceania",
+    "PistaCultural":"Leyo sobre el imperio britanico",
   },
   {
     "Ciudad":"Bangkok",
-    "PistaEconomica":"Su moneda oficial es el baht",
-    "PistaViajera":"Su bandera es roja, blanca y azul",
-    "PistaCultural":"Alli se encuentra el palacio real o Gran Palacio"
+    "PistaEconomica":"Queria invertir en la reciente industrializacion",
+    "PistaViajera":"La bandera del avion tenia cinco franjas horizontales",
+    "PistaCultural":"Estuvo leyendo sobre la gastronomia asiatica"
   },
   {
     "Ciudad":"Por Moresby",
-    "PistaEconomica":"Su moneda es el kina",
-    "PistaViajera":"Su bandera es roja negra y amarilla",
-    "PistaCultural":"Su ave nacional es el ave del paraiso"
+    "PistaEconomica":"Abrio una cuenta en kinas",
+    "PistaViajera":"Se fue en un avion de bandera con dos triangulos",
+    "PistaCultural":"Leyo sobre las colonias britanicas"
   }
 ]
