@@ -1,7 +1,20 @@
 package edu.fiuba.algo3.modelo;
 
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.List;
+
 public class RangoInvestigador implements IRango{
-    private int velocidad = 1300;
+    private int velocidad;
+    public HashMap<String, List<Pista>> pistas;
+    public RangoInvestigador(){
+        this.velocidad = 1300;
+        this.pistas = (new InicializadorDePistasDificiles()).inicializarPistas();
+    }
+
+    public HashMap<String, List<Pista>> obtenerPistaPorRango(){
+        return this.pistas;
+    }
 
     public boolean esNovato(){
         return false;

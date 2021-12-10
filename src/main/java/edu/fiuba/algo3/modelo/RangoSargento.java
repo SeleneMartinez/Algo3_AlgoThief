@@ -1,8 +1,20 @@
 package edu.fiuba.algo3.modelo;
 
-public class RangoSargento implements IRango{
-    private int velocidad = 1500;
+import java.util.HashMap;
+import java.util.List;
 
+public class RangoSargento implements IRango{
+    private int velocidad;
+    private HashMap<String, List<Pista>> pistas;
+
+    public RangoSargento(){
+        this.velocidad = 1500;
+        this.pistas = (new InicializadorDePistasDificiles()).inicializarPistas();
+    }
+
+    public HashMap<String, List<Pista>> obtenerPistaPorRango(){
+        return this.pistas;
+    }
     public boolean esNovato() {
         return false;
     }

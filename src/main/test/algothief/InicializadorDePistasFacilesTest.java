@@ -1,9 +1,6 @@
 package algothief;
 
-import edu.fiuba.algo3.modelo.InicializadorDePistasFaciles;
-import edu.fiuba.algo3.modelo.InicializadorLadrones;
-import edu.fiuba.algo3.modelo.Ladron;
-import edu.fiuba.algo3.modelo.Pista;
+import edu.fiuba.algo3.modelo.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
