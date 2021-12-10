@@ -8,7 +8,7 @@ public class Algothief {
     private Partida partida;
     private List<Ciudad> ciudades;
     private List<Ladron> ladrones;
-    private HashMap<String, List<PistaFacil>> pistasFaciles;
+    private HashMap<String, List<Pista>> pistas;
 
     public Algothief() throws FileNotFoundException {
         this.iniciarCiudades();
@@ -29,6 +29,6 @@ public class Algothief {
 
     private void iniciarPistasFaciles() throws FileNotFoundException {
         InicializadorDePistasFaciles inicializadorDePistasFaciles = new InicializadorDePistasFaciles();
-        pistasFaciles = inicializadorDePistasFaciles.inicializarPistas();
+        pistas = inicializadorDePistasFaciles.inicializarPistas();
     }
 }

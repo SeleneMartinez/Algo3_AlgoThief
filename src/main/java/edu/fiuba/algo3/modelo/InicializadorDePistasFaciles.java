@@ -13,9 +13,9 @@ import java.util.List;
 
 public class InicializadorDePistasFaciles {
 
-    public HashMap<String, List<PistaFacil>> inicializarPistas() throws FileNotFoundException {
+    public HashMap<String, List<Pista>> inicializarPistas() throws FileNotFoundException {
 
-        HashMap<String, List<PistaFacil>> pistasFaciles = new HashMap<String, List<PistaFacil>>();
+        HashMap<String, List<Pista>> pistasFaciles = new HashMap<String, List<Pista>>();
         JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasFaciles.json"));
         JsonElement json = parser.next();
         JsonArray jsonArray = json.getAsJsonArray();
@@ -25,10 +25,10 @@ public class InicializadorDePistasFaciles {
             String pistaViajera = (jsonArray.get(i).getAsJsonObject().get("PistaViajera")).getAsString();
             String pistaCultural = (jsonArray.get(i).getAsJsonObject().get("PistaCultural")).getAsString();
 
-            PistaFacil pistaFacilEconomica = new PistaFacil(pistaEconomica);
-            PistaFacil pistaFacilViajera = new PistaFacil(pistaViajera);
-            PistaFacil pistaFacilCultural = new PistaFacil(pistaCultural);
-            List<PistaFacil> pistas = Arrays.asList(pistaFacilEconomica,
+            Pista pistaFacilEconomica = new Pista(pistaEconomica);
+            Pista pistaFacilViajera = new Pista(pistaViajera);
+            Pista pistaFacilCultural = new Pista(pistaCultural);
+            List<Pista> pistas = Arrays.asList(pistaFacilEconomica,
                     pistaFacilViajera,
                     pistaFacilCultural);
             pistasFaciles.put(nombreCiudad, pistas);
