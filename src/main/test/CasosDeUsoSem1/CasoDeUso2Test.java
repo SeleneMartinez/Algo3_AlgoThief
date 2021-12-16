@@ -12,8 +12,8 @@ import java.util.List;
 public class CasoDeUso2Test {
     @Test
     public void novatoVisitaBancoYVisitaBiblioteca() {
-        Integer altitud = 1200;
-        Integer latitud = 600;
+        Integer altitud = -74;
+        Integer latitud = 45;
         String pistaBanco = "La moneda es el Dolar Canadiense";
         String pistaBiblioteca = "El idioma oficial es el frances";
         String nombreCiudad = "Montreal";
