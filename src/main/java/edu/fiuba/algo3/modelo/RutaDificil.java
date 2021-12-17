@@ -26,7 +26,13 @@ public class RutaDificil implements IRutaDeEscape{
         ciudadesDeLaRuta.add(ciudadActual);
         while (x <= 6)
         {
-            ciudadesConectadas.addAll(ciudadActual.devolverCiudadesConectadas());
+            ciudadesConectadas.clear();
+            if (x==1){
+                ciudadesConectadas.addAll(ciudadActual.devolverCiudadesConectadasPrimeraVez());
+            }
+            else {
+                ciudadesConectadas.addAll(ciudadActual.devolverCiudadesConectadas());
+            }
             int int_random = rand.nextInt(ciudadesConectadas.size());
             ciudadesDeLaRuta.add(ciudadesConectadas.get(int_random));
             ciudadActual = ciudadesDeLaRuta.get(x);

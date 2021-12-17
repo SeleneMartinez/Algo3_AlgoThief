@@ -10,6 +10,7 @@ public class InicializadorCiudades {
     public InicializadorCiudades() {}
 
     public List<Ciudad> iniciarCiudades() {
+        ConectorCiudades conector= new ConectorCiudades();
         List<Ciudad> ciudades = new ArrayList<Ciudad>();
         try{
             JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/ciudades.json"));
@@ -22,31 +23,13 @@ public class InicializadorCiudades {
                 int altitud = (jsonArray.get(i).getAsJsonObject().get("Altitud")).getAsInt();
 
                 Ubicacion ubicacion = new Ubicacion(altitud, latitud);
-                Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion);
+                Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion,conector);
                 ciudades.add(ciudad);
             }
         }catch(FileNotFoundException e){
             System.out.println(e.getMessage());
         }
+        conector.RecibeSinConectar(ciudades);
         return ciudades;
     }
 }
-    //     ConectorCiudades conector= new ConectorCiudades();
-    //     List<Ciudad> ciudades = new ArrayList<Ciudad>();
-    //     JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/ciudades.json"));
-    //     JsonElement json = parser.next();
-    //     JsonArray jsonArray = json.getAsJsonArray();
-    //     for (int i = 0; i < jsonArray.size(); i++) {
-    //         String nombreCiudad = (jsonArray.get(i).getAsJsonObject().get("Ciudad")).getAsString();
-    //         String pais = (jsonArray.get(i).getAsJsonObject().get("Pais")).getAsString();
-    //         int latitud = (jsonArray.get(i).getAsJsonObject().get("Latitud")).getAsInt();
-    //         int altitud = (jsonArray.get(i).getAsJsonObject().get("Altitud")).getAsInt();
-
-    //         Ubicacion ubicacion = new Ubicacion(altitud, latitud);
-    //         Ciudad ciudad = new Ciudad(nombreCiudad, ubicacion);
-    //         ciudades.add(ciudad);
-    //     }
-    //     conector.RecibeSinConectar(ciudades);
-    //     return ciudades;
-    // }
-// }
