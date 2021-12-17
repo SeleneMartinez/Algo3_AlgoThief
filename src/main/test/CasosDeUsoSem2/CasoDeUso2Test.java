@@ -15,13 +15,13 @@ public class CasoDeUso2Test {
         }
 
         IRango rango = policiaInvestigador.obtenerRangoPolicia();
-        Ciudad ciudadMontreal = new Ciudad("Montreal", new Ubicacion(1200, 600));
-        Ciudad ciudadMexico = new Ciudad("Mexico", new Ubicacion(900, 400));
+        Ciudad ciudadMontreal = new Ciudad("Montreal", new Ubicacion(45, -74));
+        Ciudad ciudadMexico = new Ciudad("Mexico", new Ubicacion(19, -99));
 
         policiaInvestigador.viajarDesdeHasta(ciudadMontreal, ciudadMexico);
-
         assertTrue(policiaInvestigador.cantidadDeCasosResueltos() > 10);
         assertTrue(policiaInvestigador.obtenerRangoPolicia() instanceof RangoInvestigador);
         assertEquals(1, rango.tiempoDeViaje(ciudadMontreal, ciudadMexico));
+
     }
 }

@@ -12,11 +12,12 @@ public class CasoDeUso5Test {
         Ladron ladronSospechoso = new Ladron("Nick Brunch", "Negro","Maculino", "Escalada","Negro","Moto");
         Policia detective = new Policia("Rock");
         OrdenDeCaptura orden = new OrdenDeCaptura(ladronSospechoso);
-        Ciudad ciudadOrigen = new Ciudad("Buenos Aires", new Ubicacion(800, 350));
-        Ciudad ciudadFinal = new Ciudad("Lima", new Ubicacion(650, 600));
+        Ciudad ciudadOrigen = new Ciudad("Buenos Aires", new Ubicacion(-58, -34));
+        Ciudad ciudadFinal = new Ciudad("Lima", new Ubicacion(-77, -10));
         Pista pistaBanco = new Pista("Su moneda es el sol");
         Banco banco = new Banco(pistaBanco);
         EdificioConLadron edificioConLadron = new EdificioConLadron();
+        //EdificioConLadron edificioConLadron = new EdificioConLadron(ladronSospechoso);
 
         for (int i = 0; i < 6; i++){
             Ladron ladronTest = new Ladron("Len Bulk", "Maculino", "Escalada", "Rojo", "Tatuaje", "Convertible");
@@ -43,7 +44,7 @@ public class CasoDeUso5Test {
         assertNotNull(banco.visitarEdificio(detective));
         assertTrue(banco.visitarEdificio(detective) instanceof Pista);
         assertEquals(7, detective.cantidadDeCasosResueltos());
-        assertEquals(1, rangoDetective.tiempoDeViaje(ciudadOrigen, ciudadFinal));
+        assertEquals(2, rangoDetective.tiempoDeViaje(ciudadOrigen, ciudadFinal));
         assertEquals("Policia atrapó al ladron", eventoDetenerLadron.obtenerRespuesta());
     }
 }

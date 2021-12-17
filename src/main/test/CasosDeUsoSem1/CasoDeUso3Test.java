@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CasoDeUso3Test {
     @Test
     public void detectiveViajeDeMontrealAMexico() {
-        Integer altitud1 = 1200;
-        Integer latitud1 = 600;
-        Integer altitud2 = 900;
-        Integer latitud2 = 400;
-        Integer horaEsperada = 1;
+        Integer altitud1 = -74;
+        Integer latitud1 = 45;
+        Integer altitud2 = -99;
+        Integer latitud2 = 19;
+        Integer horaEsperada = 2;
         String nombreCiudad1 = "Montreal";
         String nombreCiudad2 = "Mexico";
         String nombrePolicia = "PoliNovato";
