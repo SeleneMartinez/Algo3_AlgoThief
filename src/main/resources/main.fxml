@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(23,23,23);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.Inicio">
+   <children>
+      <Button layoutX="100.0" layoutY="295.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="401.0" style="-fx-font-weight: bold;" text="Comenzar Investigacion">
+         <font>
+            <Font name="Monospaced Regular" size="24.0" />
+         </font>
+      </Button>
+      <Text layoutX="34.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Where on earth is AlgoThief" textAlignment="CENTER" wrappingWidth="532.986328125">
+         <fill>
+            <RadialGradient centerX="0.5057803468208092" centerY="0.7709359605911329" radius="0.5">
+               <stops>
+                  <Stop color="#d71919" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+         <font>
+            <Font name="Impact" size="72.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,8 +1,9 @@
 module edu.fiuba.algo3 {
+    requires javafx.fxml;
     requires javafx.controls;
-    exports edu.fiuba.algo3;
     requires javafx.graphics;
     requires com.google.gson;
     exports edu.fiuba.algo3.modelo;
-    opens edu.fiuba.algo3.modelo;
+    exports edu.fiuba.algo3.Vista;
+    exports edu.fiuba.algo3.controlador;
 }
