@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonStreamParser;
+import edu.fiuba.algo3.controlador.InicioControlador;
 import edu.fiuba.algo3.modelo.Algothief;
 import edu.fiuba.algo3.modelo.Ubicacion;
 import javafx.application.Application;
@@ -26,6 +27,8 @@ public class Main extends Application {
         Algothief algothief = new Algothief();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
         Parent root = loader.load();
+        InicioControlador inicioControlador = loader.getController();
+        inicioControlador.iniciar(algothief);
         Scene scene = new Scene(root, 500, 500);
         scene.setFill(Color.BLACK);
         stage.setTitle("AlgoThief G13");

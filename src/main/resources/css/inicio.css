@@ -1,0 +1,13 @@
+Pane{
+    -fx-background-image: url("../img/carmen.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: rgb(25,25,25);
+}
+
+Button{
+    -fx-background-color: orange;
+    -fx-font-weight: bold;
+    -fx-font-family: Impact;
+    -fx-font-size: 18px;
+}

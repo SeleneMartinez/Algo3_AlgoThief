@@ -9,7 +9,7 @@ public class Algothief {
     private List<Ciudad> ciudades;
     private List<Ladron> ladrones;
 
-    public Algothief() {
+    public void iniciarJuego(){
         this.iniciarCiudades();
         this.iniciarLadrones();
         this.partida = new Partida();
