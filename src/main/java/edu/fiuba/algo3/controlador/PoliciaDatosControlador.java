@@ -16,10 +16,7 @@ import java.io.IOException;
 
 public class PoliciaDatosControlador {
     Algothief algothief;
-    public void iniciar(Algothief algothief){
-        this.algothief = algothief;
-    }
-    
+
     @FXML
     public TextField nombrePolicia;
 
