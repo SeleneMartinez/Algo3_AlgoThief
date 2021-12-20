@@ -8,7 +8,7 @@ public class Partida {
     Ladron ladron;
     Policia policia;
     List<Ciudad> ciudades;
-
+    /**
     public Partida(){
 
     }
@@ -17,6 +17,7 @@ public class Partida {
         this.policia = policia;
         this.ciudades = ciudades;
     }
+    */
     public Partida(String nombrePolicia, List<Ciudad> ciudades, Ladron ladron) {
         policia = new Policia(nombrePolicia);
         this.policia = policia;
