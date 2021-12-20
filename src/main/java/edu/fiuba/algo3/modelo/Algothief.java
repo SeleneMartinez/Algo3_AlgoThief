@@ -12,7 +12,7 @@ public class Algothief {
     public void iniciarJuego(){
         this.iniciarCiudades();
         this.iniciarLadrones();
-        this.partida = new Partida();
+        //this.partida = new Partida();
     }
 
     private void iniciarCiudades()  {
@@ -23,5 +23,10 @@ public class Algothief {
     private void iniciarLadrones() {
         InicializadorLadrones inicializadorLadrones = new InicializadorLadrones();
         ladrones = inicializadorLadrones.iniciarLadrones();
+    }
+    
+    public void nuevaPartida(String nombre) {
+        nombrePolicia = nombre;
+        partida = new Partida(nombre, ciudades, ladrones.get(0));
     }
 }
