@@ -26,7 +26,6 @@ public class Algothief {
     }
     
     public void nuevaPartida(String nombre) {
-        nombrePolicia = nombre;
         partida = new Partida(nombre, ciudades, ladrones.get(0));
     }
 }
