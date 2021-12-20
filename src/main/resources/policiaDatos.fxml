@@ -32,7 +32,12 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField />
+                  <TextField fx:id="nombrePolicia">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#asignarNombre" prefHeight="25.0" prefWidth="83.0" text="Enviar" />
                </children>
             </VBox>
             <VBox alignment="BOTTOM_CENTER" GridPane.columnIndex="2">
