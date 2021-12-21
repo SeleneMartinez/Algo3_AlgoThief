@@ -14,7 +14,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,6 +27,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException{
+        reproducirSonidoInicio();
         Algothief algothief = new Algothief();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
         Parent root = loader.load();
@@ -43,5 +47,14 @@ public class Main extends Application {
     public static <AlgoThief> void main(String[] args){
         Algothief algothief = new Algothief();
         launch();
+    }
+
+    public void reproducirSonidoInicio(){
+        File archivo = new File("src/main/resources/inicio.mp3");
+        Media audio = new Media(archivo.toURI().toString());
+        MediaPlayer audioInicio = new MediaPlayer(audio);
+        audioInicio.setCycleCount(MediaPlayer.INDEFINITE);
+        audioInicio.setVolume(0.06);
+        audioInicio.play();
     }
 }
