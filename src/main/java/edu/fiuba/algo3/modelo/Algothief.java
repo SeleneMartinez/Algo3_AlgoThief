@@ -28,4 +28,8 @@ public class Algothief {
     public void nuevaPartida(String nombre) {
         partida = new Partida(nombre, ciudades, ladrones.get(0));
     }
+    
+    public Partida getPartida() {
+        return partida;
+    }
 }
