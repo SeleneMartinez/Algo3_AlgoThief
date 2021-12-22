@@ -38,4 +38,5 @@ public class Reloj {
     public int obtenerHora(){
         return this.horario;
     }
+    public String obtenerDia() { return this.dia; }
 }
