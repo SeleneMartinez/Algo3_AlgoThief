@@ -63,6 +63,7 @@ public class Policia {
     public int obtenerHora(){
         return reloj.obtenerHora();
     }
+    public String obtenerDia() { return reloj.obtenerDia(); }
 }
 
 
