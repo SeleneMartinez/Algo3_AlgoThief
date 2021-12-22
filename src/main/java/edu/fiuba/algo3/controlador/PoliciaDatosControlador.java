@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.Vista.AvisoRobo;
 import edu.fiuba.algo3.modelo.Algothief;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,6 +40,8 @@ public class PoliciaDatosControlador {
             Stage stage = (Stage) window;
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/avisoRobo.fxml"));
             Parent root = loader.load();
+            AvisoRobo controlador = loader.getController();
+            controlador.iniciarAvisoRobo(algothief);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);
