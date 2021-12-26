@@ -70,6 +70,7 @@
                   <Image url="@img/carmen_sandiego.jpg" />
                </image>
             </ImageView>
+            <Button mnemonicParsing="false" onAction="#volverPantallaPrincipal" text="Volver" />
          </children>
       </VBox>
    </children>
