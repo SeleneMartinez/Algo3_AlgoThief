@@ -11,6 +11,7 @@ public class Partida {
     List<Ciudad> ciudades;
     HashMap<String, List<Pista>> pistasPorCiudad;
     Ciudad ciudadActual;
+    BuscadorLadrones buscador;
     /**
     public Partida(){
 
@@ -33,7 +34,11 @@ public class Partida {
     }
 
     private void setPistasEnCiudad(HashMap<String, List<Pista>> pistas){
-        for (Ciudad ciudad : this.ciudades){
+        Random random = new Random();
+        ciudadActual = ciudades.get(random.nextInt(ciudades.size()));
+        //ConectorCiudades conexiones = new ConstructorCiudades(ciudades);
+        for (Ciudad ciudad : this.ciudades) {
+            //conexiones.agregarConexiones(ciudad)
             List<Pista> pista = pistas.get(ciudad.darNombre());
             for (int i = 0; i < 3; i++) {
                 if (i == 0) {
@@ -45,9 +50,19 @@ public class Partida {
                 }
             }
         }
-        Random random = new Random();
-        ciudadActual = ciudades.get(random.nextInt(ciudades.size()));
+        //RutaFacil ruta = new RutaFacil(ciudadActual);
+        //ladron.agregarRutaEscape(ruta);
+        
     }
+    
+    public void asignarBuscador(List<Ladron> ladrones) {
+        buscador = new BuscadorLadrones(ladrones);
+    }
+    
+    public BuscadorLadrones getBuscador() {
+        return buscador;
+    }
+    
     public String getDia() {
         return policia.obtenerDia();
     }
@@ -63,6 +78,9 @@ public class Partida {
     public Policia getPolicia() {
         return policia;
     }
-
+    
+    public boolean partidaTerminada() {
+        return policia.finTiempo();
+    }
 
 }
