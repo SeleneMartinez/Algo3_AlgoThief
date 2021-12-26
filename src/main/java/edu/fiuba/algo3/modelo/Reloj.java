@@ -11,7 +11,7 @@ public class Reloj {
                                                              "Martes",
                                                              "Miercoles",
                                                              "Jueves",
-                                                             "Viermes",
+                                                             "Viernes",
                                                              "Sabado",
                                                              "Domingo"));
     Iterator <String> iteradorDias= dias.iterator();
@@ -39,4 +39,8 @@ public class Reloj {
         return this.horario;
     }
     public String obtenerDia() { return this.dia; }
+    
+    public boolean tiempoTerminado() {
+        return dia.equals("Domingo") && horario >= 17;
+    }
 }
