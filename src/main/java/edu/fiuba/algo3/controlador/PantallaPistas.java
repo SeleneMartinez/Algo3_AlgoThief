@@ -43,7 +43,7 @@ public class PantallaPistas {
 
     }
 
-    private void modificarTiempo() {
+    private void modificarTiempo(ActionEvent event) {
         Partida partida = juego.getPartida();
         if (partida.partidaTerminada()) {
             this.pantallaFinal(event);
@@ -103,21 +103,21 @@ public class PantallaPistas {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
         pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(0).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
-        this.modificarTiempo();
+        this.modificarTiempo(event);
     }
 
     public void getPistaViajera(ActionEvent event) {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
         pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(1).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
-        this.modificarTiempo();
+        this.modificarTiempo(event);
     }
 
     public void getPistaCultural(ActionEvent event) {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
         pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(2).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
-        this.modificarTiempo();
+        this.modificarTiempo(event);
     }
 
 
