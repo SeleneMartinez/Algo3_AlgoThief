@@ -32,6 +32,8 @@ public class Policia {
     public void demorar(int demora){
         reloj.aumentarHora(demora);
     }
+    
+    
 
     public void dormir(){
         reloj.aumentarHora(8);
@@ -64,6 +66,10 @@ public class Policia {
         return reloj.obtenerHora();
     }
     public String obtenerDia() { return reloj.obtenerDia(); }
+    
+    public boolean finTiempo() {
+        return reloj.tiempoTerminado();
+    }
 }
 
 
