@@ -50,5 +50,9 @@ public class Ladron{
     public String getNombre() {
         return nombre;
     }
+    
+    public void agregarRutaEscape(IRutaDeEscape ruta) { 
+        this.rutaDeEscape = ruta;
+    }
 
 }
