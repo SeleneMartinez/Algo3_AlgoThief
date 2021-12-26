@@ -1,7 +1,6 @@
 package edu.fiuba.algo3.Vista;
 
-import edu.fiuba.algo3.controlador.PantallaPistas;
-import edu.fiuba.algo3.controlador.PoliciaDatosControlador;
+import edu.fiuba.algo3.controlador.PantallaPrincipalControlador;
 import edu.fiuba.algo3.modelo.Algothief;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -27,10 +26,11 @@ public class AvisoRobo {
             Scene sceneActual = sourceAsNode.getScene();
             Window window = sceneActual.getWindow();
             Stage stage = (Stage) window;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaPistas.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaPrincipal.fxml"));
             Parent root = loader.load();
-            PantallaPistas controlador = loader.getController();
-            controlador.iniciarPantallaPistas(juego);
+            PantallaPrincipalControlador controlador = loader.getController();
+            controlador.iniciarPantallaPrincipal(juego);
+
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);
