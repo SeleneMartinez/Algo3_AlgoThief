@@ -63,6 +63,10 @@ public class Partida {
         buscador.buscarPorPelo(color);
     }
 
+    public void buscadorAsignarHobby(String hobby) {
+        buscador.buscarPorHobby(hobby);
+    }
+
     public List<Ladron> buscadorDevuelveSospechosos() {
         return buscador.devolverSospechosos();
     }

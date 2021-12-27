@@ -42,7 +42,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Hobby">
+                  <Button mnemonicParsing="false" onAction="#pistaHobby" text="Hobby">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
