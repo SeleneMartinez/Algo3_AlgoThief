@@ -33,9 +33,7 @@ public class BuscadorLadrones {
                 nuevaLista.add(ladron);
             }
         }
-        if (nuevaLista.size() > 0) {
-            misSospechosos = nuevaLista;
-        }
+        misSospechosos = nuevaLista;
     }
 
     public void buscarPorHobby(String hobby) {
@@ -46,9 +44,7 @@ public class BuscadorLadrones {
                 nuevaLista.add(ladron);
             }
         }
-        if (nuevaLista.size() > 0) {
-            misSospechosos = nuevaLista;
-        }
+        misSospechosos = nuevaLista;
     }
 
     public void buscarPorCaracteristica(String caracteristica) {
@@ -59,9 +55,7 @@ public class BuscadorLadrones {
                 nuevaLista.add(ladron);
             }
         }
-        if (nuevaLista.size() > 0) {
-            misSospechosos = nuevaLista;
-        }
+        misSospechosos = nuevaLista;
     }
 
     public void buscarPorPelo(String pelo) {
@@ -72,9 +66,8 @@ public class BuscadorLadrones {
                 nuevaLista.add(ladron);
             }
         }
-        if (nuevaLista.size() > 0) {
-            misSospechosos = nuevaLista;
-        }
+        misSospechosos = nuevaLista;
+
     }
 
     public void buscarPorVehiculo(String vehiculo) {
@@ -85,8 +78,7 @@ public class BuscadorLadrones {
                 nuevaLista.add(ladron);
             }
         }
-        if (nuevaLista.size() > 0) {
-            misSospechosos = nuevaLista;
-        }
+
+        misSospechosos = nuevaLista;
     }
 }

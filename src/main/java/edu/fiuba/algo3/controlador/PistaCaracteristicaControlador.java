@@ -11,25 +11,25 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class PistaHobbyControlador {
+public class PistaCaracteristicaControlador {
     public Algothief juego;
 
-    public void iniciarPantallaPistaHobby(Algothief algothief) {
+    public void iniciarPantallaPistaCaracteristica(Algothief algothief) {
         juego = algothief;
     }
 
-    public void hobbyEscalada(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Escalada");
+    public void caracteristicaAnillo(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Anillo");
         this.volverPantallaInterpol(event);
     }
 
-    public void hobbyCroquet(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Croquet");
+    public void caracteristicaJoyas(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Joyas");
         this.volverPantallaInterpol(event);
     }
 
-    public void hobbyTennis(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Tennis");
+    public void caracteristicaTatuaje(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Tatuaje");
         this.volverPantallaInterpol(event);
     }
 
@@ -53,7 +53,6 @@ public class PistaHobbyControlador {
             e.printStackTrace();
         }
     }
-
 
 
 }

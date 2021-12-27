@@ -11,25 +11,25 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class PistaHobbyControlador {
+public class PistaVehiculoControlador {
     public Algothief juego;
 
-    public void iniciarPantallaPistaHobby(Algothief algothief) {
+    public void iniciarPantallaPistaVehiculo(Algothief algothief) {
         juego = algothief;
     }
 
-    public void hobbyEscalada(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Escalada");
+    public void vehiculoMoto(ActionEvent event) {
+        juego.getPartida().buscadorAsignarVehiculo("Moto");
         this.volverPantallaInterpol(event);
     }
 
-    public void hobbyCroquet(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Croquet");
+    public void vehiculoConvertible(ActionEvent event) {
+        juego.getPartida().buscadorAsignarVehiculo("Convertible");
         this.volverPantallaInterpol(event);
     }
 
-    public void hobbyTennis(ActionEvent event) {
-        juego.getPartida().buscadorAsignarHobby("Tennis");
+    public void vehiculoLimosina(ActionEvent event) {
+        juego.getPartida().buscadorAsignarVehiculo("Limosina");
         this.volverPantallaInterpol(event);
     }
 

@@ -114,8 +114,16 @@ public class Partida {
         buscador.buscarPorHobby(hobby);
     }
 
-    public void setBuscadorAsignarSexo(String sexo) {
+    public void buscadorAsignarSexo(String sexo) {
         buscador.buscarPorSexo(sexo);
+    }
+
+    public void buscadorAsignarCaracteristica(String caracteristica) {
+        buscador.buscarPorCaracteristica(caracteristica);
+    }
+
+    public void buscadorAsignarVehiculo(String vehiculo) {
+        buscador.buscarPorVehiculo(vehiculo);
     }
 
     public List<Ladron> buscadorDevuelveSospechosos() {

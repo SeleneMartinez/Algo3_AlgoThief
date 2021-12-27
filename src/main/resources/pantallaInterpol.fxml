@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -24,10 +25,15 @@
       <RowConstraints maxHeight="151.99998474121094" minHeight="10.0" prefHeight="134.99997965494794" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Text fx:id="nombreSospechosos" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <font>
-            <Font name="System Bold Italic" size="20.0" />
-         </font></Text>
+      <Pane style="-fx-border-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Text fx:id="nombreSospechosos" fill="WHITE" layoutX="81.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" wrappingWidth="270.8033447265625">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
       <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduzca sus pistas">
@@ -52,12 +58,12 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Caracteristica">
+                  <Button mnemonicParsing="false" onAction="#pistaCaracteristica" text="Caracteristica">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Vehiculo" />
+                  <Button mnemonicParsing="false" onAction="#pistaVehiculo" text="Vehiculo" />
                </children>
             </HBox>
          </children>
@@ -81,12 +87,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Emitir orden">
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#mostrarSospechosos" text="Iniciar busqueda">
+            <Button mnemonicParsing="false" onAction="#emitirOrdenDeCaptura" text="Emitir orden">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
