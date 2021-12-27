@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.controlador.PistaPeloControlador;
 import edu.fiuba.algo3.modelo.Algothief;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import java.io.IOException;
 
 public class PantallaInterpolControlador {
     @FXML
-    public Text nombreSospechosos;
+    //public Text nombreSospechosos;
 
     public Algothief juego;
 
@@ -30,10 +31,10 @@ public class PantallaInterpolControlador {
             Scene sceneActual = sourceAsNode.getScene();
             Window window = sceneActual.getWindow();
             Stage stage = (Stage) window;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaPrincipal.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pistaPelo.fxml"));
             Parent root = loader.load();
-            PantallaPrincipalControlador pantalla = loader.getController();
-            pantalla.iniciarPantallaPrincipal(juego);
+            PistaPeloControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaPistaPelo(juego);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);

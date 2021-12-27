@@ -27,6 +27,7 @@ public class Algothief {
     
     public void nuevaPartida(String nombre) {
         partida = new Partida(nombre, ciudades, ladrones.get(0));
+        partida.asignarBuscador(ladrones);
     }
     
     public Partida getPartida() {

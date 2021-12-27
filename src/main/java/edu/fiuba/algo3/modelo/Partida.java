@@ -59,9 +59,11 @@ public class Partida {
         buscador = new BuscadorLadrones(ladrones);
     }
     
-    public BuscadorLadrones getBuscador() {
-        return buscador;
+    public void buscadorAsignarPelo(String color) {
+        buscador.buscarPorPelo(color);
     }
+
+
     
     public String getDia() {
         return policia.obtenerDia();
