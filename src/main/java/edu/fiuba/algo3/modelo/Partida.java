@@ -75,6 +75,10 @@ public class Partida {
         buscador.buscarPorCaracteristica(caracteristica);
     }
 
+    public void buscadorAsignarVehiculo(String vehiculo) {
+        buscador.buscarPorVehiculo(vehiculo);
+    }
+
     public List<Ladron> buscadorDevuelveSospechosos() {
         return buscador.devolverSospechosos();
     }

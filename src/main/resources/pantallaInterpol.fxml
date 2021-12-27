@@ -57,7 +57,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Vehiculo" />
+                  <Button mnemonicParsing="false" onAction="#pistaVehiculo" text="Vehiculo" />
                </children>
             </HBox>
          </children>
