@@ -41,9 +41,15 @@ public class Ciudad {
     public void agregarEdificio(IEdificio edificio) {
         edificiosEnCiudad.add(edificio);
     }
+    public void eliminarEdificios() {
+        edificiosEnCiudad.clear();
+    }
+
     public List<Ciudad> devolverCiudadesConectadas(){
         return ciudadesConectadas;
     }
+
+
 
     public Ciudad devolverCiudadAnterior() { 
         return ciudadAnterior;

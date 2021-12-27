@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
@@ -63,9 +64,13 @@ public class Ladron{
         return nombre;
     }
     
-    public void agregarRutaEscape(IRutaDeEscape ruta) { 
-        ruta.agregarPistas(pistasLadron);
+    public void agregarRutaEscape(IRutaDeEscape ruta, HashMap<String, List<Pista>> pistasPorCiudad) {
+        ruta.agregarPistas(pistasLadron, pistasPorCiudad);
         this.rutaDeEscape = ruta;
+    }
+
+    public IRutaDeEscape obtenerRutaEscape() {
+        return rutaDeEscape;
     }
 
 }

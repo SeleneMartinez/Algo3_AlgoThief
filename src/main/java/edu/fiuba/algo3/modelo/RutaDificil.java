@@ -1,10 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class RutaDificil implements IRutaDeEscape{
     List<Ciudad> ciudadesDeLaRuta = new ArrayList<Ciudad>();
@@ -21,13 +17,37 @@ public class RutaDificil implements IRutaDeEscape{
 
     }
 
-    public void agregarPistas(List<Pista> pistaLadron){
+
+
+    public void agregarMatones(Ciudad ciudad) {
+        Random random = new Random();
+        int indice = random.nextInt(3);
+        for (int i = 0; i < 3; i++) {
+            if (i == indice) {
+                ciudad.agregarEdificio(new EdificioConLadron());
+            } else {
+                ciudad.agregarEdificio(new EdificioConMaton());
+            }
+        }
+    }
+
+    public void agregarPistas(List<Pista> pistaLadron, HashMap<String, List<Pista>> pistasPorCiudad) {
         List<Pista> pistasCopia = new ArrayList<Pista>(pistaLadron);
-        for (Ciudad ciudad : ciudadesConectadas) {
-            int random = 1;
-            if(random <5){
-                int randomPista = (new Random()).nextInt(pistasCopia.size());
-                ciudad.agregarPista(pistasCopia.remove(randomPista));
+        int random = 1;
+        for (int i = 0; i < ciudadesConectadas.size(); i++) {
+            if (i == ciudadesConectadas.size() - 1) {
+                this.agregarMatones(ciudadesConectadas.get(i));
+            } else {
+                Ciudad proxCiudad = ciudadesConectadas.get(i + 1);
+                List<Pista> pistas = pistasPorCiudad.get(proxCiudad.darNombre());
+                ciudadesConectadas.get(i).agregarEdificio(new Banco(pistas.get(0)));
+                ciudadesConectadas.get(i).agregarEdificio(new Aeropuerto(pistas.get(1)));
+                ciudadesConectadas.get(i).agregarEdificio(new Biblioteca(pistas.get(2)));
+                if (random < 5) {
+                    int randomPista = (new Random()).nextInt(pistasCopia.size());
+                    ciudadesConectadas.get(i).agregarPista(pistasCopia.remove(randomPista));
+                    random += 1;
+                }
             }
         }
     }
@@ -44,6 +64,19 @@ public class RutaDificil implements IRutaDeEscape{
             ciudadesConectadas.get(i).agregarConexion(ciudadesConectadas.get(i-1));
         }
 
+        ciudadActual = ciudadesConectadas.get(0);
+        proximaCiudad = ciudadesConectadas.get(1);
+
+    }
+
+
+    public boolean ciudadEnLaRuta(Ciudad ciudad) {
+        for (Ciudad ciudadEnRuta: ciudadesConectadas) {
+            if (ciudadEnRuta.darNombre().equals(ciudad.darNombre())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void agregarCiudadesEnLaRuta() {
@@ -68,6 +101,10 @@ public class RutaDificil implements IRutaDeEscape{
             this.recorrerCiudades ();
             return this.proximaCiudad;
         }
+    }
+
+    public Ciudad devolverCiudadActual() {
+        return ciudadActual;
     }
     
 }

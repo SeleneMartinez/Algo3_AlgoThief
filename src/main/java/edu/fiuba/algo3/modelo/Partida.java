@@ -35,8 +35,9 @@ public class Partida {
         pistasPorCiudad = rango.obtenerPistaPorRango();
         this.setPistasEnCiudad(pistasPorCiudad);
         this.obtenerRutaLadron();
-        this.ciudadActual = this.obtenerCiudadRandom();
-        this.ciudadAnterior = this.obtenerCiudadRandom();
+        //this.ciudadActual = this.obtenerCiudadRandom();
+        //this.ciudadAnterior = this.obtenerCiudadRandom();
+
         this.conectarCiudad();
     }
 
@@ -51,7 +52,9 @@ public class Partida {
     private void obtenerRutaLadron(){
         IRutaDeEscape ruta = this.policia.obtenerTipoDeRuta();
         ruta.crearRuta(ciudades);
-        ladron.agregarRutaEscape(ruta);
+        ladron.agregarRutaEscape(ruta, pistasPorCiudad);
+        ciudadActual = ruta.devolverCiudadActual();
+        ciudadAnterior = this.obtenerCiudadRandom();
     }
     private Ciudad obtenerCiudadRandom(){
         int numeroRandom = (new Random()).nextInt(this.ciudadesNoConectadas.size());
@@ -69,15 +72,41 @@ public class Partida {
     }
 
     private void conectarCiudad(){
+
+        ciudadActual.agregarConexion(ciudadAnterior);
+        ciudadActual.agregarConexion(obtenerCiudadRandom());
+        //ciudadActual.agregarConexion(obtenerCiudadRandom());
+
+    }
+
+    private void conectarCiudad(Ciudad ciudad) {
+        if (ladron.obtenerRutaEscape().ciudadEnLaRuta(ciudad)) {
+            this.conectarCiudad();
+        }
         ciudadActual.agregarConexion(ciudadAnterior);
         ciudadActual.agregarConexion(obtenerCiudadRandom());
         ciudadActual.agregarConexion(obtenerCiudadRandom());
-
     }
+
     private void setPistasEnCiudad(HashMap<String, List<Pista>> pistas){
         Random random = new Random();
         ciudadActual = ciudades.get(random.nextInt(ciudades.size()));
         //ConectorCiudades conexiones = new ConstructorCiudades(ciudades);
+        Pista pista = new Pista("No paso nadie por aqui");
+        for (Ciudad ciudad: this.ciudades) {
+            for (int i = 0; i < 3; i++) {
+                if (i == 0) {
+                    ciudad.agregarEdificio(new Banco(pista));
+                } else if (i == 1) {
+                    ciudad.agregarEdificio(new Aeropuerto(pista));
+                } else {
+                    ciudad.agregarEdificio(new Biblioteca(pista));
+                }
+            }
+        }
+
+
+        /**
         for (Ciudad ciudad : this.ciudades) {
             //conexiones.agregarConexiones(ciudad)
             List<Pista> pista = pistas.get(ciudad.darNombre());
@@ -91,15 +120,14 @@ public class Partida {
                 }
             }
         }
-        //RutaFacil ruta = new RutaFacil(ciudadActual);
-        //ladron.agregarRutaEscape(ruta);
+        */
         
     }
     public void viajar(Ciudad ciudadDestino){
         this.policia.viajarDesdeHasta(ciudadActual, ciudadDestino);
         ciudadAnterior = ciudadActual;
         ciudadActual = ciudadDestino;
-        this.conectarCiudad();
+        this.conectarCiudad(ciudadActual);
     }
     
     public void asignarBuscador(List<Ladron> ladrones) {
