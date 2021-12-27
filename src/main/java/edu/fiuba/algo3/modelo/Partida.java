@@ -1,17 +1,18 @@
 package edu.fiuba.algo3.modelo;
 
 import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Partida {
     Ladron ladron;
     Policia policia;
     List<Ciudad> ciudades;
+    List<Ciudad> ciudadesNoConectadas;
     HashMap<String, List<Pista>> pistasPorCiudad;
     Ciudad ciudadActual;
+    Ciudad ciudadAnterior;
     BuscadorLadrones buscador;
+
     /**
     public Partida(){
 
@@ -27,12 +28,52 @@ public class Partida {
         //this.policia = policia;
         this.ladron = ladron;
         this.ciudades = ciudades;
+
+        this.ciudadesNoConectadas = new ArrayList<Ciudad>(this.ciudades);
         IRango rango = policia.obtenerRangoPolicia();
         //HashMap<String, List<Pista>> pistasPorCiudad = rango.obtenerPistaPorRango();
         pistasPorCiudad = rango.obtenerPistaPorRango();
         this.setPistasEnCiudad(pistasPorCiudad);
+        this.obtenerRutaLadron();
+        this.ciudadActual = this.obtenerCiudadRandom();
+        this.ciudadAnterior = this.obtenerCiudadRandom();
+        this.conectarCiudad();
     }
 
+    public List<Ciudad> getConexiones(){
+        return this.ciudadActual.getConexiones();
+    }
+
+    public Ciudad obtenerCiduadAnterior(){
+        return this.ciudadAnterior;
+    }
+
+    private void obtenerRutaLadron(){
+        IRutaDeEscape ruta = this.policia.obtenerTipoDeRuta();
+        ruta.crearRuta(ciudades);
+        ladron.agregarRutaEscape(ruta);
+    }
+    private Ciudad obtenerCiudadRandom(){
+        int numeroRandom = (new Random()).nextInt(this.ciudadesNoConectadas.size());
+
+        if( this.ciudadesNoConectadas.get(numeroRandom).equals(ciudadActual)){
+            return this.obtenerCiudadRandom();
+        }
+        else{
+            return this.ciudadesNoConectadas.get(numeroRandom);
+        }
+    }
+
+    public int obtenerTiempoDeViaje(Ciudad ciudad){
+        return policia.obtenerTiempoDeViaje(ciudadActual, ciudad);
+    }
+
+    private void conectarCiudad(){
+        ciudadActual.agregarConexion(ciudadAnterior);
+        ciudadActual.agregarConexion(obtenerCiudadRandom());
+        ciudadActual.agregarConexion(obtenerCiudadRandom());
+
+    }
     private void setPistasEnCiudad(HashMap<String, List<Pista>> pistas){
         Random random = new Random();
         ciudadActual = ciudades.get(random.nextInt(ciudades.size()));
@@ -53,6 +94,12 @@ public class Partida {
         //RutaFacil ruta = new RutaFacil(ciudadActual);
         //ladron.agregarRutaEscape(ruta);
         
+    }
+    public void viajar(Ciudad ciudadDestino){
+        this.policia.viajarDesdeHasta(ciudadActual, ciudadDestino);
+        ciudadAnterior = ciudadActual;
+        ciudadActual = ciudadDestino;
+        this.conectarCiudad();
     }
     
     public void asignarBuscador(List<Ladron> ladrones) {

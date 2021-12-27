@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@css/pantallaPistas.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.PantallaPrincipalControlador">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@css/pantallaPistas.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.PantallaPrincipalControlador">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="157.0">
          <children>
@@ -48,7 +48,7 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Viajar">
+            <Button mnemonicParsing="false" onAction="#pantallaViaje" prefHeight="25.0" prefWidth="130.0" text="Viajar">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>

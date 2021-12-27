@@ -27,6 +27,10 @@ public class RangoInvestigador implements IRango{
         return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
+    public RutaNormal obtenerRutaDeEscapeSegunRango(){
+        return new RutaNormal();
+    }
+
     public IRango obtenerRango(int casosResueltos)
     {
         IRango output = this;

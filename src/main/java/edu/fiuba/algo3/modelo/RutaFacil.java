@@ -17,7 +17,21 @@ public class RutaFacil implements IRutaDeEscape{
     }
 
     public RutaFacil (){
-        this.agregarCiudadesEnLaRuta();
+
+    }
+    public void crearRuta(List<Ciudad> ciudades){
+        List<Ciudad> ciudadesCopia = new ArrayList<>(ciudades);
+        for (int i = 0; i < 3; i++) {
+            int random = (new Random()).nextInt(ciudadesCopia.size());
+            ciudadesConectadas.add(ciudadesCopia.remove(random));
+            if(i>0){
+                ciudadesConectadas.get(i-1).agregarConexion(ciudadesConectadas.get(i));
+            }
+        }
+        for (int i = 2; i>0  ; i--) {
+            ciudadesConectadas.get(i).agregarConexion(ciudadesConectadas.get(i-1));
+        }
+
     }
 
     public void agregarCiudadesEnLaRuta() {

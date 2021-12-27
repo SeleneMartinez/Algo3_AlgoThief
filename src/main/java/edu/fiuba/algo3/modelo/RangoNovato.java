@@ -27,6 +27,9 @@ public class RangoNovato implements IRango{
         return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
+    public RutaFacil obtenerRutaDeEscapeSegunRango(){
+        return new RutaFacil();
+    }
     public IRango obtenerRango(int casosResueltos)
     {
         IRango output = this;

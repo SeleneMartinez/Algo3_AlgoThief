@@ -17,6 +17,10 @@ public class Policia {
         this.orden = new OrdenDeCapturaSinEmitir();
     }
 
+    public int obtenerTiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino){
+        return this.rango.tiempoDeViaje(ciudadOrigen, ciudadDestino);
+    }
+
     public String obtenerNombre() {
         return this.nombre;
     }
@@ -33,7 +37,9 @@ public class Policia {
         reloj.aumentarHora(demora);
     }
     
-    
+    public IRutaDeEscape obtenerTipoDeRuta(){
+        return this.rango.obtenerRutaDeEscapeSegunRango();
+    }
 
     public void dormir(){
         reloj.aumentarHora(8);

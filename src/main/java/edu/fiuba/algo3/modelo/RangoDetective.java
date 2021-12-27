@@ -24,6 +24,10 @@ public class RangoDetective implements IRango{
     public boolean esInvestigador(){ return false;}
     public boolean esSargento(){ return false;}
 
+    public RutaNormal obtenerRutaDeEscapeSegunRango(){
+        return new RutaNormal();
+    }
+
     public int tiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino) {
         return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }

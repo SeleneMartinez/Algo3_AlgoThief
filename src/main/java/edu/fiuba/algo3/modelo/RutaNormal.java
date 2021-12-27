@@ -17,7 +17,19 @@ public class RutaNormal implements IRutaDeEscape{
     }
 
     public RutaNormal (){
-        this.agregarCiudadesEnLaRuta();
+    }
+    public void crearRuta(List<Ciudad> ciudades){
+        List<Ciudad> ciudadesCopia = new ArrayList<>(ciudades);
+        for (int i = 0; i < 4; i++) {
+            int random = (new Random()).nextInt(ciudadesCopia.size());
+            ciudadesConectadas.add(ciudadesCopia.remove(random));
+            if(i>0){
+                ciudadesConectadas.get(i-1).agregarConexion(ciudadesConectadas.get(i));
+            }
+        }
+        for (int i = 3; i>0  ; i--) {
+            ciudadesConectadas.get(i).agregarConexion(ciudadesConectadas.get(i-1));
+        }
     }
 
     public void agregarCiudadesEnLaRuta() {

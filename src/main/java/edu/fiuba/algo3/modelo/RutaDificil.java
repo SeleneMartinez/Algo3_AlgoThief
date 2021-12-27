@@ -16,8 +16,24 @@ public class RutaDificil implements IRutaDeEscape{
         this.ciudadActual = ciudad;
     }
 
-    public RutaDificil (){
-        this.agregarCiudadesEnLaRuta();
+    public RutaDificil() {
+
+    }
+
+
+    public void crearRuta(List<Ciudad> ciudades){
+        List<Ciudad> ciudadesCopia = new ArrayList<>(ciudades);
+        for (int i = 0; i < 6; i++) {
+            int random = (new Random()).nextInt(ciudadesCopia.size());
+            ciudadesConectadas.add(ciudadesCopia.remove(random));
+            if(i>0){
+                ciudadesConectadas.get(i-1).agregarConexion(ciudadesConectadas.get(i));
+            }
+        }
+        for (int i = 5; i>0  ; i--) {
+            ciudadesConectadas.get(i).agregarConexion(ciudadesConectadas.get(i-1));
+        }
+
     }
 
     public void agregarCiudadesEnLaRuta() {

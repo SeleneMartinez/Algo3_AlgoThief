@@ -26,6 +26,9 @@ public class RangoSargento implements IRango{
         return (int) Math.ceil(((double) ciudadOrigen.obtenerDistanciaA(ciudadDestino) / velocidad));
     }
 
+    public RutaDificil obtenerRutaDeEscapeSegunRango(){
+        return new RutaDificil();
+    }
     public IRango obtenerRango(int casosResueltos)
     {
         return this;
