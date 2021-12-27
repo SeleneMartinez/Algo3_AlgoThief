@@ -52,7 +52,7 @@ public class PistaPeloControlador {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaInterpol.fxml"));
             Parent root = loader.load();
             PantallaInterpolControlador pantalla = loader.getController();
-            pantalla.iniciarPantallaInterpol(juego);
+            pantalla.iniciarPantallaInterpol(event, juego);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);

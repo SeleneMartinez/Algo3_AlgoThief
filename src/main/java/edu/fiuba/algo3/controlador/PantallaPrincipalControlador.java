@@ -77,7 +77,7 @@ public class PantallaPrincipalControlador {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaInterpol.fxml"));
             Parent root = loader.load();
             PantallaInterpolControlador controlador = loader.getController();
-            controlador.iniciarPantallaInterpol(juego);
+            controlador.iniciarPantallaInterpol(event, juego);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);

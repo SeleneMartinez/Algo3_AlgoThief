@@ -4,6 +4,7 @@ import edu.fiuba.algo3.Vista.PantallaFinal;
 import edu.fiuba.algo3.controlador.PistaPeloControlador;
 import edu.fiuba.algo3.modelo.Algothief;
 import edu.fiuba.algo3.modelo.Ladron;
+import edu.fiuba.algo3.modelo.OrdenDeCaptura;
 import edu.fiuba.algo3.modelo.Partida;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,13 +28,14 @@ public class PantallaInterpolControlador {
 
     public Algothief juego;
 
-    public void iniciarPantallaInterpol(Algothief algothief) {
+    public void iniciarPantallaInterpol(ActionEvent event, Algothief algothief) {
         juego = algothief;
-        nombreSospechosos.setText("SIN SOSPECHOSOS");
         Partida partida = juego.getPartida();
         Integer h = partida.getHora();
         String h2 = Integer.toString(h);
         tiempo.setText(partida.getDia() + " " + h2 + " hs");
+        this.mostrarSospechosos(event);
+
     }
 
     private void modificarTiempo(ActionEvent event) {
@@ -176,19 +178,35 @@ public class PantallaInterpolControlador {
         }
     }
 
+    public void emitirOrdenDeCaptura(ActionEvent event) {
+        Partida partida = juego.getPartida();
+        List<Ladron> sospechosos = partida.buscadorDevuelveSospechosos();
+        if (sospechosos.size() == 1) {
+            Ladron ladron = sospechosos.get(0);
+            OrdenDeCaptura orden = new OrdenDeCaptura(ladron);
+            partida.getPolicia().recibirOrdenDeCaptura(orden);
+            partida.getPolicia().investigacionInterpol();
+            this.modificarTiempo(event);
+            nombreSospechosos.setText("ORDEN DE ARRESTO \n SOSPECHOSO: " + ladron.getNombre());
+        } else {
+            nombreSospechosos.setText("NO ES POSIBLE EMITIR LA ORDEN");
+        }
+
+    }
+
 
     public void mostrarSospechosos(ActionEvent event) {
         Partida partida = juego.getPartida();
         List<Ladron> sospechosos = partida.buscadorDevuelveSospechosos();
         String lineaTexto = "";
-        for (Ladron ladron: sospechosos) {
-            lineaTexto = lineaTexto + "* " + ladron.getNombre() + "\n";
+        if (sospechosos.size() > 0 && sospechosos.size() < 10) {
+            for (Ladron ladron : sospechosos) {
+                lineaTexto = lineaTexto + "* " + ladron.getNombre() + "\n";
+            }
+            nombreSospechosos.setText(lineaTexto);
+        } else {
+            nombreSospechosos.setText("SIN SOSPECHOSOS");
         }
-        nombreSospechosos.setText(lineaTexto);
-        partida.getPolicia().investigacionInterpol();
-        this.modificarTiempo(event);
-
-
     }
 
     public void reiniciarBusqueda(ActionEvent event) {
