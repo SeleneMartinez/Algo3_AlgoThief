@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class Ladron{
     public String nombre;
