@@ -112,6 +112,27 @@ public class PantallaInterpolControlador {
         }
     }
 
+    public void pistaSexo(ActionEvent event) {
+        try {
+            Object eventSource = event.getSource();
+            Node sourceAsNode = (Node) eventSource;
+            Scene sceneActual = sourceAsNode.getScene();
+            Window window = sceneActual.getWindow();
+            Stage stage = (Stage) window;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pistaSexo.fxml"));
+            Parent root = loader.load();
+            PistaSexoControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaPistaSexo(juego);
+            sceneActual.setRoot(root);
+            stage.setScene(sceneActual);
+            stage.setMaximized(true);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void mostrarSospechosos(ActionEvent event) {
         Partida partida = juego.getPartida();
