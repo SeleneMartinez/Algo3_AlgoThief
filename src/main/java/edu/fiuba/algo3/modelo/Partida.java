@@ -95,6 +95,10 @@ public class Partida {
         //ladron.agregarRutaEscape(ruta);
         
     }
+
+    private void setPistasFalsas(HashMap<String, List<Pista>> pistas) {
+
+    }
     public void viajar(Ciudad ciudadDestino){
         this.policia.viajarDesdeHasta(ciudadActual, ciudadDestino);
         ciudadAnterior = ciudadActual;
