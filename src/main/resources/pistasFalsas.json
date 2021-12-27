@@ -1,0 +1,23 @@
+[
+  {
+    "PistaEconomica": "Este mes tuvimos un alza en la moneda",
+    "PistaCultural": "El museo es un buen lugar para encontrar gente",
+    "PistaViajera": "Adicionamos 15 unidades a nuestras flotas"
+  },
+  {
+    "PistaEconomica": "Este mes tuvimos una baja en la moneda",
+    "PistaCultural": "La biblioteca no es un buen lugar para encontrar gente",
+    "PistaViajera": "Cada noche bajamos las banderas y las volvemos a subir a las 6 de la mañana"
+  },
+
+  {
+    "PistaEconomica": "Cerramos todos los dias a las 15 hs",
+    "PistaCultural": "Nuestro teatro es la mayor atraccion en la noche",
+    "PistaViajera": "Cada verano recibimos 40000 turistas"
+  },
+  {
+    "PistaEconomica": "Para abrir una cuenta debe poseer al menos 1 año de antiguedad",
+    "PistaCultural": "Nuestra mayor festividad se realiza en diciembre",
+    "PistaViajera": "Nuestro momento favorito es cuando pueden reunirse las familias luego de un largo viaje"
+  }
+]
