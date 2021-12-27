@@ -13,7 +13,7 @@ public class Policia {
         this.nombre = nombre;
         this.casosResueltos = 0;
         this.rango = new RangoNovato();
-        this.reloj = new Reloj(0 , "Lunes");
+        this.reloj = new Reloj(9 , "Lunes");
         this.orden = new OrdenDeCapturaSinEmitir();
     }
 
