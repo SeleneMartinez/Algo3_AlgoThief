@@ -54,7 +54,7 @@ public class PantallaPistas {
 
     }
     
-        private void pantallaFinal(ActionEvent event) {
+    private void pantallaFinal(ActionEvent event) {
         try {
             Object eventSource = event.getSource();
             Node sourceAsNode = (Node) eventSource;

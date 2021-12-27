@@ -39,6 +39,10 @@ public class Policia {
         reloj.aumentarHora(8);
     }
 
+    public void investigacionInterpol() {
+        reloj.aumentarHora(3);
+    }
+
     public void nuevoCasoResuelto()
     {
         this.casosResueltos++;

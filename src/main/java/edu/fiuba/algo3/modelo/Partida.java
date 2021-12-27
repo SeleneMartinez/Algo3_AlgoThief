@@ -63,6 +63,13 @@ public class Partida {
         buscador.buscarPorPelo(color);
     }
 
+    public List<Ladron> buscadorDevuelveSospechosos() {
+        return buscador.devolverSospechosos();
+    }
+
+    public void reiniciarBusqueda() {
+        buscador.reiniciarBusqueda();
+    }
 
     
     public String getDia() {

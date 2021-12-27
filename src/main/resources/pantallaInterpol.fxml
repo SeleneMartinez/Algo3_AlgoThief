@@ -24,7 +24,10 @@
       <RowConstraints maxHeight="151.99998474121094" minHeight="10.0" prefHeight="134.99997965494794" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Text fx:id="nombreSospechosos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Text fx:id="nombreSospechosos" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="262.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></Text>
       <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduzca sus pistas">
@@ -73,7 +76,7 @@
       </HBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
          <children>
-            <Button mnemonicParsing="false" text="Reiniciar busqueda">
+            <Button mnemonicParsing="false" onAction="#reiniciarBusqueda" text="Reiniciar busqueda">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
@@ -83,7 +86,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Iniciar busqueda">
+            <Button mnemonicParsing="false" onAction="#mostrarSospechosos" text="Iniciar busqueda">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
@@ -93,6 +96,15 @@
                   <Insets />
                </VBox.margin>
             </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Text fx:id="tiempo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Text>
          </children>
       </VBox>
    </children>
