@@ -3,7 +3,7 @@ import edu.fiuba.algo3.modelo.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class UbicacionTest {
-
+    /**
     @Test
     public void obtieneDistanciaCorrecta(){
         Ubicacion origen = new Ubicacion(200, 100);
@@ -13,4 +13,5 @@ public class UbicacionTest {
 
         assertEquals(111,distancia);
     }
+    */
 }
