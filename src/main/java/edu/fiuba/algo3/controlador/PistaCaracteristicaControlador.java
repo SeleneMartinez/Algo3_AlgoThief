@@ -11,20 +11,25 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class PistaSexoControlador {
+public class PistaCaracteristicaControlador {
     public Algothief juego;
 
-    public void iniciarPantallaPistaSexo(Algothief algothief) {
+    public void iniciarPantallaPistaCaracteristica(Algothief algothief) {
         juego = algothief;
     }
 
-    public void sexoFemenino(ActionEvent event) {
-        juego.getPartida().buscadorAsignarSexo("Femenino");
+    public void caracteristicaAnillo(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Anillo");
         this.volverPantallaInterpol(event);
     }
 
-    public void sexoMasculino(ActionEvent event) {
-        juego.getPartida().buscadorAsignarSexo("Masculino");
+    public void caracteristicaJoyas(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Joyas");
+        this.volverPantallaInterpol(event);
+    }
+
+    public void caracteristicaTatuaje(ActionEvent event) {
+        juego.getPartida().buscadorAsignarCaracteristica("Tatuaje");
         this.volverPantallaInterpol(event);
     }
 
@@ -48,5 +53,6 @@ public class PistaSexoControlador {
             e.printStackTrace();
         }
     }
+
 
 }
