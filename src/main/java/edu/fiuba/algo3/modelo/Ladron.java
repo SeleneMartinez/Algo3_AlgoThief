@@ -1,5 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Ladron{
     public String nombre;
     public String sexo;
@@ -7,6 +10,7 @@ public class Ladron{
     public String pelo;
     public String auto;
     public String caracteristica;
+    public List<Pista> pistasLadron;
     public IRutaDeEscape rutaDeEscape;
 
     public Ladron(String nombre, String pelo, String sexo, String hobby, String caracteristica, String auto){
@@ -16,6 +20,13 @@ public class Ladron{
         this.hobby = hobby;
         this.auto = auto;
         this.sexo = sexo;
+        pistasLadron = Arrays.asList(
+            new Pista(pelo),
+            new Pista(caracteristica),
+            new Pista(hobby),
+            new Pista(auto),
+            new Pista(sexo)
+        );
     }
 
     public IRespuestaDelEvento entregarse(){
@@ -52,6 +63,7 @@ public class Ladron{
     }
     
     public void agregarRutaEscape(IRutaDeEscape ruta) { 
+        ruta.agregarPistas(pistasLadron);
         this.rutaDeEscape = ruta;
     }
 

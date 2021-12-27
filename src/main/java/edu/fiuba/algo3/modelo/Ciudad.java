@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Ciudad {
     String nombre;
@@ -15,6 +16,11 @@ public class Ciudad {
         this.ubicacion = ubicacion;
     }
 
+    public void agregarPista(Pista pistaLadron){
+        int random = (new Random()).nextInt(edificiosEnCiudad.size());
+        edificiosEnCiudad.remove(random);
+        edificiosEnCiudad.add(new Banco(pistaLadron));
+    }
     public List<Ciudad> getConexiones(){
         return this.ciudadesConectadas;
     }
@@ -48,6 +54,10 @@ public class Ciudad {
     }
     public int obtenerDistanciaA(Ciudad destino){
         return this.ubicacion.calcularDistancia(destino.ubicacion);
+    }
+
+    public void agregarPistaLadron(){
+        
     }
 
     // String nombre;

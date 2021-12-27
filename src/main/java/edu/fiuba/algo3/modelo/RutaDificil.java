@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -20,7 +21,16 @@ public class RutaDificil implements IRutaDeEscape{
 
     }
 
-
+    public void agregarPistas(List<Pista> pistaLadron){
+        List<Pista> pistasCopia = new ArrayList<Pista>(pistaLadron);
+        for (Ciudad ciudad : ciudadesConectadas) {
+            int random = 1;
+            if(random <5){
+                int randomPista = (new Random()).nextInt(pistasCopia.size());
+                ciudad.agregarPista(pistasCopia.remove(randomPista));
+            }
+        }
+    }
     public void crearRuta(List<Ciudad> ciudades){
         List<Ciudad> ciudadesCopia = new ArrayList<>(ciudades);
         for (int i = 0; i < 6; i++) {
