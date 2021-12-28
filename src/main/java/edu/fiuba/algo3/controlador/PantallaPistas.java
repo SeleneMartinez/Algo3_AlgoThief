@@ -140,6 +140,27 @@ public class PantallaPistas {
     }
 
 
+    public void pantallaPoliciaAtrapaLadron(ActionEvent event) {
+        try {
+            Object eventSource = event.getSource();
+            Node sourceAsNode = (Node) eventSource;
+            Scene sceneActual = sourceAsNode.getScene();
+            Window window = sceneActual.getWindow();
+            Stage stage = (Stage) window;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaPoliciaAtrapaLadron.fxml"));
+            Parent root = loader.load();
+            PantallaPoliciaAtrapaLadronControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaPoliciaAtrapaLadron(juego);
+            sceneActual.setRoot(root);
+            stage.setScene(sceneActual);
+            stage.setMaximized(true);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     public void detectarRespuesta(String respuesta, ActionEvent event) {
@@ -148,7 +169,7 @@ public class PantallaPistas {
         } else if (respuesta.equals("Ladrón escapó")) {
             this.pantallaLadronEscapa(event);
         } else if (respuesta.equals("Policia atrapó al ladron")) {
-
+            this.pantallaPoliciaAtrapaLadron(event);
         } else {
             pista.setText("La pista es:" + "\n" + respuesta);
         }
