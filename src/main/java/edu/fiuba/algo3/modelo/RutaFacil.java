@@ -18,25 +18,27 @@ public class RutaFacil implements IRutaDeEscape{
 
     }
 
-    public void agregarMatones(Ciudad ciudad) {
+    public void agregarMatones(Ciudad ciudad, Ladron ladron) {
         Random random = new Random();
         int indice = random.nextInt(3);
         ciudad.eliminarEdificios();
         for (int i = 0; i < 3; i++) {
             if (i == indice) {
-                ciudad.agregarEdificio(new EdificioConLadron());
+                EdificioConLadron edificio = new EdificioConLadron();
+                edificio.ladronEntraAlEdificio(ladron);
+                ciudad.agregarEdificio(edificio);
             } else {
                 ciudad.agregarEdificio(new EdificioConMaton());
             }
         }
     }
 
-    public void agregarPistas(List<Pista> pistaLadron, HashMap<String, List<Pista>> pistasPorCiudad){
+    public void agregarPistas(List<Pista> pistaLadron, HashMap<String, List<Pista>> pistasPorCiudad, Ladron ladron){
         List<Pista> pistasCopia = new ArrayList<Pista>(pistaLadron);
         int random = 1;
         for (int i = 0; i < ciudadesConectadas.size(); i++) {
             if (i == ciudadesConectadas.size() - 1) {
-                this.agregarMatones(ciudadesConectadas.get(i));
+                this.agregarMatones(ciudadesConectadas.get(i), ladron);
             } else {
                 Ciudad proxCiudad = ciudadesConectadas.get(i + 1);
                 List<Pista> pistas = pistasPorCiudad.get(proxCiudad.darNombre());

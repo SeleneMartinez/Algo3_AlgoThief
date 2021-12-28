@@ -95,28 +95,90 @@ public class PantallaPistas {
             e.printStackTrace();
         }
     }
+
+
+    public void pantallaMatonAtaca(ActionEvent event) {
+        try {
+            Object eventSource = event.getSource();
+            Node sourceAsNode = (Node) eventSource;
+            Scene sceneActual = sourceAsNode.getScene();
+            Window window = sceneActual.getWindow();
+            Stage stage = (Stage) window;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/matonAtaca.fxml"));
+            Parent root = loader.load();
+            PantallaMatonAtacaControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaMatonAtaca(juego);
+            sceneActual.setRoot(root);
+            stage.setScene(sceneActual);
+            stage.setMaximized(true);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
-    
-    
+    public void pantallaLadronEscapa(ActionEvent event) {
+        try {
+            Object eventSource = event.getSource();
+            Node sourceAsNode = (Node) eventSource;
+            Scene sceneActual = sourceAsNode.getScene();
+            Window window = sceneActual.getWindow();
+            Stage stage = (Stage) window;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaLadronEscapa.fxml"));
+            Parent root = loader.load();
+            PantallaLadronEscapoControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaLadronEscapo(juego);
+            sceneActual.setRoot(root);
+            stage.setScene(sceneActual);
+            stage.setMaximized(true);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    public void detectarRespuesta(String respuesta, ActionEvent event) {
+        if (respuesta.equals("Matón atacó al policia")) {
+            this.pantallaMatonAtaca(event);
+        } else if (respuesta.equals("Ladrón escapó")) {
+            this.pantallaLadronEscapa(event);
+        } else if (respuesta.equals("Policia atrapó al ladron")) {
+
+        } else {
+            pista.setText("La pista es:" + "\n" + respuesta);
+        }
+    }
+
 
     public void getPistaEconomica(ActionEvent event) {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
-        pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(0).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
+        String respuesta = ciudadActual.devolverEdificios().get(0).visitarEdificio(partida.getPolicia()).obtenerRespuesta();
+        this.detectarRespuesta(respuesta, event);
+        //pista.setText("La pista es:" + "\n" + respuesta);
         this.modificarTiempo(event);
     }
 
     public void getPistaViajera(ActionEvent event) {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
-        pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(1).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
+        String respuesta = ciudadActual.devolverEdificios().get(1).visitarEdificio(partida.getPolicia()).obtenerRespuesta();
+        //pista.setText("La pista es:" + "\n" + respuesta);
+        this.detectarRespuesta(respuesta, event);
         this.modificarTiempo(event);
     }
 
     public void getPistaCultural(ActionEvent event) {
         Partida partida = juego.getPartida();
         Ciudad ciudadActual = partida.getCiudadActual();
-        pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(2).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
+        String respuesta = ciudadActual.devolverEdificios().get(2).visitarEdificio(partida.getPolicia()).obtenerRespuesta();
+        this.detectarRespuesta(respuesta, event);
+        //pista.setText("La pista es:" + "\n" + ciudadActual.devolverEdificios().get(2).visitarEdificio(partida.getPolicia()).obtenerRespuesta());
         this.modificarTiempo(event);
     }
 

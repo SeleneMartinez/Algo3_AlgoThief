@@ -65,7 +65,7 @@ public class Ladron{
     }
     
     public void agregarRutaEscape(IRutaDeEscape ruta, HashMap<String, List<Pista>> pistasPorCiudad) {
-        ruta.agregarPistas(pistasLadron, pistasPorCiudad);
+        ruta.agregarPistas(pistasLadron, pistasPorCiudad, this);
         this.rutaDeEscape = ruta;
     }
 
