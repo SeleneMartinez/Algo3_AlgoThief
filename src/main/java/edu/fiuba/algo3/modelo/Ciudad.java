@@ -17,7 +17,8 @@ public class Ciudad {
     }
 
     public void agregarPista(Pista pistaLadron){
-        int random = (new Random()).nextInt(edificiosEnCiudad.size());
+        //int random = (new Random()).nextInt(edificiosEnCiudad.size());
+        int random = (new Random()).nextInt(2);
         edificiosEnCiudad.remove(random);
         edificiosEnCiudad.add(new Banco(pistaLadron));
     }

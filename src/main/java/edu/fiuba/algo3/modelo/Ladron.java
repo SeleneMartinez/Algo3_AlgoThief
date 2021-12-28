@@ -23,11 +23,11 @@ public class Ladron{
         this.auto = auto;
         this.sexo = sexo;
         pistasLadron = Arrays.asList(
-            new Pista(pelo),
-            new Pista(caracteristica),
-            new Pista(hobby),
-            new Pista(auto),
-            new Pista(sexo)
+            new Pista("Su cabello era de color " + pelo),
+            new Pista("Se ve que tenia " + caracteristica),
+            new Pista("Dijo que practicaba " + hobby),
+            new Pista("Se fue en " + auto),
+            new Pista("Era una persona de sexo " + sexo)
         );
     }
 

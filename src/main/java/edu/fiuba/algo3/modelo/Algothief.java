@@ -3,6 +3,7 @@ package edu.fiuba.algo3.modelo;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class Algothief {
     private Partida partida;
@@ -26,7 +27,9 @@ public class Algothief {
     }
     
     public void nuevaPartida(String nombre) {
-        partida = new Partida(nombre, ciudades, ladrones.get(0));
+        Random random = new Random();
+        int indice = random.nextInt(9);
+        partida = new Partida(nombre, ciudades, ladrones.get(indice));
         partida.asignarBuscador(ladrones);
     }
     

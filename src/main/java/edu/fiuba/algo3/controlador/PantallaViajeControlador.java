@@ -99,17 +99,19 @@ public class PantallaViajeControlador {
     public void viajarAnterior(ActionEvent event){
         Partida partida = juego.getPartida();
         partida.viajar(ciudadAnterior);
-
+        this.modificarTiempo(event);
         this.volver(event);
     }
     public void viajarPrimera(ActionEvent event){
         Partida partida = juego.getPartida();
         partida.viajar(ciudadPrimeraConexion);
+        this.modificarTiempo(event);
         this.volver(event);
     }
     public void viajarSegunda(ActionEvent event){
         Partida partida = juego.getPartida();
         partida.viajar(ciudadSegundaConexion);
+        this.modificarTiempo(event);
         this.volver(event);
     }
     private void pantallaFinal(ActionEvent event) {
