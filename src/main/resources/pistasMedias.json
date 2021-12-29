@@ -1,7 +1,7 @@
 [
   {
     "Ciudad":"New York City",
-    "PistaEconomica":"izo una transferencia al banco de Washington",
+    "PistaEconomica":"Hizo una transferencia al banco de Washington",
     "PistaViajera": "Queria conocer la estatua de la Libertad",
     "PistaCultural": "Estuvo leyendo sobre la guerra de Secesion"
   },
@@ -166,7 +166,7 @@
     "Ciudad":"Sydney",
     "PistaEconomica":"Abrio una cuenta en dolares australianos",
     "PistaViajera":"Queria conocer oceania",
-    "PistaCultural":"Leyo sobre el imperio britanico",
+    "PistaCultural":"Leyo sobre el imperio britanico"
   },
   {
     "Ciudad":"Bangkok",

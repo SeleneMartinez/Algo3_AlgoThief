@@ -18,17 +18,22 @@ public class PantallaPoliciaAtrapaLadronControlador {
         juego = algothief;
     }
 
-    public void volverEmpezar(ActionEvent event) {
+    public void policiaAtrapoLadron() {
+        juego.getPartida().getPolicia().nuevoCasoResuelto();
+    }
+
+    public void continuar(ActionEvent event) {
         try {
+            this.policiaAtrapoLadron();
             Object eventSource = event.getSource();
             Node sourceAsNode = (Node) eventSource;
             Scene sceneActual = sourceAsNode.getScene();
             Window window = sceneActual.getWindow();
             Stage stage = (Stage) window;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaOtroCaso.fxml"));
             Parent root = loader.load();
-            InicioControlador inicioControlador = loader.getController();
-            inicioControlador.iniciar(juego);
+            PantallaOtroCasoControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaOtroCaso(juego);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);

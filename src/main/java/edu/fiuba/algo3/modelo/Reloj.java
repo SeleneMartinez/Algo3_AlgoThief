@@ -43,4 +43,10 @@ public class Reloj {
     public boolean tiempoTerminado() {
         return dia.equals("Domingo") && horario >= 17;
     }
+
+    public void reiniciarReloj() {
+        iteradorDias = dias.iterator();
+        horario= 7;
+        dia= "Lunes";
+    }
 }

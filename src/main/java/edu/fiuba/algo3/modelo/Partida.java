@@ -187,4 +187,23 @@ public class Partida {
         return policia.finTiempo();
     }
 
+    public void nuevoCaso(Ladron ladron) {
+        this.ladron = ladron;
+        IRango rango = policia.obtenerRangoPolicia();
+        pistasPorCiudad = rango.obtenerPistaPorRango();
+        policia.reiniciar();
+        this.reiniciarBusqueda();
+        this.reiniciarCiudades();
+        this.setPistasEnCiudad(pistasPorCiudad);
+        this.obtenerRutaLadron();
+        this.conectarCiudad();
+    }
+
+    public void reiniciarCiudades() {
+        for (Ciudad ciudad: this.ciudades) {
+            ciudad.eliminarConexiones();
+            ciudad.eliminarEdificios();
+        }
+    }
+
 }

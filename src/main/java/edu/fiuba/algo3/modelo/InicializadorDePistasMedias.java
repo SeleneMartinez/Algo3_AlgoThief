@@ -16,7 +16,7 @@ public class InicializadorDePistasMedias {
 
         HashMap<String, List<Pista>> pistasMedias = new HashMap<String, List<Pista>>();
         try{
-            JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasFaciles.json"));
+            JsonStreamParser parser = new JsonStreamParser(new FileReader("src/main/resources/pistasMedias.json"));
             JsonElement json = parser.next();
             JsonArray jsonArray = json.getAsJsonArray();
             for (int i = 0; i < jsonArray.size(); i++) {

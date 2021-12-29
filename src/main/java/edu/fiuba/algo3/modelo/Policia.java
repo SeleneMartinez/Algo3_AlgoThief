@@ -52,6 +52,7 @@ public class Policia {
     public void nuevoCasoResuelto()
     {
         this.casosResueltos++;
+        System.out.println(casosResueltos);
         this.rango = this.rango.obtenerRango(casosResueltos);
     }
 
@@ -79,6 +80,12 @@ public class Policia {
     
     public boolean finTiempo() {
         return reloj.tiempoTerminado();
+    }
+
+    public void reiniciar() {
+
+        reloj.reiniciarReloj();
+        orden = new OrdenDeCapturaSinEmitir();
     }
 }
 

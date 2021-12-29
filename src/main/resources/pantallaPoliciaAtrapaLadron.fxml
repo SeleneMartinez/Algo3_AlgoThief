@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.PantallaPoliciaAtrapaLadronControlador">
    <children>
       <ImageView fitHeight="200.0" fitWidth="284.0" pickOnBounds="true" preserveRatio="true">
@@ -24,7 +23,7 @@
             <Font name="Times New Roman Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Button mnemonicParsing="false" onAction="#volverEmpezar" text="Continuar">
+      <Button mnemonicParsing="false" onAction="#continuar" text="Continuar">
          <VBox.margin>
             <Insets top="50.0" />
          </VBox.margin>

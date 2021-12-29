@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.Vista;
 
 import edu.fiuba.algo3.controlador.InicioControlador;
+import edu.fiuba.algo3.controlador.PantallaOtroCasoControlador;
 import edu.fiuba.algo3.controlador.PoliciaDatosControlador;
 import edu.fiuba.algo3.modelo.Algothief;
 import javafx.event.ActionEvent;
@@ -25,7 +26,7 @@ public class PantallaFinal {
         algothief = juego;
     }
 
-    public void volverEmpezar(ActionEvent event) {
+    public void continuar(ActionEvent event) {
         try {
             reproducirSonidoInicio();
             Object eventSource = event.getSource();
@@ -33,10 +34,10 @@ public class PantallaFinal {
             Scene sceneActual = sourceAsNode.getScene();
             Window window = sceneActual.getWindow();
             Stage stage = (Stage) window;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/pantallaOtroCaso.fxml"));
             Parent root = loader.load();
-            InicioControlador inicioControlador = loader.getController();
-            inicioControlador.iniciar(algothief);
+            PantallaOtroCasoControlador pantalla = loader.getController();
+            pantalla.iniciarPantallaOtroCaso(algothief);
             sceneActual.setRoot(root);
             stage.setScene(sceneActual);
             stage.setMaximized(true);

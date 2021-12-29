@@ -20,7 +20,8 @@ public class Ciudad {
         //int random = (new Random()).nextInt(edificiosEnCiudad.size());
         int random = (new Random()).nextInt(2);
         edificiosEnCiudad.remove(random);
-        edificiosEnCiudad.add(new Banco(pistaLadron));
+        //edificiosEnCiudad.add(new Banco(pistaLadron));
+        edificiosEnCiudad.add(random, new Banco(pistaLadron));
     }
     public List<Ciudad> getConexiones(){
         return this.ciudadesConectadas;
@@ -35,6 +36,10 @@ public class Ciudad {
             ciudadesConectadas.add(ciudad);
         }
     }
+    public void eliminarConexiones() {
+        ciudadesConectadas.clear();
+    }
+
     public void agregarCiudadAnterior(Ciudad ciudadAnterior) {
         ciudadesConectadas.add(ciudadAnterior);
         this.ciudadAnterior = ciudadAnterior;

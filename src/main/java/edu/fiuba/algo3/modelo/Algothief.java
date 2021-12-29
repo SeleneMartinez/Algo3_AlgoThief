@@ -36,4 +36,10 @@ public class Algothief {
     public Partida getPartida() {
         return partida;
     }
+
+    public void nuevoCaso() {
+        Random random = new Random();
+        int indice = random.nextInt(9);
+        partida.nuevoCaso(ladrones.get(indice));
+    }
 }

@@ -7,7 +7,7 @@
     },
     {
         "Ciudad":"Montreal",
-        "PistaEconomica":"",
+        "PistaEconomica":"La moneda es el dolar canadiense",
         "PistaViajera": "Bandera roja y blanca con una hoja",
         "PistaCultural":"El idioma oficial es el frances"
     },
@@ -51,13 +51,13 @@
     {
         "Ciudad":"Paris",
         "PistaEconomica":"Su moneda es el euro",
-        "PistaViajera": "Su bandera son tres franjaz azul, blanca y roja",
+        "PistaViajera": "Su bandera son tres franjas azul, blanca y roja",
         "PistaCultural": "Alli se encuentra la torre eiffel"
     },
     {
         "Ciudad":"San Marino",
         "PistaEconomica":"Su moneda es el euro",
-        "PistaViajera":"Su bandera es celeste y blanca con tres trores",
+        "PistaViajera":"Su bandera es celeste y blanca con tres torres",
         "PistaCultural":"Su idioma oficial es el italiano"
     },
     {
