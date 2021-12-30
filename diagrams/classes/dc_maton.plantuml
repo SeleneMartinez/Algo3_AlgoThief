@@ -1,39 +1,53 @@
 @startuml
 class Maton
 {
- + obtenerDemoraPorArma():int
+ + atacar(policia:Policia): IRespuestaDelEvento
 }
 
 interface Arma
 {
+    + herir(policia:Policia): IRespuestaDelEvento
 }
 
 class Cuchillo
 {
+    + herir(policia:Policia): Amenaza
 }
 class Pistola
 {
+    + herir(policia:Policia): Amenaza
 }
 
 class Ladron
 {
+    -nombre:String 
+    -sexo:String 
+    -hobby:String 
+    -pelo:String 
+    -auto:String 
+    -caracteristica:String 
+    -pistasLadron:List<Pista> 
+    -rutaDeEscape:IRutaDeEscape 
+    + entregarse():IRespuestaDelEvento
+    + escapar():IRespuestaDelEvento
+    +obtenerRutaEscape():IRutaDeEscape
 }
-interface Orden
+interface IOrdenDeCaptura
 {
-    + tengoOrdenDeCaptura(Ladron ladron) : void
+    + capturar(ladron:Ladron):IRespuestaDelEvento
 }
 class OrdenDeCaptura
 {
-    + tengoOrdenDeCaptura(Ladron ladron) : void
+    + capturar(ladron:Ladron):IRespuestaDelEvento
 }
 class OrdenDeCapturaInvalida
 {
-    + tengoOrdenDeCaptura(Ladron ladron) : void
+    + capturar(ladron:Ladron):LadronEscapo
 }
-Orden <|.. OrdenDeCaptura
-Orden <|.. OrdenDeCapturaInvalida
+IOrdenDeCaptura <|.. OrdenDeCaptura
+IOrdenDeCaptura <|.. OrdenDeCapturaInvalida
 Maton --> Arma
 Arma <|.. Cuchillo
 Arma <|.. Pistola
-Ladron --> Orden
+IOrdenDeCaptura --> Ladron
 @enduml
