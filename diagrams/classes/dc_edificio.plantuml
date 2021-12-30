@@ -2,45 +2,46 @@
 
 interface Edificio
 {
-    +visitarEdificio: void
+    + visitarEdificio(policia:Policia): IRespuestaDelEvento
 }
 class EdificioConMaton
 {
-    +visitar(Policia policia): Amenaza
+    - maton:Maton
+    +visitar(policia:Policia): Amenaza
 }
 class EdificioConLadron
 {
-    +visitar((Policia policia): RespuestaDelEventos
+    - ladron:Ladron
+    + visitar(policia:Policia): RespuestaDelEventos
 }
 
 class Biblioteca
 {
-    -pista :Pista
+
 }
 
 class Banco
 {
-    -pista :Pista
+
 }
 
 class Aeropuerto
 {
-    -pista :Pista
+
 }
 class Puerto
 {
-    -pista :Pista
+
 }
-class Bolsa
-{
-    -pista :Pista
-}
+
 
 class EdificioConPista
 {
-    +visitar(Policia policia): Pista
+    - pista :Pista
+    - visita: IVisita
+    + visitar(policia Policia):Pista
 }
-EdificioConPista<|-- Bolsa
+
 EdificioConPista<|-- Banco
 EdificioConPista<|-- Aeropuerto
 EdificioConPista<|-- Puerto
