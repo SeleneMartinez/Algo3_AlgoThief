@@ -3,11 +3,16 @@ class Ciudad
 {
     - nombre
     - ciudadConectadas : List<Ciudad>
+    - ubicacion: Ubicacion
+    + agregarPista(pista:Pista)
+    + agregarConexion(ciudad:Ciudad)
+    + eliminarConexiones()
+    + agregarEdificio(edificio:IEdificio)
+    + devolverCiudadesConectadas():List<Ciudad>
 }
 interface Edificio
 {
-    -cantVecesVisitado : int
-    + visitarEdificio(): void
+    + visitarEdificio(policia:Policia): IRespuestaDelEvento
 }
 
 Ciudad "1"-> "3"  Edificio
