@@ -1,41 +1,54 @@
 @startuml
 class Policia
 {
-    - int casosResueltos
-    + amenaza(Maton maton): Amenaza
-    + demorar(int demora): void
+    - nombre:String 
+    - casosResueltos:Int 
+    - rango:IRango 
+    - orden:IOrdenDeCaptura 
+    - reloj:Reloj 
+    + viajarDesdeHasta(ciudad:Ciudad, otraCiudad:Ciudad)
+    + demorar(demora:Int)
+    + dormir()
+    + investigascionInterpol()
+    + nuevoCasoResuelto()
+    + detener(ladron:Ladron):IRespuestaDelEvento
+    + recibirOrdenDeCaptura(orden:IOrdenDeCaptura)
+
 }
-interface Rango
+interface IRango
 {
-    + rangoSiguiente(int casosResueltos): Rango
-    +dificultad(): Dificultad
+    + {abstract} obtenerRango(casosResueltos:Int):IRango
+    + {abstract} obtenerPistaPorRango(): Dicctionary
+    + {abstract} tiempoDeViaje(ciudad:Ciudad, otraCiudad:Ciudad):Int
+    + {abstract} obtenerRutaDeEscapeSegunRango():IRutaDeEscape
 }
 
 class Detective
 {
     -int tiempoDeViaje
+    + obtenerRutaDeEscapeSegunRango():RutaNormal
 }
 class Novato
 {
     -int tiempoDeViaje
+    + obtenerRutaDeEscapeSegunRango():RutaFacil
 }
 class Sargento
 {
     -int tiempoDeViaje
+    + obtenerRutaDeEscapeSegunRango():RutaDificil
 }
 class Investigador
 {
     -int tiempoDeViaje
+    + obtenerRutaDeEscapeSegunRango():RutaNormal
 }
 
-interface Dificultad
-{
-}
 
-Policia -->Rango
-Rango <|..Investigador
-Rango <|..Sargento
-Rango <|.. Detective
-Rango <|..Novato
-Rango ...> Dificultad
+Policia -->IRango
+IRango <|..Investigador
+IRango <|..Sargento
+IRango <|.. Detective
+IRango <|..Novato
+
 @enduml

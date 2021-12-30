@@ -1,34 +1,33 @@
 @startuml
-interface Pista
+
+interface IRespuestaDelEvento
 {
-    - pista: string
-    + obtenerRespuesta(): string
+    + {abstract} obtenerRespuesta(): String
 }
 
-interface RespuestaDelEvento
+class Pista
 {
-   + obtenerRespuesta(): string
+    - pista: String
 }
+
 class Amenaza
 {
-    +obtenerRespuesta(): string
+    - amenaza:String
 }
+
 class LadronAtrapado
 {
-    +obtenerRespuesta(): string
+    - arresto:String
 }
+
 class LadronEscapo
 {
-    +obtenerRespuesta(): string
+    - huida:String
 }
-class SinInformacion
-{
-    +obtenerRespuesta(): string
-}
-RespuestaDelEvento <|.. Pista
-RespuestaDelEvento <|.. Amenaza
-RespuestaDelEvento <|.. LadronAtrapado
-RespuestaDelEvento <|.. LadronEscapo
-RespuestaDelEvento <|.. SinInformacion
+
+IRespuestaDelEvento <|.. Pista
+IRespuestaDelEvento <|.. Amenaza
+IRespuestaDelEvento <|.. LadronAtrapado
+IRespuestaDelEvento <|.. LadronEscapo
 
 @enduml

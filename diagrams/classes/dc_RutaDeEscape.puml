@@ -1,23 +1,27 @@
 @startuml
 
-interface RutaDeEscape
+interface IRutaDeEscape
 {
-    +cantPaises():int
+    + devolverProximaCiudad():Ciudad
+    + crearRuta(List<Ciudad> ciudades)
+    + ciudadEnLaRuta(ciudad:Ciudad):Boolean
+    + devolverCiudadActual():Ciudad
 }
 class RutaFacil
 {
-    +cantPaises(): int
+    
 }
 class RutaMedioDificil
 {
-    +cantPaises():int
+    
 }
 class RutaDificil
 {
-    +cantPaises():int
+    
 }
 
-RutaDeEscape <|... RutaFacil
-RutaDeEscape <|... RutaMedioDificil
-RutaDeEscape <|... RutaDificil
+IRutaDeEscape <|... RutaFacil
+IRutaDeEscape <|... RutaMedioDificil
+IRutaDeEscape <|... RutaDificil
+
 @enduml
