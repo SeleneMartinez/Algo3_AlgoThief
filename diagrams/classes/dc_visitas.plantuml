@@ -1,27 +1,27 @@
 @startuml
-    interface Visita
+
+    interface IVisita
     {
-        +agregarVisita() : Visita
-        +obtenerDemora(): int
+        + {abstract} recibirVisita(policia:Policia): IVisita
     }
     class PrimeraVisita
     {
-        +agregarVisita : SegundaVisita
+        - demora:Int
+        + recibirVisita(policia:Policia): SegundaVisita
     }
     class SegundaVisita
     {
-        +agregarVisita : VisitaTercera
+        - demora:Int
+        + recibirVisita(policia:Policia): TerceraVisita
     }
     class TerceraVisita
     {
-        +agregarVisita : NoSePuedeVisitar
+        - demora:Int
+        + recibirVisita(policia:Policia): TerceraVisita
     }
-    class NoVisitado
-    {
-        +agregarVisita : PrimeraVisita
-    }
-    Visita <|..SegundaVisita
-    Visita <|..TerceraVisita
-    Visita <|..NoVisitado
-    Visita <|...PrimeraVisita
+
+
+    IVisita <|..SegundaVisita
+    IVisita <|..TerceraVisita
+    IVisita <|..PrimeraVisita
 @enduml
