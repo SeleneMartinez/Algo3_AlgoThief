@@ -1,27 +1,31 @@
 @startuml
 class AlgoThieft
 {
-    -pistas : List<Pista>
-    -policia : List<Policia>
-    -edificio : List<Edificio>
+
     -ciudades : List<Ciudad>
     -ladrones : List<Ladron>
-    -dossierLadrones: DossierLadrones
-    -objetosRobados: List<ObjetoRobado>
-    -estrategiasDeEscape: List<EstrategiasDeEscape>
+    + iniciarPartida(nombre:String)
+    + nuveoCaso()
 }
 
 class Partida
 {
-    - ciudadActual: Ciudad
-    - reloj : Reloj
-    - ladron : Ladron
-    - objetoRobado : ObjetoRobado
-    - estrategiasDeEscape: EstrategiaDeEscape
+    - ladron:Ladron
+    - policia:Policia
+    - ciudades:List<Ciudad>
+    - ciudadesNoConectadas:List<Ciudad>
+    - pistasPorCiudad: Dicctionary
+    - ciudadActual:Ciudad 
+    - ciudadAnterior:Ciudad 
+    - buscador:BuscadorLadrones 
 
-    +pedirOrdenDeCaptura(): void
-    +viajarA() : void
-    +entrarA(): void
+
+    + obtenerTiempoDeViaje(ciudad:Ciudad):Int
+    + partidaTerminada()
+    + reiniciarCiudades()
+    + viajar(ciudad:Ciudad)
+    - obtenerCiudadRandom():Ciudad
+    - obtenerRutaLadron()
 }
 AlgoThieft --> Partida
 
