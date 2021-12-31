@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Reloj {
 
-    List <String> dias = new ArrayList<String>(Arrays.asList("Lunes",
+    List <String> dias = new ArrayList<String>(Arrays.asList(
                                                              "Martes",
                                                              "Miercoles",
                                                              "Jueves",
