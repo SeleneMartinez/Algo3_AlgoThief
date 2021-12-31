@@ -11,26 +11,36 @@ interface Arma
 
 class Cuchillo
 {
+    + demoraPorSegundoAtaque: int
+    - demoraPorAtaque: int
     + herir(policia:Policia): Amenaza
 }
 class Pistola
 {
+    + demoraPorAtaque: int
     + herir(policia:Policia): Amenaza
 }
 
 class Ladron
 {
-    -nombre:String 
-    -sexo:String 
-    -hobby:String 
-    -pelo:String 
-    -auto:String 
-    -caracteristica:String 
-    -pistasLadron:List<Pista> 
-    -rutaDeEscape:IRutaDeEscape 
+    +nombre:String
+    +sexo:String
+    +hobby:String
+    +pelo:String
+    +auto:String
+    +caracteristica:String
+    +pistasLadron:List<Pista>
+    +rutaDeEscape:IRutaDeEscape
     + entregarse():IRespuestaDelEvento
     + escapar():IRespuestaDelEvento
     +obtenerRutaEscape():IRutaDeEscape
+    +agregarRutaEscape(IRutaDeEscape ruta, HashMap<String, List<Pista>> pistasPorCiudad)
+    +getSexo(): String
+    +getPelo(): String
+    +getCaracteristica(): String
+    +getHobby(): String
+    +getVehiculo(): String
+    +getNombre(): String
 }
 interface IOrdenDeCaptura
 {
@@ -40,12 +50,12 @@ class OrdenDeCaptura
 {
     + capturar(ladron:Ladron):IRespuestaDelEvento
 }
-class OrdenDeCapturaInvalida
+class OrdenDeCapturaSinEmitir
 {
     + capturar(ladron:Ladron):LadronEscapo
 }
 IOrdenDeCaptura <|.. OrdenDeCaptura
-IOrdenDeCaptura <|.. OrdenDeCapturaInvalida
+IOrdenDeCaptura <|.. OrdenDeCapturaSinEmitir
 Maton --> Arma
 Arma <|.. Cuchillo
 Arma <|.. Pistola

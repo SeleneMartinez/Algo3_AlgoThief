@@ -4,8 +4,13 @@ class AlgoThieft
 
     -ciudades : List<Ciudad>
     -ladrones : List<Ladron>
-    + iniciarPartida(nombre:String)
-    + nuveoCaso()
+    + iniciarJuego()
+    - iniciarCiudades()
+    - iniciarLadrones()
+    + nuevaPartida(nombre:String)
+    + nuevoCaso()
+    + getPartida(): Partida
+
 }
 
 class Partida

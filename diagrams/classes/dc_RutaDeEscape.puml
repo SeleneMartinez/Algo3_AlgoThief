@@ -6,6 +6,9 @@ interface IRutaDeEscape
     + crearRuta(List<Ciudad> ciudades)
     + ciudadEnLaRuta(ciudad:Ciudad):Boolean
     + devolverCiudadActual():Ciudad
+    +agregarMatones(Ciudad ciudad, Ladron ladron)
+    +agregarPistas(List<Pista> pistaLadron, HashMap<String, List<Pista>> pistasPorCiudad, Ladron ladron)
+
 }
 class RutaFacil
 {

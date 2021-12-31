@@ -9,6 +9,9 @@ class Ciudad
     + eliminarConexiones()
     + agregarEdificio(edificio:IEdificio)
     + devolverCiudadesConectadas():List<Ciudad>
+    + darNombre(): String
+    + eliminarEdificios()
+    + obtenerDistanciaA(Ciudad destino): int
 }
 interface Edificio
 {

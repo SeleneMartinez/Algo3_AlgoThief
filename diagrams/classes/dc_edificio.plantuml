@@ -13,6 +13,7 @@ class EdificioConLadron
 {
     - ladron:Ladron
     + visitar(policia:Policia): RespuestaDelEventos
+    + ladronEntraAlEdificio(Ladron ladron)
 }
 
 class Biblioteca
