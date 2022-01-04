@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Reloj {
 
-    List <String> dias = new ArrayList<String>(Arrays.asList("Lunes",
+    List <String> dias = new ArrayList<String>(Arrays.asList(
                                                              "Martes",
                                                              "Miercoles",
                                                              "Jueves",
-                                                             "Viermes",
+                                                             "Viernes",
                                                              "Sabado",
                                                              "Domingo"));
     Iterator <String> iteradorDias= dias.iterator();
@@ -24,8 +24,8 @@ public class Reloj {
     }
     public void aumentarHora( int hora){
         int nuevoHorario = this.horario + hora;
-        if (nuevoHorario >= 24) {
-            this.horario = nuevoHorario - 24;
+        if (nuevoHorario >= 22) {
+            this.horario = nuevoHorario - 16;
             this.cambioDia();
         } else {
             this.horario = nuevoHorario;
@@ -37,5 +37,16 @@ public class Reloj {
 
     public int obtenerHora(){
         return this.horario;
+    }
+    public String obtenerDia() { return this.dia; }
+    
+    public boolean tiempoTerminado() {
+        return dia.equals("Domingo") && horario >= 17;
+    }
+
+    public void reiniciarReloj() {
+        iteradorDias = dias.iterator();
+        horario= 7;
+        dia= "Lunes";
     }
 }

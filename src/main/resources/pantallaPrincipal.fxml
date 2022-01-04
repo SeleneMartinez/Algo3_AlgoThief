@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" stylesheets="@css/pantallaPistas.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.PantallaPrincipalControlador">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="157.0">
+         <children>
+            <Text fx:id="ciudad" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="192.1367290019989">
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="tiempo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="196.13669395446777">
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="218.0" fitWidth="193.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/detective.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="195.0">
+         <children>
+            <ImageView fitHeight="246.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ciudad.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#pantallaInvestigacion" prefHeight="25.0" prefWidth="130.0" text="Investigar">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pantallaViaje" prefHeight="25.0" prefWidth="130.0" text="Viajar">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#pantallaInterpol" prefHeight="25.0" prefWidth="130.0" text="Interpol" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="216.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@img/carmen_sandiego.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</HBox>

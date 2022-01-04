@@ -11,4 +11,5 @@ public interface IRango {
     public abstract boolean esSargento();
     public IRango obtenerRango(int casosResueltos);
     public HashMap<String, List<Pista>> obtenerPistaPorRango();
+    public IRutaDeEscape obtenerRutaDeEscapeSegunRango();
 }

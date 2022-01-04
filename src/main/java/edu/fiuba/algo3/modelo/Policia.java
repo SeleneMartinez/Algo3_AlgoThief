@@ -13,8 +13,12 @@ public class Policia {
         this.nombre = nombre;
         this.casosResueltos = 0;
         this.rango = new RangoNovato();
-        this.reloj = new Reloj(0 , "Lunes");
+        this.reloj = new Reloj(9 , "Lunes");
         this.orden = new OrdenDeCapturaSinEmitir();
+    }
+
+    public int obtenerTiempoDeViaje(Ciudad ciudadOrigen, Ciudad ciudadDestino){
+        return this.rango.tiempoDeViaje(ciudadOrigen, ciudadDestino);
     }
 
     public String obtenerNombre() {
@@ -32,14 +36,23 @@ public class Policia {
     public void demorar(int demora){
         reloj.aumentarHora(demora);
     }
+    
+    public IRutaDeEscape obtenerTipoDeRuta(){
+        return this.rango.obtenerRutaDeEscapeSegunRango();
+    }
 
     public void dormir(){
         reloj.aumentarHora(8);
     }
 
+    public void investigacionInterpol() {
+        reloj.aumentarHora(3);
+    }
+
     public void nuevoCasoResuelto()
     {
         this.casosResueltos++;
+        System.out.println(casosResueltos);
         this.rango = this.rango.obtenerRango(casosResueltos);
     }
 
@@ -62,6 +75,17 @@ public class Policia {
 
     public int obtenerHora(){
         return reloj.obtenerHora();
+    }
+    public String obtenerDia() { return reloj.obtenerDia(); }
+    
+    public boolean finTiempo() {
+        return reloj.tiempoTerminado();
+    }
+
+    public void reiniciar() {
+
+        reloj.reiniciarReloj();
+        orden = new OrdenDeCapturaSinEmitir();
     }
 }
 

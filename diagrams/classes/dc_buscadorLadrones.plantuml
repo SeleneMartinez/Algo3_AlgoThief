@@ -1,0 +1,29 @@
+@startuml
+class BuscadorLadrones
+{
+    + devolverSospechosos(): List<Ladron>
+    + reiniciarBusqueda()
+    + buscarPorSexo(String sexo)
+    + buscarPorHobby(String hobby)
+    + buscarPorCaracteristica(String caracteristica)
+    + buscarPorPelo(String pelo)
+    + buscarPorVehiculo(String vehiculo)
+}
+
+class Ladron
+{
+    -nombre:String 
+    -sexo:String 
+    -hobby:String 
+    -pelo:String 
+    -auto:String 
+    -caracteristica:String 
+    -pistasLadron:List<Pista> 
+    -rutaDeEscape:IRutaDeEscape 
+    + entregarse():IRespuestaDelEvento
+    + escapar():IRespuestaDelEvento
+    +obtenerRutaEscape():IRutaDeEscape
+}
+
+BuscadorLadrones "1"-> "*"  Ladron
+@enduml

@@ -1,5 +1,10 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+
 public class Ladron{
     public String nombre;
     public String sexo;
@@ -7,6 +12,7 @@ public class Ladron{
     public String pelo;
     public String auto;
     public String caracteristica;
+    public List<Pista> pistasLadron;
     public IRutaDeEscape rutaDeEscape;
 
     public Ladron(String nombre, String pelo, String sexo, String hobby, String caracteristica, String auto){
@@ -16,6 +22,13 @@ public class Ladron{
         this.hobby = hobby;
         this.auto = auto;
         this.sexo = sexo;
+        pistasLadron = Arrays.asList(
+            new Pista("Su cabello era de color " + pelo),
+            new Pista("Se ve que tenia " + caracteristica),
+            new Pista("Dijo que practicaba " + hobby),
+            new Pista("Se fue en " + auto),
+            new Pista("Era una persona de sexo " + sexo)
+        );
     }
 
     public IRespuestaDelEvento entregarse(){
@@ -49,6 +62,15 @@ public class Ladron{
 
     public String getNombre() {
         return nombre;
+    }
+    
+    public void agregarRutaEscape(IRutaDeEscape ruta, HashMap<String, List<Pista>> pistasPorCiudad) {
+        ruta.agregarPistas(pistasLadron, pistasPorCiudad, this);
+        this.rutaDeEscape = ruta;
+    }
+
+    public IRutaDeEscape obtenerRutaEscape() {
+        return rutaDeEscape;
     }
 
 }

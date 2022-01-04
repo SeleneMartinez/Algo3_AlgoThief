@@ -1,7 +1,7 @@
 [
   {
     "Ciudad":"New York City",
-    "PistaEconomica":"izo una transferencia al banco de Washington",
+    "PistaEconomica":"Hizo una transferencia al banco de Washington",
     "PistaViajera": "Queria conocer la estatua de la Libertad",
     "PistaCultural": "Estuvo leyendo sobre la guerra de Secesion"
   },
@@ -61,7 +61,7 @@
     "PistaCultural":"Queria la historia 'serenisima republica'"
   },
   {
-    "Ciudad":"Roma",
+    "Ciudad":"Rome",
     "PistaEconomica":"Hizo una transferencia al banco de Venecia",
     "PistaViajera":"Dijo que queria conocer la torre de Pisa",
     "PistaCultural":"Estuvo leyendo sobre el imperio romano"
@@ -166,7 +166,7 @@
     "Ciudad":"Sydney",
     "PistaEconomica":"Abrio una cuenta en dolares australianos",
     "PistaViajera":"Queria conocer oceania",
-    "PistaCultural":"Leyo sobre el imperio britanico",
+    "PistaCultural":"Leyo sobre el imperio britanico"
   },
   {
     "Ciudad":"Bangkok",
@@ -175,7 +175,7 @@
     "PistaCultural":"Estuvo leyendo sobre la gastronomia asiatica"
   },
   {
-    "Ciudad":"Por Moresby",
+    "Ciudad":"Port Moresby",
     "PistaEconomica":"Abrio una cuenta en kinas",
     "PistaViajera":"Se fue en un avion de bandera con dos triangulos",
     "PistaCultural":"Leyo sobre las colonias britanicas"

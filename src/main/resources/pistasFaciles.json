@@ -7,7 +7,7 @@
     },
     {
         "Ciudad":"Montreal",
-        "PistaEconomica":"",
+        "PistaEconomica":"La moneda es el dolar canadiense",
         "PistaViajera": "Bandera roja y blanca con una hoja",
         "PistaCultural":"El idioma oficial es el frances"
     },
@@ -51,17 +51,17 @@
     {
         "Ciudad":"Paris",
         "PistaEconomica":"Su moneda es el euro",
-        "PistaViajera": "Su bandera son tres franjaz azul, blanca y roja",
+        "PistaViajera": "Su bandera son tres franjas azul, blanca y roja",
         "PistaCultural": "Alli se encuentra la torre eiffel"
     },
     {
         "Ciudad":"San Marino",
         "PistaEconomica":"Su moneda es el euro",
-        "PistaViajera":"Su bandera es celeste y blanca con tres trores",
+        "PistaViajera":"Su bandera es celeste y blanca con tres torres",
         "PistaCultural":"Su idioma oficial es el italiano"
     },
     {
-        "Ciudad":"Roma",
+        "Ciudad":"Rome",
         "PistaEconomica":"Su moneda es el euro",
         "PistaViajera":"Su bandera es verde, blanca y roja",
         "PistaCultural":"Alli se encuentra el famoso coliseo"
@@ -175,7 +175,7 @@
         "PistaCultural":"Alli se encuentra el palacio real o Gran Palacio"
     },
     {
-        "Ciudad":"Por Moresby",
+        "Ciudad":"Port Moresby",
         "PistaEconomica":"Su moneda es el kina",
         "PistaViajera":"Su bandera es roja negra y amarilla",
         "PistaCultural":"Su ave nacional es el ave del paraiso"

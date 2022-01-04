@@ -1,0 +1,15 @@
+{
+    -fx-background-color: black;
+}
+
+Text {
+    -fx-background-color: black;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: Times New Roman;
+    -fx-font-size: 30px;
+}
+
+Button {
+    -fx-background-color: white;
+}
